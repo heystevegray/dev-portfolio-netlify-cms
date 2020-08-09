@@ -31,7 +31,7 @@ async function getPageData(graphql) {
             }
             frontmatter {
               title
-              Publish_Date
+              publish_date
               updated
               image
               tags

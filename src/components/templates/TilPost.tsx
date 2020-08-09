@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react"
 import { graphql } from "gatsby"
+import dayjs from "dayjs"
 
 export const TilPostTemplateQuery = graphql`
   query TilPostTemplateQuery($slug: String) {
@@ -10,7 +11,7 @@ export const TilPostTemplateQuery = graphql`
       frontmatter {
         title
         image
-        Publish_Date
+        publish_date
         updated
         tags
       }
@@ -24,6 +25,11 @@ const TilPost = ({ data }): ReactElement => {
     <div>
       <div>
         <h2>{data.markdownRemark.frontmatter.title}</h2>
+        <p>
+          {dayjs(data.markdownRemark.frontmatter.publish_date).format(
+            "dddd, MMMM D, YYYY h:mm A"
+          )}
+        </p>
         <div> {data.markdownRemark.frontmatter.description}</div>
         <div
           className="blog-post-content"
