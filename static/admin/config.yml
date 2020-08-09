@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: heystevegray/dev-portfolio-netlify-cms
+media_folder: static/assets
+public_folder: assets
+publish_mode: editorial_workflow
+collections:
+  - name: til
+    label: til
+    description: Today I Learned
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: content/til
+    create: true
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: path, label: Path, required: false }
+      - { label: publish date, name: Publish Date, widget: datetime }
+      - { name: updated, label: Updated At, widget: datetime, required: false }
+      - { name: description, label: Description, required: false }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: body, label: Body, widget: markdown }
+      - { name: tags, label: Tags, widget: list }
