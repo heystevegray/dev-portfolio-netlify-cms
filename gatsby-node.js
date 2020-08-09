@@ -33,7 +33,6 @@ async function getPageData(graphql) {
               title
               publish_date
               updated
-              image
               tags
             }
             html

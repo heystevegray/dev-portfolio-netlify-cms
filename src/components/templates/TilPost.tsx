@@ -1,6 +1,8 @@
 import React, { ReactElement } from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import dayjs from "dayjs"
+import Layout from "../layout"
 
 export const TilPostTemplateQuery = graphql`
   query TilPostTemplateQuery($slug: String) {
@@ -10,7 +12,13 @@ export const TilPostTemplateQuery = graphql`
       }
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            fixed(width: 350) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         publish_date
         updated
         tags
@@ -21,22 +29,26 @@ export const TilPostTemplateQuery = graphql`
 `
 
 const TilPost = ({ data }): ReactElement => {
+  const {
+    title,
+    description,
+    publish_date,
+    image,
+  } = data.markdownRemark.frontmatter
+
   return (
-    <div>
-      <div>
-        <h2>{data.markdownRemark.frontmatter.title}</h2>
-        <p>
-          {dayjs(data.markdownRemark.frontmatter.publish_date).format(
-            "dddd, MMMM D, YYYY h:mm A"
-          )}
-        </p>
-        <div> {data.markdownRemark.frontmatter.description}</div>
+    <Layout>
+      <div className="card">
+        <h2>{title}</h2>
+        <p>{dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}</p>
+        {description && <div> {description}</div>}
+        {image && <Img fixed={image.childImageSharp.fixed} />}
         <div
-          className="blog-post-content"
+          className="card-content"
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
       </div>
-    </div>
+    </Layout>
   )
 }
 export default TilPost
