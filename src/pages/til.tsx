@@ -44,32 +44,28 @@ export default function til({ data }) {
         {data &&
           data?.allMarkdownRemark.edges?.map(({ node }) => {
             return (
-              <div className="card" key={node.fields.slug}>
-                <div className="card-content">
-                  <div className="columns">
-                    <div className="column">
-                      <figure className="image is-250x250">
-                        <Img
-                          fixed={node.frontmatter.image.childImageSharp.fixed}
-                        />
-                      </figure>
-                    </div>
-                    <div className="column">
-                      <p className="title is-4">{node.frontmatter.title}</p>
-                      <p className="subtitle is-6">
-                        {dayjs(node.frontmatter.publish_date).format(
-                          "dddd, MMMM D, YYYY h:mm A"
-                        )}
-                      </p>
-                      <Tags tags={node.frontmatter.tags} />
-                    </div>
-                    <div className="column">
-                      <Link to={`/til${node.fields.slug}`}>
-                        <button className="button is-primary">
-                          Learn More
-                        </button>
-                      </Link>
-                    </div>
+              <div className="box" key={node.fields.slug}>
+                <div className="columns">
+                  <div className="column">
+                    <figure className="image is-250x250">
+                      <Img
+                        fixed={node.frontmatter.image.childImageSharp.fixed}
+                      />
+                    </figure>
+                  </div>
+                  <div className="column">
+                    <p className="title is-4">{node.frontmatter.title}</p>
+                    <p className="subtitle is-6">
+                      {dayjs(node.frontmatter.publish_date).format(
+                        "dddd, MMMM D, YYYY h:mm A"
+                      )}
+                    </p>
+                    <Tags tags={node.frontmatter.tags} />
+                  </div>
+                  <div className="column">
+                    <Link to={`/til${node.fields.slug}`}>
+                      <button className="button is-primary">Learn More</button>
+                    </Link>
                   </div>
                 </div>
               </div>
