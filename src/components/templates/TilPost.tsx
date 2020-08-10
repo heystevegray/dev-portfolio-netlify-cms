@@ -53,7 +53,7 @@ const TilPost = ({ data }): ReactElement => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       )}
-      {tags && tags.length ? (
+      {/* {tags && tags.length ? (
         <div>
           <h2>Tags</h2>
           <ul className="taglist">
@@ -64,7 +64,7 @@ const TilPost = ({ data }): ReactElement => {
             ))}
           </ul>
         </div>
-      ) : null}
+      ) : null} */}
     </Layout>
   )
 }
