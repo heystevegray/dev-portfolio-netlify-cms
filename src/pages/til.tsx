@@ -38,8 +38,7 @@ export default function til({ data }) {
   return (
     <Layout>
       <div className="full-width-image-container margin-top-0">
-        <h1 className="has-text-weight-bold is-size-1">Lessons learned</h1>
-        <p className="">A collections of my Today I Learned's.</p>
+        <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
       </div>
       <section className="section">
         {data &&
@@ -57,11 +56,11 @@ export default function til({ data }) {
                     </div>
                     <div className="column">
                       <p className="title is-4">{node.frontmatter.title}</p>
-                      <time>
+                      <p className="subtitle is-6">
                         {dayjs(node.frontmatter.publish_date).format(
                           "dddd, MMMM D, YYYY h:mm A"
                         )}
-                      </time>
+                      </p>
                       <Tags tags={node.frontmatter.tags} />
                     </div>
                     <div className="column">
