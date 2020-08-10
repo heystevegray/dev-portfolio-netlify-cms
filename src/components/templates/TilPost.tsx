@@ -59,7 +59,12 @@ const TilPost = ({ data }): ReactElement => {
       {image && <Img fixed={image.childImageSharp.fixed} />}
       <p>{dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}</p>
       {description && <div> {description}</div>}
-      {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
+      {html && (
+        <div
+          className="container content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      )}
       {/* {tags && tags.length ? (
         <div>
           <h2>Tags</h2>
