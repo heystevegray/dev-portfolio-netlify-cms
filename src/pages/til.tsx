@@ -4,61 +4,74 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import dayjs from "dayjs"
 import "../assets/styles.css"
+import Tags from "../components/Tags"
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
-    markdownRemark {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        image {
-          childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+    allMarkdownRemark(
+      sort: { fields: frontmatter___publish_date, order: DESC }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            image {
+              childImageSharp {
+                fixed(width: 250) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
             }
+            publish_date
+            tags
           }
         }
-        publish_date
-        tags
       }
     }
   }
 `
 
 export default function til({ data }) {
-  const { title, publish_date, image, tags } = data.markdownRemark.frontmatter
-  const { slug } = data.markdownRemark.fields
-  console.log({ slug })
-
   return (
     <Layout>
       <div className="full-width-image-container margin-top-0">
-        <h1 className="has-text-weight-bold is-size-1">New Lessons</h1>
+        <h1 className="has-text-weight-bold is-size-1">Lessons learned</h1>
+        <p className="">A collections of my Today I Learned's.</p>
       </div>
       <section className="section">
-        <div className="card">
-          <div className="card-image"></div>
-          <div className="card-content">
-            <div className="media">
-              <div className="media-left">
-                <figure className="image is-5x5">
-                  <Img fixed={image.childImageSharp.fixed} />
-                </figure>
+        {data &&
+          data?.allMarkdownRemark.edges?.map(({ node }) => {
+            return (
+              <div className="card" key={node.fields.slug}>
+                <div className="card-content">
+                  <div className="media">
+                    <div className="media-left">
+                      <figure className="image is-250x250">
+                        <Img
+                          fixed={node.frontmatter.image.childImageSharp.fixed}
+                        />
+                      </figure>
+                    </div>
+                    <div className="media-content">
+                      <p className="title is-4">{node.frontmatter.title}</p>
+                      <time>
+                        {dayjs(node.frontmatter.publish_date).format(
+                          "dddd, MMMM D, YYYY h:mm A"
+                        )}
+                      </time>
+                      <Tags tags={node.frontmatter.tags} />
+                    </div>
+                    <Link to={`/til${node.fields.slug}`}>
+                      <button className="button is-primary">Learn More</button>
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="media-content">
-                <p className="title is-4">{title}</p>
-                <time>
-                  {dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}
-                </time>
-              </div>
-              <Link to={`/til${slug}`}>
-                <button className="button is-primary">Learn More</button>
-              </Link>
-            </div>
-          </div>
-        </div>
+            )
+          })}
       </section>
     </Layout>
   )

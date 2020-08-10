@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import dayjs from "dayjs"
 import { kebabCase } from "lodash"
 import Layout from "../layout"
+import Tags from "../Tags"
 
 export const TilPostTemplateQuery = graphql`
   query TilPostTemplateQuery($slug: String) {
@@ -44,7 +45,7 @@ const TilPost = ({ data }): ReactElement => {
       <nav className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <a href="/til">Til</a>
+            <a href="/til">Today I Learned</a>
           </li>
           <li className="is-active">
             <a href="#" aria-current="page">
@@ -58,25 +59,14 @@ const TilPost = ({ data }): ReactElement => {
       </h1>
       {image && <Img fixed={image.childImageSharp.fixed} />}
       <p>{dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}</p>
-      {description && <div> {description}</div>}
+      {description && <div>{description}</div>}
       {html && (
         <div
-          className="container content"
+          className="container content mt-4"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       )}
-      {/* {tags && tags.length ? (
-        <div>
-          <h2>Tags</h2>
-          <ul className="taglist">
-            {tags.map((tag: string) => (
-              <li key={tag + `tag`}>
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null} */}
+      <Tags tags={tags} />
     </Layout>
   )
 }
