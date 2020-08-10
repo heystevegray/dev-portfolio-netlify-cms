@@ -47,15 +47,15 @@ export default function til({ data }) {
             return (
               <div className="card" key={node.fields.slug}>
                 <div className="card-content">
-                  <div className="media">
-                    <div className="media-left">
+                  <div className="columns">
+                    <div className="column">
                       <figure className="image is-250x250">
                         <Img
                           fixed={node.frontmatter.image.childImageSharp.fixed}
                         />
                       </figure>
                     </div>
-                    <div className="media-content">
+                    <div className="column">
                       <p className="title is-4">{node.frontmatter.title}</p>
                       <time>
                         {dayjs(node.frontmatter.publish_date).format(
@@ -64,9 +64,13 @@ export default function til({ data }) {
                       </time>
                       <Tags tags={node.frontmatter.tags} />
                     </div>
-                    <Link to={`/til${node.fields.slug}`}>
-                      <button className="button is-primary">Learn More</button>
-                    </Link>
+                    <div className="column">
+                      <Link to={`/til${node.fields.slug}`}>
+                        <button className="button is-primary">
+                          Learn More
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
