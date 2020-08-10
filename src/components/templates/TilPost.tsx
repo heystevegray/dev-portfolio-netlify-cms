@@ -41,18 +41,25 @@ const TilPost = ({ data }): ReactElement => {
 
   return (
     <Layout>
+      <nav className="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+          <li>
+            <a href="/til">Til</a>
+          </li>
+          <li className="is-active">
+            <a href="#" aria-current="page">
+              {title}
+            </a>
+          </li>
+        </ul>
+      </nav>
       <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
         {title}
       </h1>
       {image && <Img fixed={image.childImageSharp.fixed} />}
       <p>{dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}</p>
       {description && <div> {description}</div>}
-      {html && (
-        <div
-          className="card-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      )}
+      {html && <div dangerouslySetInnerHTML={{ __html: html }} />}
       {/* {tags && tags.length ? (
         <div>
           <h2>Tags</h2>

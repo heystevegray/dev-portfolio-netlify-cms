@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import dayjs from "dayjs"
+import "../assets/styles.css"
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
@@ -14,8 +15,8 @@ export const TilPostTemplateQuery = graphql`
         title
         image {
           childImageSharp {
-            fixed(width: 200) {
-              src
+            fixed {
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -37,22 +38,24 @@ export default function til({ data }) {
         <h1 className="has-text-weight-bold is-size-1">New Lessons</h1>
       </div>
       <section className="section">
-        <div className="container">
-          <div className="content">
-            <div className="card">
-              <div className="card-image">
-                {image && <Img fixed={image.childImageSharp.fixed} />}
+        <div className="card">
+          <div className="card-image"></div>
+          <div className="card-content">
+            <div className="media">
+              <div className="media-left">
+                <figure className="image is-5x5">
+                  <Img fixed={image.childImageSharp.fixed} />
+                </figure>
               </div>
-              <div className="card-content">
-                <div className="content">
-                  <Link to={`/til${slug}`}>
-                    <h3 className="title is-4">{title}</h3>
-                    <time className="subtitle is-6">
-                      {dayjs(publish_date).format("dddd, MMMM D, YYYY")}
-                    </time>
-                  </Link>
-                </div>
+              <div className="media-content">
+                <p className="title is-4">{title}</p>
+                <time>
+                  {dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}
+                </time>
               </div>
+              <Link to={`/til${slug}`}>
+                <button className="button is-primary">Learn More</button>
+              </Link>
             </div>
           </div>
         </div>
