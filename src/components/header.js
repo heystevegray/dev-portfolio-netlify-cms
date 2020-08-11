@@ -14,7 +14,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
 
-        <a
+        {/* <a
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) => (
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </a> */}
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
