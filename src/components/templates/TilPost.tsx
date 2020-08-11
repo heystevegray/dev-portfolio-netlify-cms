@@ -37,6 +37,7 @@ const TilPost = ({ data }): ReactElement => {
     description,
     publish_date,
     image,
+    updated,
     tags,
   } = data.markdownRemark.frontmatter
   const { html } = data.markdownRemark
@@ -60,7 +61,14 @@ const TilPost = ({ data }): ReactElement => {
         {title}
       </h1>
       {image && <Img fixed={image.childImageSharp.fixed} />}
-      <p>{dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}</p>
+      {publish_date && (
+        <p>
+          Published on {dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}
+        </p>
+      )}
+      {updated && (
+        <p>Updated on {dayjs(updated).format("dddd, MMMM D, YYYY h:mm A")}</p>
+      )}
       {description && <div>{description}</div>}
       {html && (
         <div
