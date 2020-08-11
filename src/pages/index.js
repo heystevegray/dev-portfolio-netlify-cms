@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Steve Gray | Developer Portfolio Website" />
     <h1>Software Engineer</h1>
     <Link to="/til/">
       <button className="button is-primary is-large">

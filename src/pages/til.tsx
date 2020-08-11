@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import dayjs from "dayjs"
 import "../assets/styles.css"
 import Tags from "../components/Tags"
+import SEO from "../components/seo"
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
@@ -37,6 +38,7 @@ export const TilPostTemplateQuery = graphql`
 export default function til({ data }) {
   return (
     <Layout>
+      <SEO title={`Steve Gray | Today I Learned`} />
       <div className="full-width-image-container margin-top-0">
         <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
       </div>

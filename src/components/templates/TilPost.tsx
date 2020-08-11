@@ -5,6 +5,7 @@ import dayjs from "dayjs"
 import { kebabCase } from "lodash"
 import Layout from "../layout"
 import Tags from "../Tags"
+import SEO from "../seo"
 
 export const TilPostTemplateQuery = graphql`
   query TilPostTemplateQuery($slug: String) {
@@ -42,6 +43,7 @@ const TilPost = ({ data }): ReactElement => {
 
   return (
     <Layout>
+      <SEO title={`Steve Gray | ${title}`} />
       <nav className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
