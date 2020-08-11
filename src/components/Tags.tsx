@@ -5,12 +5,12 @@ export default function Tags({ tags }) {
     <>
       {tags && tags.length ? (
         <div>
-          <ul className="taglist">
+          <ul className="tags">
             {tags.map((tag: string, index) => (
               //   <li key={tag + `tag`}>
               //     <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
               //   </li>
-              <span className="tag is-primary is-light mr-1" key={index}>
+              <span className="tag is-secondary" key={index}>
                 {tag}
               </span>
             ))}

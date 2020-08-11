@@ -47,15 +47,13 @@ export default function til({ data }) {
           data?.allMarkdownRemark.edges?.map(({ node }) => {
             return (
               <div className="box" key={node.fields.slug}>
-                <div className="columns">
-                  <div className="column">
-                    <figure className="image is-250x250">
-                      <Img
-                        fixed={node.frontmatter.image.childImageSharp.fixed}
-                      />
-                    </figure>
-                  </div>
-                  <div className="column">
+                <div className="row is-full">
+                  <figure className="image is-250x250">
+                    <Img fixed={node.frontmatter.image.childImageSharp.fixed} />
+                  </figure>
+                </div>
+                <div className="row is-full columns">
+                  <div className="column is-three-quarters">
                     <p className="title is-4">{node.frontmatter.title}</p>
                     <p className="subtitle is-6">
                       {dayjs(node.frontmatter.publish_date).format(
@@ -64,7 +62,7 @@ export default function til({ data }) {
                     </p>
                     <Tags tags={node.frontmatter.tags} />
                   </div>
-                  <div className="column">
+                  <div className="column is-one-quarter">
                     <Link to={`/til${node.fields.slug}`}>
                       <button className="button is-primary">Learn More</button>
                     </Link>
