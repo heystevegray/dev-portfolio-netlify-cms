@@ -43,7 +43,7 @@ const TilPost = ({ data }): ReactElement => {
 
   return (
     <Layout>
-      <SEO title={`Steve Gray | ${title}`} />
+      <SEO title={`${title}`} />
       <nav className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
