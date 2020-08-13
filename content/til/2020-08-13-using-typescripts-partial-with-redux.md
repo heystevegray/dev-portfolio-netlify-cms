@@ -25,6 +25,7 @@ You can see that it's not problem to only update *part* of the `Todo` interface 
 ![Image of a typescript error.](assets/tspartialexample2.png "Image of a Typescript error.")
 
 Here is the error that is displayed:
+
 > Argument of type '{ description: string; }' is not assignable to parameter of type 'Todo'. Property 'title' is missing in type '{ description: string; }' but required in type 'Todo'. (2345)
 
 Wrapping `Partial<>` around the `Todo` interface allows us to only update a few of the properties in the interface without having to make all of the [optional properties](https://www.typescriptlang.org/docs/handbook/interfaces.html#optional-properties). Which is dope.
