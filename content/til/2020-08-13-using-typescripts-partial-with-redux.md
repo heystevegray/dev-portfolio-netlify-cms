@@ -18,7 +18,7 @@ Quick overview of `Partial`:
 
 Here is an [example from the documentation](https://www.typescriptlang.org/docs/handbook/utility-types.html#example):
 
-![Typescript Partial example.](assets/tspartialexample.png "Typescript Partial example.")
+![Typescript Partial example.](assets/tspartialexample.png)
 
 You can see that it's not problem to only update *part* of the `Todo` interface on line 16. If I take the same code above, and remove `Partial` on line 6, we get the following error in Typescript.
 
