@@ -1,20 +1,18 @@
-import React, { ReactElement, useState, useEffect } from "react"
+import React, { ReactElement, useState } from "react"
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import Socials from "../Socials/Socials"
-import "./header.scss"
 
-const Header = ({ siteTitle }): ReactElement => {
+interface Props {
+  siteTitle: string
+}
+
+const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
   const [active, setActive] = useState(false)
-
-  useEffect(() => {
-    console.log({ active })
-  }, [active])
 
   return (
     <header>
       <nav role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
+          {/* Main links */}
           <Link to="/" className="navbar-item">
             {siteTitle}
           </Link>
@@ -22,6 +20,7 @@ const Header = ({ siteTitle }): ReactElement => {
             Today I Learned
           </Link>
 
+          {/* The navbar-burger */}
           <a
             role="button"
             className={`navbar-burger burger ${active && "is-active"}`}
@@ -38,6 +37,7 @@ const Header = ({ siteTitle }): ReactElement => {
           </a>
         </div>
 
+        {/* The navbar-menu */}
         {active && (
           <div
             className={`navbar-menu has-background-black-bis ${
@@ -54,14 +54,6 @@ const Header = ({ siteTitle }): ReactElement => {
       </nav>
     </header>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
 }
 
 export default Header
