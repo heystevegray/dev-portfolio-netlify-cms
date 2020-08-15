@@ -6,11 +6,12 @@ import "./Socials.scss"
 
 interface Props {
   iconSize?: number
+  className?: string
 }
 
-export default function Socials({ iconSize = 3 }: Props) {
+export default function Socials({ className = "", iconSize = 3 }: Props) {
   return (
-    <div className="columns is-centered">
+    <div className={`${className} columns is-centered`}>
       <div className="column">
         <div className="columns is-mobile is-centered">
           <a

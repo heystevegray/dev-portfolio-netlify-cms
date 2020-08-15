@@ -1,1 +1,13 @@
 @import "mixins.scss";
+
+button {
+  &:hover {
+    @include hover;
+  }
+}
+
+.logo {
+  img {
+    border-radius: 50%;
+  }
+}
