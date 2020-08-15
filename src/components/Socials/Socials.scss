@@ -1,0 +1,9 @@
+@import "../../assets/sass/";
+
+.socials {
+  &__link {
+    &:hover {
+      @include hover;
+    }
+  }
+}
