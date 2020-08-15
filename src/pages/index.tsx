@@ -7,8 +7,7 @@ import "../assets/sass/index.scss"
 import Img from "gatsby-image"
 
 const IndexPage = ({ data }): ReactElement => {
-  const image = data?.allFile?.edges[0]?.node
-  const source = image?.childImageSharp?.fixed
+  const image = data?.file?.childImageSharp?.fixed
 
   return (
     <Layout>
@@ -16,7 +15,7 @@ const IndexPage = ({ data }): ReactElement => {
       <section className="hero is-fullheight-with-navbar has-text-centered has-background-black-ter">
         <div className="hero-body">
           <div className="container">
-            {image && <Img className="logo" fixed={source} />}
+            {image && <Img className="logo" fixed={image} />}
             <h1 className="title is-1">Steve Gray</h1>
             <div className="container">
               <h3 className="title is-3">Software Engineer</h3>
@@ -42,21 +41,12 @@ const IndexPage = ({ data }): ReactElement => {
 
 export default IndexPage
 
-export const squareImage = graphql`
-  query getLogo {
-    allFile(
-      filter: {
-        childImageSharp: { id: { eq: "f4cd0480-4f5b-5649-bc33-4747c0c70405" } }
-      }
-    ) {
-      edges {
-        node {
-          childImageSharp {
-            id
-            fixed(width: 250) {
-              ...GatsbyImageSharpFixed
-            }
-          }
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "logo.jpg" }) {
+      childImageSharp {
+        fixed(width: 250) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
