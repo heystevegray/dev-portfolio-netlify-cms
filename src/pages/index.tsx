@@ -7,8 +7,8 @@ import "../assets/sass/index.scss"
 import Img from "gatsby-image"
 
 const IndexPage = ({ data }): ReactElement => {
-  const image = data?.allFile?.edges[0].node
-  const source = image.childImageSharp.fixed
+  const image = data?.allFile?.edges[0]?.node
+  const source = image?.childImageSharp?.fixed
 
   return (
     <Layout>
