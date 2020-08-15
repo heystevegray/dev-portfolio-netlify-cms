@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import dayjs from "dayjs"
 import Layout from "../layout"
@@ -47,12 +47,12 @@ const TilPost = ({ data }): ReactElement => {
       <nav className="breadcrumb" aria-label="breadcrumbs">
         <ul>
           <li>
-            <a href="/til">Today I Learned</a>
+            <Link to="/til">Today I Learned</Link>
           </li>
           <li className="is-active">
-            <a href="#" aria-current="page">
+            <Link to="#" aria-current="page">
               {title}
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
