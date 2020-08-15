@@ -26,7 +26,6 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
             className={`navbar-burger burger ${active && "is-active"}`}
             aria-label="menu"
             aria-expanded="false"
-            data-target="navbarBasicExample"
             onClick={() => {
               setActive(!active)
             }}
