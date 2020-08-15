@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Socials from "./Socials/Socials"
 
 const Header = ({ siteTitle }) => (
   <header>
@@ -10,9 +11,11 @@ const Header = ({ siteTitle }) => (
       aria-label="main navigation"
     >
       <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          {siteTitle}
-        </Link>
+        <h4 className="title is-4">
+          <Link to="/" className="navbar-item">
+            {siteTitle}
+          </Link>
+        </h4>
 
         {/* <a
           role="button"
@@ -28,11 +31,10 @@ const Header = ({ siteTitle }) => (
       </div>
 
       <div id="navbarBasicExample" className="navbar-menu">
-        <div className="navbar-start">
+        <div className="navbar-end">
           <Link to="/til" className="navbar-item">
             Today I Learned
           </Link>
-
           {/* <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">More</a>
             <div className="navbar-dropdown">
@@ -41,11 +43,12 @@ const Header = ({ siteTitle }) => (
             </div>
           </div> */}
         </div>
+      </div>
 
-        {/* <div className="navbar-end">
+      {/* <div className="navbar-end">
           <div className="navbar-item"></div>
         </div> */}
-      </div>
+      {/* </div> */}
     </nav>
   </header>
 )

@@ -3,13 +3,11 @@ import Socials from "./Socials/Socials"
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer has-background-black-bis">
       <Socials />
-      <div className="container">
-        <p className="content has-text-centered">
-          Steve Gray © {new Date().getFullYear()}
-        </p>
-      </div>
+      <p className="has-text-centered">
+        Steve Gray © {new Date().getFullYear()}
+      </p>
     </footer>
   )
 }

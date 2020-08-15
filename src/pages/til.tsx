@@ -39,8 +39,10 @@ export default function til({ data }) {
   return (
     <Layout>
       <SEO title="Today I Learned" />
-      <div className="full-width-image-container margin-top-0">
-        <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
+      <div className="has-text-centered">
+        <div className="full-width-image-container margin-top-0">
+          <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
+        </div>
       </div>
       <section className="section">
         {data &&
