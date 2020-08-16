@@ -1,17 +1,24 @@
-import React from "react"
+import React, { ReactElement } from "react"
 
-export default function Tags({ tags }) {
+export interface Tag {
+  label: string
+}
+
+interface Props {
+  tags: Tag[]
+  maxTags?: number
+}
+
+export default function Tags({ tags, maxTags = 4 }: Props): ReactElement {
+  const items: Tag[] = maxTags ? tags.slice(0, maxTags) : tags
   return (
     <>
       {tags && tags.length ? (
         <div>
           <ul className="tags">
-            {tags.map((tag: string, index) => (
-              //   <li key={tag + `tag`}>
-              //     <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-              //   </li>
+            {items.map((label, index) => (
               <span className="tag is-secondary" key={index}>
-                {tag}
+                {label}
               </span>
             ))}
           </ul>
