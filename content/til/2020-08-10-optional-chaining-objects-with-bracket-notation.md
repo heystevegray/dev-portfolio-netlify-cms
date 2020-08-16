@@ -1,8 +1,8 @@
 ---
 title: Optional chaining objects with bracket notation
 publish_date: 2020-08-10T06:35:26.871Z
-updated: 2020-08-11T07:15:39.149Z
-image: assets/emily-morter-8xaa0f9yqne-unsplash.jpg
+updated: 2020-08-16T22:06:18.799Z
+image: assets/emily-morter-8xaa0f9yqne-unsplash-1-.jpg
 tags:
   - development
   - javascript
