@@ -11,11 +11,11 @@ tags:
   - hooks
   - bulma
 ---
-# Summary
+## Summary
 
 [Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` `className` to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the hamburger menu is clicked for anything to happen. The good news is we can easily implement this using the `useState` hook.
 
-# Example
+## Example
 
 You can view the full code for my `header.tsx` file [here](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx).
 
@@ -69,14 +69,12 @@ Don't forget to add the `onClick` function to the  `navbar-burger` so that we ca
 
 And thats it! 🥳
 
-![Mission accomplished](https://media.giphy.com/media/12e5dX36aMp2Ba/giphy.gif)
-
-# Resources
+## Resources
 
 [Navbar](https://bulma.io/documentation/components/navbar/)
 
 [heystevegray/dev-portfolio-netlify-cms](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
 
-# TLDR
+## TLDR
 
 [Here is how I implemented the responsive Navbar](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx) for my portfolio website using Bulma and React Hooks!  | [Resources](https://bulma.io/documentation/components/navbar/)
