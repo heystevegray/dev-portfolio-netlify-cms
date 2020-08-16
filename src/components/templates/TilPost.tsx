@@ -74,7 +74,7 @@ const TilPost = ({ data }): ReactElement => {
                     <div className="columns is-centered">
                       <div className="column is-narrow">
                         {publish_date && (
-                          <div className="columns is-variable is-2-mobile is-0-tablet is-3-desktop is-8-widescreen is-1-fullhd">
+                          <div className="columns">
                             <div className="column is-narrow">
                               <Icon
                                 path={mdiCalendar}
