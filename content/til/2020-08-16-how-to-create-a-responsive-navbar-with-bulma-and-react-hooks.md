@@ -1,6 +1,6 @@
 ---
 title: Create a responsive Navbar with Bulma and React Hooks
-publish_date: 2020-08-16T06:30:28.292Z
+publish_date: 2020-08-16T06:40:55.981Z
 updated: ""
 description: A minimal Navbar example with built in hamburger menu animations.
 image: assets/erik-odiin-jbqvjx2ewnu-unsplash.jpg
@@ -68,6 +68,68 @@ Now lets control the states of these elements with our state variable. If the `i
 Don't forget to add the `onClick` function to the  `navbar-burger` so that we can set the `active` state when it is clicked.
 
 And thats it! 🥳
+
+### Full source code
+```tsx
+import React, { ReactElement, useState } from "react"
+import { Link } from "gatsby"
+
+interface Props {
+  siteTitle: string
+}
+
+const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
+  const [active, setActive] = useState(false)
+
+  return (
+    <header>
+      <nav role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          {/* Main links */}
+          <Link to="/" className="navbar-item">
+            {siteTitle}
+          </Link>
+          <Link to="/til" className="is-hidden-touch navbar-item">
+            Today I Learned
+          </Link>
+
+          {/* The navbar-burger */}
+          <a
+            role="button"
+            className={`navbar-burger burger ${active && "is-active"}`}
+            aria-label="menu"
+            aria-expanded="false"
+            onClick={() => {
+              setActive(!active)
+            }}
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        {/* The navbar-menu */}
+        {active && (
+          <div
+            className={`navbar-menu has-background-black-bis ${
+              active && "is-active"
+            }`}
+          >
+            <div className="navbar-start">
+              <Link to="/til" className="navbar-item">
+                Today I Learned
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  )
+}
+
+export default Header
+```
 
 ## Resources
 
