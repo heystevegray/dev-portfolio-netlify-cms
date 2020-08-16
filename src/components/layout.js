@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
       //   padding: `0 1.0875rem 1.45rem`,
       // }}
       >
-        <main className="has-background-black-ter">{children}</main>
+        <main className="has-background-black-bis">{children}</main>
       </div>
       <Footer />
     </>

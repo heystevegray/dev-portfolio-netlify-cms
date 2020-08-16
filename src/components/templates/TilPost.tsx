@@ -50,7 +50,7 @@ const TilPost = ({ data }): ReactElement => {
       <SEO title={`${title}`} />
       <section className="section body">
         <div className="container post">
-          <section className="hero has-text-centered is-small has-background-black-bis">
+          <section className="hero has-text-centered is-small has-background-black-ter">
             <div className="hero-body">
               <div className="column">
                 {image && <Img fixed={image.childImageSharp.fixed} />}

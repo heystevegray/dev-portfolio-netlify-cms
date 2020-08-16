@@ -10,7 +10,11 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
 
   return (
     <header>
-      <nav role="navigation" aria-label="main navigation">
+      <nav
+        className="has-background-black-bis"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
           {/* Main links */}
           <Link to="/" className="navbar-item">
@@ -39,11 +43,14 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
         {/* The navbar-menu */}
         {active && (
           <div
-            className={`navbar-menu has-background-black-bis ${
+            className={`navbar-menu has-background-grey-darker ${
               active && "is-active"
             }`}
           >
             <div className="navbar-start">
+              <Link to="/" className="navbar-item">
+                Home
+              </Link>
               <Link to="/til" className="navbar-item">
                 Today I Learned
               </Link>

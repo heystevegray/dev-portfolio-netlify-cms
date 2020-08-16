@@ -60,7 +60,7 @@ export default function til({ data }) {
                     className="box tilPreview"
                     key={node.fields.slug}
                   >
-                    <div className="card has-background-black-bis">
+                    <div className="card has-background-black-ter">
                       <div className="card-image">
                         {image && <Img fluid={image.childImageSharp.fluid} />}
                       </div>

@@ -12,7 +12,7 @@ const IndexPage = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title="Developer Portfolio Website" />
-      <section className="hero is-fullheight-with-navbar has-text-centered has-background-black-ter">
+      <section className="hero is-fullheight-with-navbar has-text-centered has-background-black-bis">
         <div className="hero-body">
           <div className="container">
             {image && <Img className="logo" fixed={image} />}
