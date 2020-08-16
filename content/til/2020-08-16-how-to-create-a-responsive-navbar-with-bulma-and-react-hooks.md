@@ -13,7 +13,7 @@ tags:
 ---
 # Summary
 
-[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the hamburger menu is clicked for anything to happen. The good news is we can easily implement this using the `useState` hook.
+[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the menu is toggled. The good news is that we can easily implement this using the `useState` hook.
 
 # Example
 
@@ -21,7 +21,7 @@ You can view the full code for my `header.tsx` file [here](https://github.com/he
 
 ### Add the useState hook
 
-Lets add a new state variable called `active` to manage the hamberger menu state in our Component.
+Let's add a new state variable called `active` to manage the hamburger menu state in our Component.
 
 ```tsx
 import React, { useState } from "react"
@@ -33,11 +33,15 @@ const Header = () => {
 
 ### Animate the burger and show the menu
 
-Quick note about the `navbar-burger`.
+Quick note about the `navbar-burger:`
+
+``
 
 > The `navbar-burger` has to contain three empty span tags in order to visualize the hamburger lines or the cross (when active). | [Source](https://bulma.io/documentation/components/navbar/#navbar-burger)
 
-Now lets control the states of these elements with our state variable. If the `is-active` className is added on the `navbar-burger`, the burger will animate into a cross. Setting the `is-active` className on the `navbar-menu` will make the menu visible. We can add it using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
+
+
+Now let's control the states of these elements with our state variable. If the `is-active` className is added on the `navbar-burger`, the burger will animate into a cross. And if the `is-active` className is added to the `navbar-menu`, the menu will become visible. We can dynamically set the \`className\` using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
 
 ```tsx
 {/* The navbar-burger */}
