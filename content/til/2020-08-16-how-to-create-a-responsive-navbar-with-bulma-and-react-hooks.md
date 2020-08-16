@@ -71,9 +71,9 @@ And thats it! 🥳
 
 ## Resources
 
-[Navbar](https://bulma.io/documentation/components/navbar/)
+[Bulma Navbar Documentation](https://bulma.io/documentation/components/navbar/)
 
-[heystevegray/dev-portfolio-netlify-cms](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
+[Full source code for my header component](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
 
 ## TLDR
 
