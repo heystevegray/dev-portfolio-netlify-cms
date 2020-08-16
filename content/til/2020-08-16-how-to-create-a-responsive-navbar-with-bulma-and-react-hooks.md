@@ -30,7 +30,7 @@ You can view the full code for my `header.tsx` file [here](https://github.com/he
 
 Lets add a new state variable called `active` to manage the hamberger menu state in our Component.
 
-```tsx
+```tsx {numberLines}
 import React, { useState } from "react"
 
 const Header = () => {
@@ -46,38 +46,51 @@ Quick note about the `navbar-burger`.
 
 Now lets control the states of these elements with our state variable. If the `is-active` `className` is added on the `navbar-burger`, the burger will animate into a cross. Setting the `is-active` `className` on the `navbar-menu` will make the menu visible. We can add it using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
 
-```tsx
-{/* The navbar-burger */}
-<a
-  role="button"
-  className={`navbar-burger burger ${active && "is-active"}`} 
-  onClick={() => {
-    setActive(!active)
-  }}
->
-  <span aria-hidden="true"></span>
-  <span aria-hidden="true"></span>
-  <span aria-hidden="true"></span>
-</a>
-
-{/* The navbar-menu */}
-<div className={`navbar-menu ${active && "is-active"}`}>
-  <div className="navbar-start">
-    <Link to="/til" className="navbar-item">
-      Today I Learned
-    </Link>
+```tsx {numberLines}
+<nav role="navigation" aria-label="main navigation">
+  <div className="navbar-brand">
+    {/* The navbar-burger */}
+    <a
+      role="button"
+      className={`navbar-burger burger ${active && "is-active"}`}
+      aria-label="menu"
+      aria-expanded="false"
+      onClick={() => {
+        setActive(!active)
+      }}
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
-</div>
+
+  {/* The navbar-menu */}
+  {active && (
+    <div
+      className={`navbar-menu has-background-black-bis ${
+        active && "is-active"
+      }`}
+    >
+      <div className="navbar-start">
+        <Link to="/til" className="navbar-item">
+          Today I Learned
+        </Link>
+      </div>
+    </div>
+  )}
+</nav>
 ```
 
 ### Add the `onClick` function
 
-Don't forget to add the `onClick` function to the  `navbar-burger` so that we can set the `active` state when it is clicked.
+Don't forget to add the `onClick` function to the `navbar-burger` so that we can set the `active` state when it is clicked. See line `10` above.
 
 And thats it! 🥳
 
 ### Full source code
-```tsx
+
+```tsx {numberLines}
 import React, { ReactElement, useState } from "react"
 import { Link } from "gatsby"
 
@@ -146,4 +159,4 @@ export default Header
 
 ## TLDR
 
-[Here is how I implemented the responsive Navbar](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx) for my portfolio website using Bulma and React Hooks!  | [Resources](https://bulma.io/documentation/components/navbar/)
+[Here is how I implemented the responsive Navbar](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx) for my portfolio website using Bulma and React Hooks! | [Resources](https://bulma.io/documentation/components/navbar/)
