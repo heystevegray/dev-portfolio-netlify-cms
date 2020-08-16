@@ -11,9 +11,10 @@ tags:
   - hooks
   - bulma
 ---
+## Table of Contents
+
 ```toc
 exclude: Table of Contents
-tight: false
 ```
 
 ## Summary
