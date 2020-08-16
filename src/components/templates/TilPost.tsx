@@ -17,6 +17,7 @@ export const TilPostTemplateQuery = graphql`
       }
       frontmatter {
         title
+        description
         image {
           childImageSharp {
             fixed(width: 125, height: 125) {
