@@ -67,6 +67,8 @@ Don't forget to add the `onClick` function to the  `navbar-burger` so that we ca
 
 And thats it! 🥳
 
+![Mission accomplished](https://media.giphy.com/media/12e5dX36aMp2Ba/giphy.gif)
+
 # Resources
 
 [Navbar](https://bulma.io/documentation/components/navbar/)
