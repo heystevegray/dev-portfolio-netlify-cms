@@ -11,16 +11,11 @@ tags:
   - hooks
   - bulma
 ---
-
-## Table of Contents
-
-```toc
-exclude: Table of Contents
-```
-
 ## Summary
 
-[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` `className` to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the hamburger menu is clicked for anything to happen. The good news is we can easily implement this using the `useState` hook.
+[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. When I copied the example code from the documentation and clicked the menu, nothing happened.
+
+I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the hamburger menu is clicked for anything to happen. The good news is we can easily implement this using the `useState` hook.
 
 ## Example
 
@@ -28,14 +23,14 @@ You can view the full code for my `header.tsx` file [here](https://github.com/he
 
 ### Add the `useState` hook
 
-Lets add a new state variable called `active` to manage the hamberger menu state in our Component.
+Let's add a new state variable called `active` to manage the hamburger menu state in our Component.
 
-```tsx {numberLines}
-import React, { useState } from "react"
+```tsx
+import React, { useState } from "react";
 
 const Header = () => {
-  const [active, setActive] = useState(false)
-}
+  const [active, setActive] = useState(false);
+};
 ```
 
 ### Animate the burger and show the menu
@@ -44,62 +39,54 @@ Quick note about the `navbar-burger`.
 
 > The `navbar-burger` has to contain three empty span tags in order to visualize the hamburger lines or the cross (when active). | [Source](https://bulma.io/documentation/components/navbar/#navbar-burger)
 
-Now lets control the states of these elements with our state variable. If the `is-active` `className` is added on the `navbar-burger`, the burger will animate into a cross. Setting the `is-active` `className` on the `navbar-menu` will make the menu visible. We can add it using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
+Now let's control the states of these elements with our state variable. If the `is-active` className is added on the `navbar-burger`, the burger will animate into a cross. Setting the `is-active` className on the `navbar-menu` will make the menu visible. We can add it using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
 
-```tsx {numberLines}
-<nav role="navigation" aria-label="main navigation">
-  <div className="navbar-brand">
-    {/* The navbar-burger */}
-    <a
-      role="button"
-      className={`navbar-burger burger ${active && "is-active"}`}
-      aria-label="menu"
-      aria-expanded="false"
-      onClick={() => {
-        setActive(!active)
-      }}
-    >
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+```tsx
+{
+  /* The navbar-burger */
+}
+<a
+  role="button"
+  className={`navbar-burger burger ${active && "is-active"}`}
+  onClick={() => {
+    setActive(!active);
+  }}
+>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>;
+
+{
+  /* The navbar-menu */
+}
+<div className={`navbar-menu ${active && "is-active"}`}>
+  <div className="navbar-start">
+    <Link to="/til" className="navbar-item">
+      Today I Learned
+    </Link>
   </div>
-
-  {/* The navbar-menu */}
-  {active && (
-    <div
-      className={`navbar-menu has-background-black-bis ${
-        active && "is-active"
-      }`}
-    >
-      <div className="navbar-start">
-        <Link to="/til" className="navbar-item">
-          Today I Learned
-        </Link>
-      </div>
-    </div>
-  )}
-</nav>
+</div>;
 ```
 
 ### Add the `onClick` function
 
-Don't forget to add the `onClick` function to the `navbar-burger` so that we can set the `active` state when it is clicked. See line `10` above.
+Don't forget to add the `onClick` function to the `navbar-burger` so that we can set the `active` state when it is clicked.
 
 And thats it! 🥳
 
 ### Full source code
 
-```tsx {numberLines}
-import React, { ReactElement, useState } from "react"
-import { Link } from "gatsby"
+```tsx
+import React, { ReactElement, useState } from "react";
+import { Link } from "gatsby";
 
 interface Props {
-  siteTitle: string
+  siteTitle: string;
 }
 
 const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
 
   return (
     <header>
@@ -120,7 +107,7 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
             aria-label="menu"
             aria-expanded="false"
             onClick={() => {
-              setActive(!active)
+              setActive(!active);
             }}
           >
             <span aria-hidden="true"></span>
@@ -131,11 +118,7 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
 
         {/* The navbar-menu */}
         {active && (
-          <div
-            className={`navbar-menu has-background-black-bis ${
-              active && "is-active"
-            }`}
-          >
+          <div className={`navbar-menu has-background-black-bis ${active && "is-active"}`}>
             <div className="navbar-start">
               <Link to="/til" className="navbar-item">
                 Today I Learned
@@ -145,10 +128,10 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
         )}
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
 ```
 
 ## Resources
