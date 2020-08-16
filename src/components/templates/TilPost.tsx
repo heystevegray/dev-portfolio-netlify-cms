@@ -48,7 +48,7 @@ const TilPost = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title={`${title}`} />
-      <section className="section">
+      <section className="section body">
         <div className="container post">
           <section className="hero has-text-centered is-small has-background-black-bis">
             <div className="hero-body">

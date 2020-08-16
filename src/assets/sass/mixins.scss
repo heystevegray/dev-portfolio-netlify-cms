@@ -1,3 +1,5 @@
+$mobile-padding: 0;
+
 @mixin hover {
   color: #f2f2f2;
   transition: all 0.25s ease-out;
@@ -7,5 +9,14 @@
 @mixin roundedImage {
   img {
     border-radius: 50%;
+  }
+}
+
+@mixin removeMobileSectionPadding {
+  @media screen and (max-width: 768px) {
+    .section.body {
+      padding-left: $mobile-padding;
+      padding-right: $mobile-padding;
+    }
   }
 }

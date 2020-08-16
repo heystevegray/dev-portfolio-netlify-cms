@@ -1,13 +1,6 @@
 @import "../mixins.scss";
 
-$mobile-padding: 0;
-
-@media screen and (max-width: 768px) {
-  .section.body {
-    padding-left: $mobile-padding;
-    padding-right: $mobile-padding;
-  }
-}
+@include removeMobileSectionPadding;
 
 .card {
   border: none;
