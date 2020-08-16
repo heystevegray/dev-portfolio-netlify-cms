@@ -69,7 +69,7 @@ Don't forget to add the `onClick` function to the  `navbar-burger` so that we ca
 
 And thats it! 🥳
 
-### Full Source Code
+### Full source code
 ```tsx
 import React, { ReactElement, useState } from "react"
 import { Link } from "gatsby"
