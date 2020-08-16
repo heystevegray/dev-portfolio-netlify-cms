@@ -21,7 +21,7 @@ I learned that you need to add the `is-active` className to both the [navbar-bur
 
 You can view the full code for my `header.tsx` file [here](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx).
 
-### Add the useState hook
+### Add the `useState` hook
 
 Let's add a new state variable called `active` to manage the hamburger menu state in our Component.
 
@@ -64,6 +64,8 @@ Now let's control the states of these elements with our state variable. If the `
   </div>
 </div>
 ```
+
+### Add the `onClick` function
 
 Don't forget to add the `onClick` function to the  `navbar-burger` so that we can set the `active` state when it is clicked.
 
