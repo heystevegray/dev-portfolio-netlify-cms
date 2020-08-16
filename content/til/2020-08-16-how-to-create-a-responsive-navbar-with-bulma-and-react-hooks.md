@@ -1,6 +1,6 @@
 ---
-title: How to create a responsive Navbar with Bulma and React Hooks
-publish_date: 2020-08-16T06:06:40.384Z
+title: Create a responsive Navbar with Bulma and React Hooks
+publish_date: 2020-08-16T06:17:37.097Z
 updated: ""
 description: A minimal Navbar example with built in hamburger menu animations.
 image: assets/erik-odiin-jbqvjx2ewnu-unsplash.jpg
