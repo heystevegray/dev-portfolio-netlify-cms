@@ -1,7 +1,7 @@
 ---
 title: Create a responsive Navbar with Bulma and React Hooks
 publish_date: 2020-08-16T07:05:17.683Z
-updated: ""
+updated: 2020-08-16T17:22:23.482Z
 description: A minimal Navbar example with built in hamburger menu animations.
 image: assets/erik-odiin-jbqvjx2ewnu-unsplash.jpg
 tags:
@@ -11,6 +11,16 @@ tags:
   - hooks
   - bulma
 ---
+
+- [Summary](#summary)
+- [Example](#example)
+  - [Add the `useState` hook](#add-the-usestate-hook)
+  - [Animate the burger and show the menu](#animate-the-burger-and-show-the-menu)
+  - [Add the `onClick` function](#add-the-onclick-function)
+  - [Full source code](#full-source-code)
+- [Resources](#resources)
+- [TLDR](#tldr)
+
 ## Summary
 
 [Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. When I copied the example code from the documentation and clicked the menu, nothing happened.
