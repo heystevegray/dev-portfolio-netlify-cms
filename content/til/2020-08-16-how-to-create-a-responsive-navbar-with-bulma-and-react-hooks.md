@@ -11,6 +11,13 @@ tags:
   - hooks
   - bulma
 ---
+
+## Table of Contents
+
+```toc
+exclude: Table of Contents
+```
+
 ## Summary
 
 [Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` `className` to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the hamburger menu is clicked for anything to happen. The good news is we can easily implement this using the `useState` hook.
