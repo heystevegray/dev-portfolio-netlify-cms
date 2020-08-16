@@ -1,4 +1,6 @@
 @import "mixins.scss";
+@import "components/tilpost.scss";
+@import "components/til.scss";
 
 button {
   &:hover {
@@ -7,7 +9,9 @@ button {
 }
 
 .logo {
-  img {
-    border-radius: 50%;
-  }
+  @include roundedImage;
+}
+
+.post {
+  max-width: 800px;
 }
