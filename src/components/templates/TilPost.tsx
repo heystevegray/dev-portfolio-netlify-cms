@@ -50,18 +50,6 @@ const TilPost = ({ data }): ReactElement => {
       <SEO title={`${title}`} />
       <section className="section">
         <div className="container post">
-          <nav className="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-              <li>
-                <Link to="/til">Today I Learned</Link>
-              </li>
-              <li className="is-active">
-                <Link to="#" aria-current="page">
-                  {title}
-                </Link>
-              </li>
-            </ul>
-          </nav>
           <section className="hero has-text-centered is-small has-background-black-bis">
             <div className="hero-body">
               <div className="column">

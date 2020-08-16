@@ -1,5 +1,14 @@
 @import "../mixins.scss";
 
+$mobile-padding: 0;
+
+@media screen and (max-width: 768px) {
+  .section.body {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}
+
 .card {
   border: none;
 
@@ -16,11 +25,6 @@
 
 .tilPreview {
   padding: 0;
-
-  img {
-    width: 100px;
-    height: auto;
-  }
 
   &:hover {
     @include hover;
