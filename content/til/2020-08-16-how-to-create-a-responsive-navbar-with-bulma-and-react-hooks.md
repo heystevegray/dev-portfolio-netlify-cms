@@ -11,13 +11,13 @@ tags:
   - hooks
   - bulma
 ---
-# Summary
+## Summary
 
 [Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. If you have tried to use Bulma's mobile Navbar and nothing happened, then you are in the right place. When I copy / pasta'ed it from the docs and then clicked on the menu nothing  happened. 
 
 I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the menu is toggled. The good news is that we can easily implement this using the `useState` hook.
 
-# Example
+## Example
 
 You can view the full code for my `header.tsx` file [here](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx).
 
@@ -68,6 +68,69 @@ Now let's control the states of these elements with our state variable. If the `
 Don't forget to add the `onClick` function to the  `navbar-burger` so that we can set the `active` state when it is clicked.
 
 And thats it! 🥳
+
+## Full Source Code
+
+```tsx
+import React, { ReactElement, useState } from "react"
+import { Link } from "gatsby"
+
+interface Props {
+  siteTitle: string
+}
+
+const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
+  const [active, setActive] = useState(false)
+
+  return (
+    <header>
+      <nav role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          {/* Main links */}
+          <Link to="/" className="navbar-item">
+            {siteTitle}
+          </Link>
+          <Link to="/til" className="is-hidden-touch navbar-item">
+            Today I Learned
+          </Link>
+
+          {/* The navbar-burger */}
+          <a
+            role="button"
+            className={`navbar-burger burger ${active && "is-active"}`}
+            aria-label="menu"
+            aria-expanded="false"
+            onClick={() => {
+              setActive(!active)
+            }}
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        {/* The navbar-menu */}
+        {active && (
+          <div
+            className={`navbar-menu has-background-black-bis ${
+              active && "is-active"
+            }`}
+          >
+            <div className="navbar-start">
+              <Link to="/til" className="navbar-item">
+                Today I Learned
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  )
+}
+
+export default Header
+```
 
 # Resources
 
