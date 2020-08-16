@@ -1,6 +1,6 @@
 ---
 title: Create a responsive Navbar with Bulma and React Hooks
-publish_date: 2020-08-16T05:12:50.556Z
+publish_date: 2020-08-16T05:21:30.100Z
 updated: ""
 description: A minimal Navbar example with built in hamburger menu animations.
 image: assets/erik-odiin-jbqvjx2ewnu-unsplash.jpg
@@ -69,9 +69,9 @@ And thats it! 🥳
 
 # Resources
 
-[Navbar](https://bulma.io/documentation/components/navbar/)
+[Bulma's Navbar Documentation](https://bulma.io/documentation/components/navbar/)
 
-[heystevegray/dev-portfolio-netlify-cms](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
+[The full source code to my `header.tsx` file](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
 
 # TLDR
 
