@@ -48,82 +48,84 @@ const TilPost = ({ data }): ReactElement => {
     <Layout>
       <SEO title={`${title}`} />
       <section className="section">
-        <nav className="breadcrumb" aria-label="breadcrumbs">
-          <ul>
-            <li>
-              <Link to="/til">Today I Learned</Link>
-            </li>
-            <li className="is-active">
-              <Link to="#" aria-current="page">
-                {title}
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <section className="hero has-text-centered is-small has-background-black-bis">
-          <div className="hero-body">
-            <div className="column">
-              {image && <Img fixed={image.childImageSharp.fixed} />}
-            </div>
-            <div className="columns is-vcentered">
+        <div className="container post">
+          <nav className="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+              <li>
+                <Link to="/til">Today I Learned</Link>
+              </li>
+              <li className="is-active">
+                <Link to="#" aria-current="page">
+                  {title}
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <section className="hero has-text-centered is-small has-background-black-bis">
+            <div className="hero-body">
               <div className="column">
-                <h1 className="title">{title}</h1>
-                {description && <h2 className="subtitle">{description}</h2>}
+                {image && <Img fixed={image.childImageSharp.fixed} />}
+              </div>
+              <div className="columns is-vcentered">
                 <div className="column">
-                  <div className="columns is-centered">
-                    <div className="column is-narrow">
-                      {publish_date && (
-                        <div className="columns">
-                          <div className="column is-narrow">
-                            <Icon
-                              path={mdiCalendar}
-                              title="Published"
-                              size={1}
-                            />
+                  <h1 className="title">{title}</h1>
+                  {description && <h2 className="subtitle">{description}</h2>}
+                  <div className="column">
+                    <div className="columns is-centered">
+                      <div className="column is-narrow">
+                        {publish_date && (
+                          <div className="columns is-variable is-2-mobile is-0-tablet is-3-desktop is-8-widescreen is-1-fullhd">
+                            <div className="column is-narrow">
+                              <Icon
+                                path={mdiCalendar}
+                                title="Published"
+                                size={1}
+                              />
+                            </div>
+                            <div className="column is-narrow">
+                              <p>
+                                {dayjs(publish_date).format(
+                                  "MMMM D, YYYY @ h:mm A"
+                                )}
+                              </p>
+                            </div>
                           </div>
-                          <div className="column is-narrow">
-                            <p>
-                              {dayjs(publish_date).format(
-                                "MMMM D, YYYY @ h:mm A"
-                              )}
-                            </p>
+                        )}
+                      </div>
+                      <div className="column is-narrow">
+                        {updated && (
+                          <div className="columns">
+                            <div className="column is-narrow">
+                              <Icon
+                                path={mdiCalendarSync}
+                                title="Published"
+                                size={1}
+                              />
+                            </div>
+                            <div className="column is-narrow">
+                              <p>
+                                {dayjs(updated).format("MMMM D, YYYY @ h:mm A")}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                      )}
-                    </div>
-                    <div className="column is-narrow">
-                      {updated && (
-                        <div className="columns">
-                          <div className="column is-narrow">
-                            <Icon
-                              path={mdiCalendarSync}
-                              title="Published"
-                              size={1}
-                            />
-                          </div>
-                          <div className="column is-narrow">
-                            <p>
-                              {dayjs(updated).format("MMMM D, YYYY @ h:mm A")}
-                            </p>
-                          </div>
-                        </div>
-                      )}
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section className="section">
-          {html && (
-            <div
-              className="container content mt-4"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          )}
-        </section>
-        <Tags tags={tags} />
+          </section>
+          <section className="section">
+            {html && (
+              <div
+                className="container content mt-4"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
+            )}
+          </section>
+          <Tags tags={tags} />
+        </div>
       </section>
     </Layout>
   )

@@ -10,3 +10,7 @@ button {
 .logo {
   @include roundedImage;
 }
+
+.post {
+  max-width: 800px;
+}
