@@ -3,3 +3,9 @@
   transition: all 0.25s ease-out;
   transform: translateY(-3px);
 }
+
+@mixin roundedImage {
+  img {
+    border-radius: 50%;
+  }
+}

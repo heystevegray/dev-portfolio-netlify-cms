@@ -5,6 +5,9 @@ import dayjs from "dayjs"
 import Layout from "../layout"
 import Tags from "../Tags"
 import SEO from "../seo"
+import { mdiCalendar, mdiCalendarSync } from "@mdi/js"
+import "../../assets/sass/components/tilpost.scss"
+import Icon from "@mdi/react"
 
 export const TilPostTemplateQuery = graphql`
   query TilPostTemplateQuery($slug: String) {
@@ -16,7 +19,7 @@ export const TilPostTemplateQuery = graphql`
         title
         image {
           childImageSharp {
-            fixed(width: 350) {
+            fixed(width: 125, height: 125) {
               ...GatsbyImageSharpFixed
             }
           }
@@ -44,38 +47,84 @@ const TilPost = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title={`${title}`} />
-      <nav className="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-          <li>
-            <Link to="/til">Today I Learned</Link>
-          </li>
-          <li className="is-active">
-            <Link to="#" aria-current="page">
-              {title}
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-        {title}
-      </h1>
-      {image && <Img fixed={image.childImageSharp.fixed} />}
-      {publish_date && (
-        <p>
-          Published on {dayjs(publish_date).format("dddd, MMMM D, YYYY h:mm A")}
-        </p>
-      )}
-      {updated && (
-        <p>Updated on {dayjs(updated).format("dddd, MMMM D, YYYY h:mm A")}</p>
-      )}
-      {description && <div>{description}</div>}
-      {html && (
-        <div
-          className="container content mt-4"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      )}
-      <Tags tags={tags} />
+      <section className="section">
+        <nav className="breadcrumb" aria-label="breadcrumbs">
+          <ul>
+            <li>
+              <Link to="/til">Today I Learned</Link>
+            </li>
+            <li className="is-active">
+              <Link to="#" aria-current="page">
+                {title}
+              </Link>
+            </li>
+          </ul>
+        </nav>
+        <section className="hero has-text-centered is-small has-background-black-bis">
+          <div className="hero-body">
+            <div className="column">
+              {image && <Img fixed={image.childImageSharp.fixed} />}
+            </div>
+            <div className="columns is-vcentered">
+              <div className="column">
+                <h1 className="title">{title}</h1>
+                {description && <h2 className="subtitle">{description}</h2>}
+                <div className="column">
+                  <div className="columns is-centered">
+                    <div className="column is-narrow">
+                      {publish_date && (
+                        <div className="columns">
+                          <div className="column is-narrow">
+                            <Icon
+                              path={mdiCalendar}
+                              title="Published"
+                              size={1}
+                            />
+                          </div>
+                          <div className="column is-narrow">
+                            <p>
+                              {dayjs(publish_date).format(
+                                "MMMM D, YYYY @ h:mm A"
+                              )}
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="column is-narrow">
+                      {updated && (
+                        <div className="columns">
+                          <div className="column is-narrow">
+                            <Icon
+                              path={mdiCalendarSync}
+                              title="Published"
+                              size={1}
+                            />
+                          </div>
+                          <div className="column is-narrow">
+                            <p>
+                              {dayjs(updated).format("MMMM D, YYYY @ h:mm A")}
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section">
+          {html && (
+            <div
+              className="container content mt-4"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+          )}
+        </section>
+        <Tags tags={tags} />
+      </section>
     </Layout>
   )
 }
