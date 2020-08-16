@@ -7,9 +7,14 @@ export interface Tag {
 interface Props {
   tags: Tag[]
   maxTags?: number
+  background?: string
 }
 
-export default function Tags({ tags, maxTags }: Props): ReactElement {
+export default function Tags({
+  tags,
+  maxTags,
+  background = "is-secondary",
+}: Props): ReactElement {
   const items: Tag[] = maxTags ? tags.slice(0, maxTags) : tags
   return (
     <>
@@ -17,7 +22,7 @@ export default function Tags({ tags, maxTags }: Props): ReactElement {
         <div>
           <ul className="tags">
             {items.map((label, index) => (
-              <span className="tag is-secondary" key={index}>
+              <span className={`tag ${background}`} key={index}>
                 {label}
               </span>
             ))}

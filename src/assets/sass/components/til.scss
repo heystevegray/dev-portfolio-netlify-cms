@@ -1,6 +1,27 @@
 @import "../mixins.scss";
 
+.card {
+  border: none;
+
+  &-image {
+    max-height: 200px;
+    overflow: hidden;
+  }
+}
+
+.box {
+  border: none;
+  overflow: hidden;
+}
+
 .tilPreview {
+  padding: 0;
+
+  img {
+    width: 100px;
+    height: auto;
+  }
+
   &:hover {
     @include hover;
   }

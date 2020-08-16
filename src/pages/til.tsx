@@ -19,10 +19,12 @@ export const TilPostTemplateQuery = graphql`
           }
           frontmatter {
             title
+            description
             image {
               childImageSharp {
-                fixed(width: 100, grayscale: true) {
-                  ...GatsbyImageSharpFixed
+                fluid(quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
                 }
               }
             }
@@ -49,30 +51,40 @@ export default function til({ data }) {
             </div>
           </div>
           <section className="section">
-            {data &&
-              data?.allMarkdownRemark.edges?.map(({ node }) => {
-                return (
-                  <Link
-                    to={`/til${node.fields.slug}`}
-                    className="box tilPreview"
-                    key={node.fields.slug}
-                  >
-                    <div className="columns is-vcentered">
-                      <div className="column">
-                        <p className="title is-4">{node.frontmatter.title}</p>
-                        <p className="subtitle is-6">
-                          {dayjs(node.frontmatter.publish_date).format(
-                            "dddd, MMMM D, YYYY h:mm A"
-                          )}
-                        </p>
-                        <div className="column">
-                          <Tags maxTags={4} tags={node.frontmatter.tags} />
+            <div className="container">
+              {data &&
+                data?.allMarkdownRemark.edges?.map(({ node }) => {
+                  const image = node.frontmatter.image
+                  console.log({ node })
+
+                  return (
+                    <Link
+                      to={`/til${node.fields.slug}`}
+                      className="box tilPreview"
+                      key={node.fields.slug}
+                    >
+                      <div className="card has-background-black-bis">
+                        <div className="card-image">
+                          {image && <Img fluid={image.childImageSharp.fluid} />}
+                        </div>
+                        <div className="card-content">
+                          <p className="title is-centered is-4">
+                            {node.frontmatter.title}
+                          </p>
+                          <p className="subtitle is-6">
+                            {node.frontmatter.description}
+                          </p>
+                          <p>
+                            {dayjs(node.frontmatter.publish_date).format(
+                              "MMM D, YYYY"
+                            )}
+                          </p>
                         </div>
                       </div>
-                    </div>
-                  </Link>
-                )
-              })}
+                    </Link>
+                  )
+                })}
+            </div>
           </section>
         </div>
       </section>
