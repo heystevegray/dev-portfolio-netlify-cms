@@ -11,15 +11,8 @@ tags:
   - hooks
   - bulma
 ---
-
-- [Summary](#summary)
-- [Example](#example)
-  - [Add the `useState` hook](#add-the-usestate-hook)
-  - [Animate the burger and show the menu](#animate-the-burger-and-show-the-menu)
-  - [Add the `onClick` function](#add-the-onclick-function)
-  - [Full source code](#full-source-code)
-- [Resources](#resources)
-- [TLDR](#tldr)
+```toc
+```
 
 ## Summary
 
