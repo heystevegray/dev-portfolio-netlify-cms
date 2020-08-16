@@ -52,33 +52,25 @@ export default function til({ data }) {
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {
                 return (
-                  <div className="box" key={node.fields.slug}>
+                  <Link
+                    to={`/til${node.fields.slug}`}
+                    className="box tilPreview"
+                    key={node.fields.slug}
+                  >
                     <div className="columns is-vcentered">
-                      {/* <div className="column is-one-fifth">
-                    <figure className="image is-100x100">
-                      <Img
-                        fixed={node.frontmatter.image.childImageSharp.fixed}
-                      />
-                    </figure>
-                  </div> */}
-                      <div className="column is-three-quarters">
+                      <div className="column">
                         <p className="title is-4">{node.frontmatter.title}</p>
                         <p className="subtitle is-6">
                           {dayjs(node.frontmatter.publish_date).format(
                             "dddd, MMMM D, YYYY h:mm A"
                           )}
                         </p>
-                        <Tags tags={node.frontmatter.tags} />
-                      </div>
-                      <div className="column is-one-quarter">
-                        <Link to={`/til${node.fields.slug}`}>
-                          <button className="button is-primary is-large is-fullwidth">
-                            Learn More
-                          </button>
-                        </Link>
+                        <div className="column">
+                          <Tags tags={node.frontmatter.tags} />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 )
               })}
           </section>

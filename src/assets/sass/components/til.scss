@@ -1,0 +1,7 @@
+@import "../mixins.scss";
+
+.tilPreview {
+  &:hover {
+    @include hover;
+  }
+}
