@@ -13,7 +13,9 @@ tags:
 ---
 # Summary
 
-[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the menu is toggled. The good news is that we can easily implement this using the `useState` hook.
+[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. If you have tried to use Bulma's mobile Navbar and nothing happened, then you are in the right place. When I copy / pasta'ed it from the docs and then clicked on the menu nothing  happened. 
+
+I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the menu is toggled. The good news is that we can easily implement this using the `useState` hook.
 
 # Example
 
@@ -35,11 +37,7 @@ const Header = () => {
 
 Quick note about the `navbar-burger:`
 
-``
-
 > The `navbar-burger` has to contain three empty span tags in order to visualize the hamburger lines or the cross (when active). | [Source](https://bulma.io/documentation/components/navbar/#navbar-burger)
-
-
 
 Now let's control the states of these elements with our state variable. If the `is-active` className is added on the `navbar-burger`, the burger will animate into a cross. And if the `is-active` className is added to the `navbar-menu`, the menu will become visible. We can dynamically set the \`className\` using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
 
