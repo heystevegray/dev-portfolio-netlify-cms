@@ -12,6 +12,8 @@ tags:
   - bulma
 ---
 ```toc
+exclude: Table of Contents
+tight: false
 ```
 
 ## Summary
