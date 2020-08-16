@@ -67,7 +67,9 @@ Now let's control the states of these elements with our state variable. If the `
 
 Don't forget to add the `onClick` function to the  `navbar-burger` so that we can set the `active` state when it is clicked.
 
-And thats it! 🥳
+That's all folks! 🥳
+
+![That's all folks](https://media.giphy.com/media/kNG2MKFNPrnWw/giphy.gif)
 
 ## Full Source Code
 
