@@ -69,7 +69,7 @@ Don't forget to add the `onClick` function to the  `navbar-burger` so that we ca
 
 That's all folks! 🥳
 
-![That's all folks](https://media.giphy.com/media/kNG2MKFNPrnWw/giphy.gif)
+![That's all folks](https://media.giphy.com/media/kNG2MKFNPrnWw/giphy.gif "That's all folks")
 
 ## Full Source Code
 
