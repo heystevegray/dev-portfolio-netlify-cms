@@ -20,6 +20,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.24",
     "gatsby-remark-prismjs": "^3.5.10",
+    "gatsby-remark-table-of-contents": "0.0.9",
     "gatsby-source-filesystem": "^2.3.24",
     "gatsby-transformer-remark": "^2.8.28",
     "gatsby-transformer-sharp": "^2.5.12",
