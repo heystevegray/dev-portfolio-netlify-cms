@@ -1,5 +1,5 @@
 ---
-title: How to create a responsive Navbar with Bulma and React Hooks
+title: Create a responsive Navbar with Bulma and React Hooks
 publish_date: 2020-08-16T05:12:50.556Z
 updated: ""
 description: A minimal Navbar example with built in hamburger menu animations.
@@ -13,7 +13,7 @@ tags:
 ---
 # Summary
 
-[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` `className` to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the hamburger menu is clicked for anything to happen. The good news is we can easily implement this using the `useState` hook.
+[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the hamburger menu is clicked for anything to happen. The good news is we can easily implement this using the `useState` hook.
 
 # Example
 
@@ -37,7 +37,7 @@ Quick note about the `navbar-burger`.
 
 > The `navbar-burger` has to contain three empty span tags in order to visualize the hamburger lines or the cross (when active). | [Source](https://bulma.io/documentation/components/navbar/#navbar-burger)
 
-Now lets control the states of these elements with our state variable. If the `is-active` `className` is added on the `navbar-burger`, the burger will animate into a cross. Setting the `is-active` `className` on the `navbar-menu` will make the menu visible. We can add it using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
+Now lets control the states of these elements with our state variable. If the `is-active` className is added on the `navbar-burger`, the burger will animate into a cross. Setting the `is-active` className on the `navbar-menu` will make the menu visible. We can add it using [template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like so:
 
 ```tsx
 {/* The navbar-burger */}
