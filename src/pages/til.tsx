@@ -66,7 +66,7 @@ export default function til({ data }) {
                           )}
                         </p>
                         <div className="column">
-                          <Tags tags={node.frontmatter.tags} />
+                          <Tags maxTags={4} tags={node.frontmatter.tags} />
                         </div>
                       </div>
                     </div>

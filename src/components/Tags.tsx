@@ -9,7 +9,7 @@ interface Props {
   maxTags?: number
 }
 
-export default function Tags({ tags, maxTags = 4 }: Props): ReactElement {
+export default function Tags({ tags, maxTags }: Props): ReactElement {
   const items: Tag[] = maxTags ? tags.slice(0, maxTags) : tags
   return (
     <>
