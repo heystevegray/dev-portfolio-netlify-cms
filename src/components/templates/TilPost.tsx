@@ -119,7 +119,7 @@ const TilPost = ({ data }): ReactElement => {
           <section className="section">
             {html && (
               <div
-                className="container content mt-4"
+                className="content"
                 dangerouslySetInnerHTML={{ __html: html }}
               />
             )}
