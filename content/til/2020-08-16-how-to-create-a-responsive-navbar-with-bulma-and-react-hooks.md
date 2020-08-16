@@ -13,7 +13,7 @@ tags:
 ---
 ## Summary
 
-[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. If you have tried to use Bulma's mobile Navbar and nothing happened, then you are in the right place. When I copy / pasta'ed it from the docs and then clicked on the menu nothing  happened. 
+[Here is the Navbar documentation](https://bulma.io/documentation/components/navbar/) from Bulma. When I copy / pasta'ed it from the docs and then clicked on the menu nothing happened. 
 
 I learned that you need to add the `is-active` className to both the [navbar-burger](https://bulma.io/documentation/components/navbar/#navbar-burger) and the [navbar-menu](https://bulma.io/documentation/components/navbar/#navbar-menu) when the menu is toggled. The good news is that we can easily implement this using the `useState` hook.
 
@@ -45,7 +45,7 @@ Now let's control the states of these elements with our state variable. If the `
 {/* The navbar-burger */}
 <a
   role="button"
-  className={`navbar-burger burger ${active && "is-active"}`} 
+  className={`navbar-burger burger ${active && "is-active"}`} // This thing
   onClick={() => {
     setActive(!active)
   }}
@@ -56,7 +56,7 @@ Now let's control the states of these elements with our state variable. If the `
 </a>
 
 {/* The navbar-menu */}
-<div className={`navbar-menu ${active && "is-active"}`}>
+<div className={`navbar-menu ${active && "is-active"}`}> // And this thing
   <div className="navbar-start">
     <Link to="/til" className="navbar-item">
       Today I Learned
