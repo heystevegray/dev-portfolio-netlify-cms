@@ -73,7 +73,7 @@ And thats it! 🥳
 
 [Bulma's Navbar Documentation](https://bulma.io/documentation/components/navbar/)
 
-[The full source code to my `header.tsx` file](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
+[The full source code for my responsive NavBar](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
 
 # TLDR
 
