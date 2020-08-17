@@ -24,7 +24,7 @@ const IndexPage = ({ data }): ReactElement => {
                 <div className="column is-one-fifth">
                   <div className="columns is-centered">
                     <Link className="column" to="/til/">
-                      <button className="button is-large is-link is-rounded">
+                      <button className="button has-text-dark is-large is-link is-rounded">
                         Today I Learned
                       </button>
                     </Link>
