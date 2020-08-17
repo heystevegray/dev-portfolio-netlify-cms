@@ -52,7 +52,6 @@ export default function til({ data }) {
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {
                 const image = node.frontmatter.image
-                console.log({ node })
 
                 return (
                   <Link
