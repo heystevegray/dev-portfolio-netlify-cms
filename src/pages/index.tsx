@@ -11,7 +11,7 @@ const IndexPage = ({ data }): ReactElement => {
 
   return (
     <Layout>
-      <SEO title="Developer Portfolio Website" />
+      <SEO title="Developer Portfolio" />
       <section className="hero is-fullheight-with-navbar has-text-centered has-background-black-bis">
         <div className="hero-body">
           <div className="container">
