@@ -1,7 +1,7 @@
 ---
 title: VS Code - Jump to line number
 publish_date: 2020-08-09T04:25:29.753Z
-updated: ""
+updated: 2020-08-19T23:25:51.949Z
 image: assets/nichlas-andersen-ei9kfavcm-e-unsplash-2-.jpg
 tags:
   - development
