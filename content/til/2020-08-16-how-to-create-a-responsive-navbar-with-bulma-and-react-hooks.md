@@ -4,6 +4,11 @@ publish_date: 2020-08-16T07:05:17.683Z
 updated: 2020-08-16T17:54:10.103Z
 description: A minimal Navbar example with built in hamburger menu animations.
 image: assets/erik-odiin-jbqvjx2ewnu-unsplash.jpg
+til: >-
+  ## TLDR
+
+
+  [Here is how I implemented the responsive Navbar](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx) for my portfolio website using Bulma and React Hooks! | [Resources](https://bulma.io/documentation/components/navbar/)
 tags:
   - development
   - typescript
@@ -145,7 +150,3 @@ export default Header;
 [Bulma Navbar Documentation](https://bulma.io/documentation/components/navbar/)
 
 [Full source code for my header component](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx)
-
-## TLDR
-
-[Here is how I implemented the responsive Navbar](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx) for my portfolio website using Bulma and React Hooks! | [Resources](https://bulma.io/documentation/components/navbar/)
