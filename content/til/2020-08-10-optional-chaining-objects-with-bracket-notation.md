@@ -1,7 +1,7 @@
 ---
 title: Optional chaining objects with bracket notation
 publish_date: 2020-08-10T06:35:26.871Z
-updated: 2020-08-16T22:06:18.799Z
+updated: 2020-08-22T22:13:06.288Z
 image: assets/emily-morter-8xaa0f9yqne-unsplash-1-.jpg
 tldr: >-
   You can use the [optional
