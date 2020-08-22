@@ -11,10 +11,6 @@ export default function TLDR(props: Partial<PreviewProps>) {
       <>
         {title && <p className="title is-centered is-4">{title}</p>}
         {description && <p className="subtitle is-6">{description}</p>}
-        {/* {tldr && (
-          <div className="content" dangerouslySetInnerHTML={{ __html: tldr }} />
-        )} */}
-        {tldr}
         <section className="section">
           {tldr && (
             <div

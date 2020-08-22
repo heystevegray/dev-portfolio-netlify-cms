@@ -27,6 +27,7 @@ export const TilPostTemplateQuery = graphql`
                 }
               }
             }
+            tldr
             publish_date
             tags
           }
