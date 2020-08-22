@@ -1,6 +1,6 @@
 @import "mixins.scss";
 @import "components/tilpost.scss";
-@import "components/til.scss";
+@import "components/post.scss";
 
 button {
   &:hover {
@@ -14,4 +14,5 @@ button {
 
 .post {
   max-width: 800px;
+  overflow: hidden;
 }

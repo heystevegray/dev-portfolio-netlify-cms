@@ -4,6 +4,7 @@
 
 .card {
   border: none;
+  width: 100%;
 
   &-image {
     max-height: 200px;
@@ -16,7 +17,7 @@
   overflow: hidden;
 }
 
-.tilPreview {
+.preview {
   padding: 0;
 
   &:hover {

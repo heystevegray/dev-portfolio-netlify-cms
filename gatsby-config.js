@@ -74,7 +74,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: "Monokai Dimmed",
+              theme: "Monokai",
             },
           },
         ],

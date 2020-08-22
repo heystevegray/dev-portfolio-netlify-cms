@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import dayjs from "dayjs"
 import "../assets/styles.css"
 import Tags from "../components/Tags"
 import SEO from "../components/seo"
+import Preview from "../components/Preview"
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
@@ -19,7 +19,6 @@ export const TilPostTemplateQuery = graphql`
           }
           frontmatter {
             title
-            description
             image {
               childImageSharp {
                 fluid(quality: 100) {
@@ -38,6 +37,7 @@ export const TilPostTemplateQuery = graphql`
 `
 
 export default function til({ data }) {
+  const [showTil, setShowTil] = useState(false)
   return (
     <Layout>
       <SEO title="Today I Learned" />
@@ -45,39 +45,30 @@ export default function til({ data }) {
         <section className="section has-text-centered">
           <div className="container">
             <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
+            <section className="section has-background-primary">
+              <button
+                className="button is-large is-dark"
+                onClick={() => setShowTil(!showTil)}
+              >
+                TLDR
+              </button>
+            </section>
           </div>
         </section>
         <section className="section body">
           <div className="container">
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {
-                const image = node.frontmatter.image
-
                 return (
-                  <Link
-                    to={`/til${node.fields.slug}`}
-                    className="box tilPreview"
-                    key={node.fields.slug}
-                  >
-                    <div className="card has-background-black-ter">
-                      <div className="card-image">
-                        {image && <Img fluid={image.childImageSharp.fluid} />}
-                      </div>
-                      <div className="card-content">
-                        <p className="title is-centered is-4">
-                          {node.frontmatter.title}
-                        </p>
-                        <p className="subtitle is-6">
-                          {node.frontmatter.description}
-                        </p>
-                        <p>
-                          {dayjs(node.frontmatter.publish_date).format(
-                            "MMM D, YYYY"
-                          )}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
+                  <Preview
+                    title={node.frontmatter.title}
+                    description={node.frontmatter.description}
+                    publish_date={node.frontmatter.publish_date}
+                    image={node.frontmatter.image}
+                    slug={node.fields.slug}
+                    showTil={showTil}
+                    tldr={node.frontmatter.tldr}
+                  />
                 )
               })}
           </div>

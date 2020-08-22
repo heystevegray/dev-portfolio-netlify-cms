@@ -33,7 +33,9 @@ const Layout = ({ children }) => {
       //   padding: `0 1.0875rem 1.45rem`,
       // }}
       >
-        <main className="has-background-black-bis">{children}</main>
+        <section class="hero has-background-black-bis is-fullheight">
+          {children}
+        </section>
       </div>
       <Footer />
     </>
