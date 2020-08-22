@@ -1,7 +1,7 @@
 ---
 title: VS Code - Jump to line number
 publish_date: 2020-08-09T04:25:29.753Z
-updated: 2020-08-19T23:25:51.949Z
+updated: 2020-08-22T22:11:18.769Z
 image: assets/nichlas-andersen-ei9kfavcm-e-unsplash-2-.jpg
 tldr: You can use the `control + G` shortcut in [VS
   Code](https://code.visualstudio.com/) to jump to a specific line number in
