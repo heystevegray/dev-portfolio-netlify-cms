@@ -10,7 +10,7 @@ til: >-
   [Here is how I implemented the responsive Navbar](https://github.com/heystevegray/dev-portfolio-netlify-cms/blob/master/src/components/header.tsx) for my portfolio website using Bulma and React Hooks! | [Resources](https://bulma.io/documentation/components/navbar/)
 title: Create a responsive Navbar with Bulma and React Hooks
 publish_date: 2020-08-16T07:05:17.683Z
-updated: 2020-08-16T17:54:10.103Z
+updated: 2020-08-22T22:12:43.141Z
 description: A minimal Navbar example with built in hamburger menu animations.
 image: assets/erik-odiin-jbqvjx2ewnu-unsplash.jpg
 tags:
