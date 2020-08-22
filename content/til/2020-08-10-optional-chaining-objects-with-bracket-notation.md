@@ -3,6 +3,18 @@ title: Optional chaining objects with bracket notation
 publish_date: 2020-08-10T06:35:26.871Z
 updated: 2020-08-16T22:06:18.799Z
 image: assets/emily-morter-8xaa0f9yqne-unsplash-1-.jpg
+tldr: >-
+  You can use the [optional
+  chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+  operator (**`?.`**) with objects and [bracket
+  notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
+
+
+  ```javascript
+
+  const nestedProp = obj?.["first"]?.["second"]
+
+  ```
 tags:
   - development
   - javascript
@@ -30,11 +42,3 @@ const nestedProp = obj?.["first"]?.["second"]
 ## Resources
 
 [The optional chaining operator (**`?.`**)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-
-## TLDR
-
-You can use the [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) operator (**`?.`**) with objects and [bracket notation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors).
-
-```javascript
-const nestedProp = obj?.["first"]?.["second"]
-```
