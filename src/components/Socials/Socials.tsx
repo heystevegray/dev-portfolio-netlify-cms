@@ -1,6 +1,6 @@
 import React from "react"
 import Icon from "@mdi/react"
-import { mdiGithub, mdiTwitter, mdiLinkedin } from "@mdi/js"
+import { mdiGithub, mdiTwitter, mdiLinkedin, mdiNpm } from "@mdi/js"
 
 import "./Socials.scss"
 
@@ -24,6 +24,13 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
               path={mdiGithub}
               size={iconSize}
             />
+          </a>
+          <a
+            className="socials__link"
+            href="https://www.npmjs.com/~heystevegray"
+            target="_blank"
+          >
+            <Icon className="column is-primary" path={mdiNpm} size={iconSize} />
           </a>
           <a
             className="socials__link"
