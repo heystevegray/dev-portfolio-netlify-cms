@@ -2,7 +2,7 @@
 title: Discard file changes with git checkout
 publish_date: 2020-09-04T06:29:02.968Z
 updated: ""
-description: Quickly revert temporary changes that you made to your files.
+description: Revert changes that you made to your files.
 image: assets/hidde-van-esch-gazronaxvsu-unsplash.jpg
 tags:
   - development
