@@ -19,8 +19,8 @@ I frequently make temporary changes to files while testing out new features. And
 2. See your changes with `git status`
 
 ```shell
-> git status                                                                                             
-
+> git status
+                                                                                             
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -42,7 +42,6 @@ git checkout src/pages/index.tsx
 
 ```shell
 > git status                                                                                             
-
 On branch master
 Your branch is up to date with 'origin/master'.
 
