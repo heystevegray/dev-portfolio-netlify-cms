@@ -18,26 +18,24 @@ I frequently make temporary changes to files while testing out new features. And
 1. Make a change to a file like `src/pages/index.tsx` and save.
 2. See your changes with `git status`
 
-```shell
-> git status
-                                                                                             
-On branch master
-Your branch is up to date with 'origin/master'.
+   ```shell
+   > git status
+                                                                                                
+   On branch master
+   Your branch is up to date with 'origin/master'.
 
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   src/pages/index.tsx
+   Changes not staged for commit:
+     (use "git add <file>..." to update what will be committed)
+     (use "git restore <file>..." to discard changes in working directory)
+           modified:   src/pages/index.tsx
 
-no changes added to commit (use "git add" and/or "git commit -a")
-```
-
+   no changes added to commit (use "git add" and/or "git commit -a")
+   ```
 3. Run `git checkout` on the same file.
 
-```shell
-git checkout src/pages/index.tsx
-```
-
+   ```shell
+   git checkout src/pages/index.tsx
+   ```
 4. You will see there are no changes when you run `git status` again.
 
 ```shell
