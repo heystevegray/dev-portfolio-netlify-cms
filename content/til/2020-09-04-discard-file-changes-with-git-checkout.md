@@ -11,7 +11,7 @@ tags:
 ---
 # Summary
 
-I frequently make temporary changes to files while testing out new features. And Since I use [GitKraken](https://www.gitkraken.com/) primarily, my process is usually to just right-click, and discard the changes to a file. Today I learned you can `git checkout` the current file you are working on again to reset it's content.
+Sometimes we need to revert temporary file changes. I frequently need to discard experimental changes to files that pertain to my feature. And since I use [GitKraken](https://www.gitkraken.com/) primarily, my process is usually to just right-click, and discard the changes to a file. Today I learned you can use `git checkout` on a file to reset it's content.
 
 # Example
 
