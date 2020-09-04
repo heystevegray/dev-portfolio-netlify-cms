@@ -11,7 +11,7 @@ tags:
 ---
 # Summary
 
-I frequently need to discard experimental changes to files that pertain to my feature. Since I use [GitKraken](https://www.gitkraken.com/) primarily, my process is usually to just right-click, and discard the changes to a file. Today I learned you can use `git checkout` on a file to reset it's content.
+I frequently discard experimental changes to files that pertain to my feature. Since I use [GitKraken](https://www.gitkraken.com/) primarily, my process is usually to just right-click, and discard the changes to a file. Today I learned that you can use `git checkout` on a file to reset it's content.
 
 # Example
 
