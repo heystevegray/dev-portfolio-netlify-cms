@@ -38,13 +38,14 @@ I frequently make temporary changes to files while testing out new features. And
    ```
 4. You will see there are no changes when you run `git status` again.
 
-```shell
-> git status                                                                                             
-On branch master
-Your branch is up to date with 'origin/master'.
+   ```shell
+   > git status                                                                                             
 
-nothing to commit, working tree clean
-```
+   On branch master
+   Your branch is up to date with 'origin/master'.
+
+   nothing to commit, working tree clean
+   ```
 
 # Resources
 
@@ -59,6 +60,6 @@ You can reset changes to a file with the `git checkout` command.
 1. Make a change to a file like `src/pages/index.tsx` and save.
 2. Run `git checkout` on the same file to revert the changes.
 
-```shell
-git checkout src/pages/index.tsx
-```
+   ```shell
+   git checkout src/pages/index.tsx
+   ```
