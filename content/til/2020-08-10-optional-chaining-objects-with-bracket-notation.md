@@ -19,12 +19,19 @@ tags:
   - development
   - javascript
 ---
+
+## Overview
+
+```toc
+exclude: Overview
+```
+
 ## Summary
 
 You are probably familiar with this representation of [optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining):
 
 ```javascript
-const nestedProp = obj.first?.second
+const nestedProp = obj.first?.second;
 ```
 
 if not:
@@ -36,7 +43,7 @@ You can use optional chaining with objects that use [bracket notation](https://d
 ## Example
 
 ```javascript
-const nestedProp = obj?.["first"]?.["second"]
+const nestedProp = obj?.["first"]?.["second"];
 ```
 
 ## Resources

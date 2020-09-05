@@ -19,7 +19,7 @@ const IndexPage = ({ data }): ReactElement => {
             <h1 className="title is-1">Steve Gray</h1>
             <div className="container">
               <h3 className="title is-3">Software Engineer</h3>
-              <h5 className="subtitle">{`React | Typescript | Bulma`}</h5>
+              <h5 className="subtitle">{`React | Typescript`}</h5>
               <div className="columns is-centered">
                 <div className="column is-one-fifth">
                   <div className="columns is-centered">

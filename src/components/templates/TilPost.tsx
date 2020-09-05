@@ -74,7 +74,7 @@ const TilPost = ({ data }): ReactElement => {
                             <div className="column is-narrow">
                               <p>
                                 {dayjs(publish_date).format(
-                                  "MMMM D, YYYY @ h:mm A"
+                                  "MMM D, YYYY @ h:mm A"
                                 )}
                               </p>
                             </div>
@@ -93,7 +93,7 @@ const TilPost = ({ data }): ReactElement => {
                             </div>
                             <div className="column is-narrow">
                               <p>
-                                {dayjs(updated).format("MMMM D, YYYY @ h:mm A")}
+                                {dayjs(updated).format("MMM D, YYYY @ h:mm A")}
                               </p>
                             </div>
                           </div>
