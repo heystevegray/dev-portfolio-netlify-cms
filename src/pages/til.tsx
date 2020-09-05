@@ -1,11 +1,11 @@
-import React from "react"
-import Layout from "../components/layout"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import dayjs from "dayjs"
-import "../assets/styles.css"
-import Tags from "../components/Tags"
-import SEO from "../components/seo"
+import React from "react";
+import Layout from "../components/layout";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import dayjs from "dayjs";
+import "../assets/styles.css";
+import Tags from "../components/Tags";
+import SEO from "../components/seo";
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
@@ -35,7 +35,7 @@ export const TilPostTemplateQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default function til({ data }) {
   return (
@@ -51,7 +51,7 @@ export default function til({ data }) {
           <div className="container">
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {
-                const image = node.frontmatter.image
+                const image = node.frontmatter.image;
 
                 return (
                   <Link
@@ -78,11 +78,11 @@ export default function til({ data }) {
                       </div>
                     </div>
                   </Link>
-                )
+                );
               })}
           </div>
         </section>
       </div>
     </Layout>
-  )
+  );
 }

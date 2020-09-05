@@ -1,12 +1,12 @@
-import React from "react"
-import Icon from "@mdi/react"
-import { mdiGithub, mdiTwitter, mdiLinkedin, mdiNpm } from "@mdi/js"
+import React from "react";
+import Icon from "@mdi/react";
+import { mdiGithub, mdiTwitter, mdiLinkedin, mdiNpm } from "@mdi/js";
 
-import "./Socials.scss"
+import "./Socials.scss";
 
 interface Props {
-  iconSize?: number
-  className?: string
+  iconSize?: number;
+  className?: string;
 }
 
 export default function Socials({ className = "", iconSize = 3 }: Props) {
@@ -57,5 +57,5 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -4,20 +4,20 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require(`path`)
+const path = require(`path`);
 
-const { createFilePath } = require("gatsby-source-filesystem")
+const { createFilePath } = require("gatsby-source-filesystem");
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+  const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
       value,
-    })
+    });
   }
-}
+};
 
 async function getPageData(graphql) {
   return await graphql(`
@@ -40,18 +40,18 @@ async function getPageData(graphql) {
         }
       }
     }
-  `)
+  `);
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { data } = await getPageData(graphql)
+  const { data } = await getPageData(graphql);
   data.tilPosts.edges.forEach(({ node }) => {
-    const { slug } = node.fields
-    console.log(`Found post /til${slug}`)
+    const { slug } = node.fields;
+    console.log(`Found post /til${slug}`);
     actions.createPage({
       path: `/til${slug}`,
       component: path.resolve("./src/components/templates/TilPost.tsx"),
       context: { slug: slug },
-    })
-  })
-}
+    });
+  });
+};

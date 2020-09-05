@@ -1,13 +1,13 @@
-import React, { ReactElement } from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import "../assets/styles.css"
-import "../assets/sass/index.scss"
-import Img from "gatsby-image"
+import React, { ReactElement } from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import "../assets/styles.css";
+import "../assets/sass/index.scss";
+import Img from "gatsby-image";
 
 const IndexPage = ({ data }): ReactElement => {
-  const image = data?.file?.childImageSharp?.fixed
+  const image = data?.file?.childImageSharp?.fixed;
 
   return (
     <Layout>
@@ -36,10 +36,10 @@ const IndexPage = ({ data }): ReactElement => {
         </div>
       </section>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query {
@@ -51,4 +51,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

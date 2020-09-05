@@ -1,5 +1,5 @@
-import React from "react"
-import Socials from "./Socials/Socials"
+import React from "react";
+import Socials from "./Socials/Socials";
 
 export default function Footer() {
   return (
@@ -9,5 +9,5 @@ export default function Footer() {
         Steve Gray © {new Date().getFullYear()}
       </p>
     </footer>
-  )
+  );
 }
