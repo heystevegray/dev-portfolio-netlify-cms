@@ -17,6 +17,12 @@ button {
   max-width: 800px;
 }
 
+.footer {
+  @include center;
+  flex-direction: column;
+  padding: 5rem !important;
+}
+
 .subtitle {
   margin-top: 0 !important;
 }
