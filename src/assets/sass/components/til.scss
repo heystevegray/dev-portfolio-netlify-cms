@@ -16,10 +16,20 @@
   overflow: hidden;
 }
 
-.tilPreview {
-  padding: 0;
+.til {
+  &-preview {
+    padding: 0;
 
-  &:hover {
-    @include hover;
+    &:hover {
+      @include hover;
+    }
   }
+
+  &-subtitle {
+    margin-top: 0 !important;
+  }
+}
+
+p {
+  margin-bottom: 0.5rem !important;
 }

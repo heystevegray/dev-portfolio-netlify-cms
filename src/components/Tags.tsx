@@ -6,20 +6,26 @@ export interface Tag {
 
 interface Props {
   tags: Tag[];
+  className?: string;
+  centered?: boolean;
   maxTags?: number;
   background?: string;
 }
 
 export default function Tags({
   tags,
+  className = "",
+  centered = true,
   maxTags,
   background = "is-secondary",
 }: Props): ReactElement {
   const items: Tag[] = maxTags ? tags.slice(0, maxTags) : tags;
+  const centerTags = centered ? "tag-container" : "";
+
   return (
-    <>
+    <div className={`${className}`}>
       {tags && tags.length ? (
-        <div>
+        <div className={`${centerTags}`}>
           <ul className="tags">
             {items.map((label, index) => (
               <span className={`tag ${background}`} key={index}>
@@ -29,6 +35,6 @@ export default function Tags({
           </ul>
         </div>
       ) : null}
-    </>
+    </div>
   );
 }

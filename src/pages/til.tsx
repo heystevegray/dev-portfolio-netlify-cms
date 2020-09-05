@@ -56,7 +56,7 @@ export default function til({ data }) {
                 return (
                   <Link
                     to={`/til${node.fields.slug}`}
-                    className="box tilPreview"
+                    className="box til-preview"
                     key={node.fields.slug}
                   >
                     <div className="card has-background-black-ter">
@@ -64,17 +64,22 @@ export default function til({ data }) {
                         {image && <Img fluid={image.childImageSharp.fluid} />}
                       </div>
                       <div className="card-content">
-                        <p className="title is-centered is-4">
-                          {node.frontmatter.title}
-                        </p>
-                        <p className="subtitle is-6">
-                          {node.frontmatter.description}
-                        </p>
                         <p>
                           {dayjs(node.frontmatter.publish_date).format(
                             "MMM D, YYYY"
                           )}
                         </p>
+                        <p className="title is-4">{node.frontmatter.title}</p>
+                        {node.frontmatter.description && (
+                          <p className="subtitle is-6 til-subtitle">
+                            {node.frontmatter.description}
+                          </p>
+                        )}
+                        <Tags
+                          centered={false}
+                          maxTags={4}
+                          tags={node.frontmatter.tags}
+                        />
                       </div>
                     </div>
                   </Link>
