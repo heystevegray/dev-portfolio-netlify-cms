@@ -57,10 +57,8 @@ const TilPost = ({ data }): ReactElement => {
               </div>
               <div className="columns is-vcentered">
                 <div className="column">
-                  <h1 className="title til-title">{title}</h1>
-                  {description && (
-                    <h2 className="subtitle til-subtitle">{description}</h2>
-                  )}
+                  <h1 className="title">{title}</h1>
+                  {description && <h2 className="subtitle">{description}</h2>}
                   <div className="column">
                     <div className="columns is-centered">
                       <div className="column is-narrow">
@@ -109,6 +107,7 @@ const TilPost = ({ data }): ReactElement => {
           </section>
           <section className="section">
             <Tags tags={tags} />
+            <br />
             <br />
             {html && (
               <div

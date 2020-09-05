@@ -71,7 +71,7 @@ export default function til({ data }) {
                         </p>
                         <p className="title is-4">{node.frontmatter.title}</p>
                         {node.frontmatter.description && (
-                          <p className="subtitle is-6 til-subtitle">
+                          <p className="subtitle is-6">
                             {node.frontmatter.description}
                           </p>
                         )}
