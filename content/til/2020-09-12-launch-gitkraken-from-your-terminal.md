@@ -20,7 +20,7 @@ exclude: Overview
 
 # Summary
 
-I prefer to use [GitKraken](https://gitkraken.com/) for maniging my repositories. However, it's gotten to the point where it's way too much work to open the GitKraken app, and then select my recent repository. I found a faster way to do it thought the terminal with the following command:
+I prefer to use [GitKraken](https://gitkraken.com/) for managing my repositories. However, it's gotten to the point where it's way too much work to open the GitKraken app, and then select my recent repository. I found a faster way to do it thought the terminal with the following command:
 
 > `open -a 'GitKraken' --args -p $(pwd)`
 
@@ -51,11 +51,11 @@ This should launch your repository in a new tab in GitKraken! 😎
 
 # Resources
 
-- [git](https://git-scm.com/)
-- [GitKraken](https://gitkraken.com/)
-- [How to Create Bash Aliases](https://linuxize.com/post/how-to-create-bash-aliases/)
-- [Linux and Unix alias command tutorial with examples](https://shapeshed.com/unix-alias/#what-is-a-shell-alias)
-- [How do I remove an alias?](https://askubuntu.com/a/325380)
+* [git](https://git-scm.com/)
+* [GitKraken](https://gitkraken.com/)
+* [How to Create Bash Aliases](https://linuxize.com/post/how-to-create-bash-aliases/)
+* [Linux and Unix alias command tutorial with examples](https://shapeshed.com/unix-alias/#what-is-a-shell-alias)
+* [How do I remove an alias?](https://askubuntu.com/a/325380)
 
 # TLDR
 
