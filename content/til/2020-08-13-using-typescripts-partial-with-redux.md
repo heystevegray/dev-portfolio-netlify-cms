@@ -1,7 +1,7 @@
 ---
 title: Using Typescript's Partial with Redux
 publish_date: 2020-08-13T02:41:07.927Z
-updated: 2020-08-13T03:00:25.955Z
+updated: ""
 image: assets/element5-digital-uikfmnxo3bi-unsplash.jpg
 tags:
   - development
