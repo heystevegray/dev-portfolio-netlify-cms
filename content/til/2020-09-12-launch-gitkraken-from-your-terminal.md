@@ -1,6 +1,6 @@
 ---
 title: Launch GitKraken from your terminal
-publish_date: 2020-09-12T04:48:46.909Z
+publish_date: 2020-09-12T05:18:41.695Z
 updated: ""
 description: Use a single command to open your repository in GitKraken.
 image: assets/silviu-beniamin-tofan-fqmfkui-wyo-unsplash.jpg
