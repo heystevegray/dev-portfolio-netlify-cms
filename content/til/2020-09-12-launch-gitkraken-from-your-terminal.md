@@ -12,6 +12,9 @@ tags:
   - terminal
   - workflow
 ---
+```toc
+```
+
 # Summary
 
 I prefer to use [GitKraken](https://gitkraken.com/) for maniging my repositories. However, it's gotten to the point where it's way too much work to open the GitKraken app, and then select my recent repository. I found a faster way to do it thought the terminal with the following command:
