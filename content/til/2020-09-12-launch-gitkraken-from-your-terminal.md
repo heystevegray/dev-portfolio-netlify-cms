@@ -66,7 +66,7 @@ You can also add this alias to your terminal's configuration file. I'm using [zs
 alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
-If you are not sure what terminal you are using you can check with the following command:
+For bash terminals, you can add this command to your `~/.bash_profile` (for Mac) or your `~/.bashrc` files. If you are not sure what terminal you are using you can check with the following command:
 
 ```bash
 echo "$SHELL"
@@ -96,6 +96,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 * [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
 * [Shell Expansion](http://linuxcommand.org/lc3_lts0080.php)
 * [Oh My Zsh](https://ohmyz.sh)
+* [Why doesn't .bashrc run automatically?](https://apple.stackexchange.com/a/13019)
 
 # TLDR
 
