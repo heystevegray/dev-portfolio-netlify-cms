@@ -21,7 +21,7 @@ const IndexPage = ({ data }): ReactElement => {
               <h3 className="title is-3">Software Engineer</h3>
               <h5 className="subtitle">{`React | Typescript`}</h5>
               <div className="columns is-centered">
-                <Link className="column" to="/til/">
+                <Link className="column" to="/til">
                   <button className="button has-text-dark is-large is-link is-rounded">
                     Today I Learned
                   </button>
