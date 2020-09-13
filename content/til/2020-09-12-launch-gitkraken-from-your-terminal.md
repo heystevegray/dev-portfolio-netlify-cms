@@ -23,7 +23,7 @@ exclude: Overview
 
 I prefer to use [GitKraken](https://gitkraken.com/) for managing my repositories. However, it's gotten to the point where it's way too much work to open the GitKraken app, and then select my recent repository. I found a faster way to do it thought the terminal with the following command:
 
-> `open -na "GitKraken" --args -p $(pwd)`
+> `open -a "GitKraken" --args -p $(pwd)`
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
 
@@ -36,7 +36,7 @@ Since we both already forgot that, let's create an [alias](https://linuxize.com/
 Create a custom alias named `kraken` by typing the following in your terminal
 
 ```bash
-alias kraken='open -na "GitKraken" --args -p $(pwd)'
+alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
@@ -45,7 +45,7 @@ To list your aliases, just type the alias command
 
 ```bash
 alias
-kraken='open -na "GitKraken" --args -p $(pwd)'
+kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
 [Source](https://askubuntu.com/a/102094)
@@ -63,7 +63,7 @@ unalias kraken
 You can also add this alias to your terminals configuration file. I'm using zsh, so I will add the following line to my `.zshrc` file:
 
 ```bash
-alias kraken='open -na "GitKraken" --args -p $(pwd)'
+alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
 # Example
@@ -94,7 +94,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 You can open your repository in GitKraken from your terminal's working directory with the following alias:
 
 ```bash
-alias kraken='open -na "GitKraken" --args -p $(pwd)'
+alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
