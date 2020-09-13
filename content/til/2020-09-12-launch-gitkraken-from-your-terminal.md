@@ -12,6 +12,7 @@ tags:
   - terminal
   - workflow
   - zsh
+  - bash
 ---
 # Overview
 
