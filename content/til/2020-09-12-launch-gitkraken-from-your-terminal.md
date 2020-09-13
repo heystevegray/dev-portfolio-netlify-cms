@@ -23,7 +23,7 @@ exclude: Overview
 
 I prefer to use [GitKraken](https://gitkraken.com/) for managing my repositories. However, it's gotten to the point where it's way too much work to open the GitKraken app, and then select my recent repository. I found a faster way to do it thought the terminal with the following command:
 
-> `open -a 'GitKraken' --args -p $(pwd)`
+> `open -a 'GitKraken' --args -p $PWD`
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
 
@@ -40,7 +40,7 @@ I am running a zsh shell on a Mac. But the default one is a bash shell.
 Create a custom alias named `kraken` by typing the following in your terminal
 
 ```bash
-alias kraken='open -a "GitKraken" --args -p $(pwd)' 
+alias kraken='open -a "GitKraken" --args -p $PWD' 
 ```
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
@@ -62,6 +62,7 @@ You can delete your alias with the `unalias` command
 [Source](https://askubuntu.com/a/325380)
 
 ## Wait wot
+
 $PWD, printenv what is `-p`
 
 # Example
@@ -91,7 +92,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 You can open your repository in GitKraken from your terminal's working directory with the following alias:
 
 ```bash
-alias kraken='open -a "GitKraken" --args -p $(pwd)' 
+alias kraken='open -a "GitKraken" --args -p $PWD' 
 ```
 
-[Source]https://flaviocopes.com/how-to-set-alias-shell(https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
+\[Source]https://flaviocopes.com/how-to-set-alias-shell(https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
