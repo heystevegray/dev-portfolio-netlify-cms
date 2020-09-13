@@ -58,9 +58,9 @@ unalias kraken
 
 [Source](https://askubuntu.com/a/325380)
 
-## Configuration file
+## Persisting aliases (configuration file)
 
-You can also add this alias to your terminal's configuration file. I'm using [zsh](https://ohmyz.sh/), so I will add the following line to my `~/.zshrc` file:
+You may notice the above method only sets the alias while your terminal is open. If you want to be able to persist this alias and use it when you open any terminal, you need to add it to your terminal's configuration file. I'm using [zsh](https://ohmyz.sh/), so I will add the following line to my `~/.zshrc` file:
 
 ```bash
 alias kraken='open -a "GitKraken" --args -p $(pwd)'
