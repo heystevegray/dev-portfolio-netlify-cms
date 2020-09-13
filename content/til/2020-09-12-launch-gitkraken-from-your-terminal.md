@@ -95,6 +95,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 * [How do I list my aliases?](https://askubuntu.com/a/102094)
 * [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
 * [Shell Expansion](http://linuxcommand.org/lc3_lts0080.php)
+* [Oh My Zsh](https://ohmyz.sh)
 
 # TLDR
 
