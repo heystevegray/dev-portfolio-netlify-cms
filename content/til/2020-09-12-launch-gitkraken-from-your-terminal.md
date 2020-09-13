@@ -40,7 +40,7 @@ I am using
 Create a custom alias named `kraken` by typing the following in your terminal
 
 ```bash
-alias kraken="open -a 'GitKraken' --args -p $(pwd)" 
+alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
@@ -50,14 +50,16 @@ To list your aliases, just type the alias command
 ```bash
 > alias
 ```
+
 [Source](https://askubuntu.com/a/102094)
 
 You can delete your alias with the `unalias` command
+
 ```bash
 > unalias kraken
 ```
-[Source](https://askubuntu.com/a/325380)
 
+[Source](https://askubuntu.com/a/325380)
 
 # Example
 
