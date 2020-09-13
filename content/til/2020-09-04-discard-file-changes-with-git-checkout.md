@@ -9,7 +9,6 @@ tags:
   - git
   - gitkraken
 ---
-
 ## Overview
 
 ```toc
@@ -26,7 +25,7 @@ I frequently discard experimental changes to files that pertain to my feature. S
 2. See your changes with `git status`
 
    ```shell
-   > git status
+   git status
 
    On branch master
    Your branch is up to date with 'origin/master'.
@@ -38,17 +37,15 @@ I frequently discard experimental changes to files that pertain to my feature. S
 
    no changes added to commit (use "git add" and/or "git commit -a")
    ```
-
 3. Run `git checkout` on the same file.
 
    ```shell
-   > git checkout src/pages/index.tsx
+   git checkout src/pages/index.tsx
    ```
-
 4. You will see there are no changes when you run `git status` again.
 
    ```shell
-   > git status
+   git status
 
    On branch master
    Your branch is up to date with 'origin/master'.
@@ -70,5 +67,5 @@ You can reset changes to a file with the `git checkout` command.
 2. Run `git checkout` on the same file to revert the changes.
 
    ```shell
-   > git checkout src/pages/index.tsx
+   git checkout src/pages/index.tsx
    ```
