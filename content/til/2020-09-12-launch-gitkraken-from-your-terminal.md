@@ -97,7 +97,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 * [Shell Expansion](http://linuxcommand.org/lc3_lts0080.php)
 * [Oh My Zsh](https://ohmyz.sh)
 * [Why doesn't .bashrc run automatically?](https://apple.stackexchange.com/a/13019)
-* [How to persist an alias](https://stackoverflow.com/questions/29790259/mac-how-to-save-alias-in-computer/29853849#29853849)
+* [How to persist an alias?](https://stackoverflow.com/questions/29790259/mac-how-to-save-alias-in-computer/29853849#29853849)
 
 # TLDR
 
