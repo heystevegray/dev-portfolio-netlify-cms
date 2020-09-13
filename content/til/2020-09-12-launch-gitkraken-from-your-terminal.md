@@ -1,6 +1,6 @@
 ---
 title: Launch GitKraken from your terminal
-publish_date: 2020-09-13T19:08:25.554Z
+publish_date: 2020-09-13T19:12:40.001Z
 updated: ""
 description: Use an alias to open your repository in GitKraken.
 image: assets/silviu-beniamin-tofan-fqmfkui-wyo-unsplash.jpg
@@ -94,7 +94,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 You can open your repository in GitKraken from your terminal's working directory with the following alias:
 
 ```bash
-alias kraken='open -a "GitKraken" --args -p $PWD' 
+alias kraken='open -na "GitKraken" --args -p $(git rev-parse --show-toplevel)'
 ```
 
-\[Source]https://flaviocopes.com/how-to-set-alias-shell(https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
+[Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2832084)
