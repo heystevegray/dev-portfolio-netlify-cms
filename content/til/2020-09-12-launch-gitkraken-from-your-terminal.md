@@ -61,6 +61,9 @@ You can delete your alias with the `unalias` command
 
 [Source](https://askubuntu.com/a/325380)
 
+## Wait wot
+$PWD, printenv what is `-p`
+
 # Example
 
 Once you have created the alias, navigate to your repository and run the `kraken` command.
