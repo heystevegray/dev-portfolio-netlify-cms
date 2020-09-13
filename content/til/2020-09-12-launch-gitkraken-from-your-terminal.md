@@ -45,7 +45,7 @@ To list your aliases, just type the alias command
 
 ```bash
 alias
-kraken='open -na "GitKraken" --args -p $(git rev-parse --show-toplevel)'
+kraken='open -na "GitKraken" --args -p $(pwd)'
 ```
 
 [Source](https://askubuntu.com/a/102094)
@@ -63,7 +63,7 @@ unalias kraken
 You can also add this alias to your terminals configuration file. I'm using zsh, so I will add the following line to my .zshrc file:
 
 ```bash
-alias kraken='open -na "GitKraken" --args -p $(git rev-parse --show-toplevel)'
+alias kraken='open -na "GitKraken" --args -p $(pwd)'
 ```
 
 # Example
@@ -88,7 +88,6 @@ This should launch your repository in a new tab in GitKraken! 😎
 * [How do I list my aliases?](https://askubuntu.com/a/102094)
 * [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
 * [Shell Expanstion](http://linuxcommand.org/lc3_lts0080.php)
-* [Pass the root of the current git repo to GitKraken](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2832084)
 
 # TLDR
 
