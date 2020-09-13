@@ -40,10 +40,10 @@ I am running a zsh shell on a Mac. But the default one is a bash shell.
 Create a custom alias named `kraken` by typing the following in your terminal
 
 ```bash
-alias kraken='open -a "GitKraken" --args -p $PWD' 
+alias kraken='open -na "GitKraken" --args -p $(git rev-parse --show-toplevel)'
 ```
 
-[Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
+[Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2832084)
 
 To list your aliases, just type the alias command
 
@@ -86,6 +86,8 @@ This should launch your repository in a new tab in GitKraken! 😎
 * [How do I remove an alias?](https://askubuntu.com/a/325380)
 * [How do I list my aliases?](https://askubuntu.com/a/102094)
 * [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
+* [Shell Expanstion](http://linuxcommand.org/lc3_lts0080.php)
+* [Pass the root of the current git repo to GitKraken](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2832084)
 
 # TLDR
 
