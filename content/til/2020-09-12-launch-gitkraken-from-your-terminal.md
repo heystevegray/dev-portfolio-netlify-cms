@@ -60,7 +60,7 @@ unalias kraken
 
 ## Configuration file
 
-You can also add this alias to your terminal's configuration file. I'm using [zsh](https://ohmyz.sh/), so I will add the following line to my `.zshrc` file:
+You can also add this alias to your terminal's configuration file. I'm using [zsh](https://ohmyz.sh/), so I will add the following line to my `~/.zshrc` file:
 
 ```bash
 alias kraken='open -a "GitKraken" --args -p $(pwd)'
