@@ -60,7 +60,7 @@ unalias kraken
 
 ## Configuration file
 
-You can also add this alias to your terminals configuration file. I'm using zsh, so I will add the following line to my .zshrc file:
+You can also add this alias to your terminals configuration file. I'm using zsh, so I will add the following line to my `.zshrc` file:
 
 ```bash
 alias kraken='open -na "GitKraken" --args -p $(pwd)'
@@ -87,7 +87,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 * [How do I remove an alias?](https://askubuntu.com/a/325380)
 * [How do I list my aliases?](https://askubuntu.com/a/102094)
 * [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
-* [Shell Expanstion](http://linuxcommand.org/lc3_lts0080.php)
+* [Shell Expansion](http://linuxcommand.org/lc3_lts0080.php)
 
 # TLDR
 
