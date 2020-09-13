@@ -1,7 +1,7 @@
 ---
 title: Discard file changes with git checkout
 publish_date: 2020-09-04T06:53:24.054Z
-updated: 2020-09-13T18:33:48.099Z
+updated: 2020-09-13T18:38:39.016Z
 description: Revert changes that you made to your files.
 image: assets/hidde-van-esch-gazronaxvsu-unsplash.jpg
 tags:
