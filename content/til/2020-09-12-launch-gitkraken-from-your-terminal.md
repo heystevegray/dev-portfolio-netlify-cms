@@ -11,6 +11,7 @@ tags:
   - alias
   - terminal
   - workflow
+  - zsh
 ---
 # Overview
 
@@ -29,6 +30,12 @@ I prefer to use [GitKraken](https://gitkraken.com/) for managing my repositories
 Since we both already forgot that, let's create an [alias](https://linuxize.com/post/how-to-create-bash-aliases/) so that we can open our repository in GitKraken with a single command: `kraken`. An alias is basically a custom command that runs another command. It's used when you are to ~~lazy~~ smart to type out a longer command that you use frequently.
 
 # Usage
+
+## rc file
+
+I am using
+
+## terminal
 
 Create a custom alias named `kraken` by typing the following in your terminal
 
@@ -78,7 +85,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 You can open your repository in GitKraken from your terminal's working directory with the following alias:
 
 ```bash
-alias kraken="open -a 'GitKraken' --args -p $(pwd)" 
+alias kraken='open -a "GitKraken" --args -p $(pwd)' 
 ```
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
