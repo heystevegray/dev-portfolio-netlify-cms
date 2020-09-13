@@ -31,11 +31,11 @@ Since we both already forgot that, let's create an [alias](https://linuxize.com/
 
 # Usage
 
-## rc file
+## Configuration file
 
 I am running a zsh shell on a Mac. But the default one is a bash shell.
 
-## terminal
+## Terminal
 
 Create a custom alias named `kraken` by typing the following in your terminal
 
