@@ -24,7 +24,7 @@ I frequently discard experimental changes to files that pertain to my feature. S
 1. Make a change to a file like `src/pages/index.tsx` and save.
 2. See your changes with `git status`
 
-   ```shell
+   ```bash
    git status
 
    On branch master
