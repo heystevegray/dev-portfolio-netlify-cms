@@ -39,7 +39,7 @@ Create a custom alias named `kraken` by typing the following in your terminal
 alias kraken='open -na "GitKraken" --args -p $(pwd)'
 ```
 
-[Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2832084)
+[Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
 
 To list your aliases, just type the alias command
 
@@ -94,7 +94,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 You can open your repository in GitKraken from your terminal's working directory with the following alias:
 
 ```bash
-alias kraken='open -na "GitKraken" --args -p $(git rev-parse --show-toplevel)'
+alias kraken='open -na "GitKraken" --args -p $(pwd)'
 ```
 
-[Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2832084)
+[Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
