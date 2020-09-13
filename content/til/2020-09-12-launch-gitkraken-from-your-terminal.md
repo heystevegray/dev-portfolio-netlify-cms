@@ -66,7 +66,7 @@ You can also add this alias to your terminal's configuration file. I'm using [zs
 alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
-If you are using a bash terminal, you can add it to your `~/.bash_profile` or `~/.bashrc` file. If you are not sure what terminal you are using you can check with the following command:
+If you are not sure what terminal you are using you can check with the following command:
 
 ```bash
 echo "$SHELL"
