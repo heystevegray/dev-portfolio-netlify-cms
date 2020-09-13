@@ -41,7 +41,7 @@ alias kraken='open -a "GitKraken" --args -p $(pwd)'
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
 
-To list your aliases, just type the alias command
+To list your aliases, just type the `alias` command
 
 ```bash
 alias
@@ -60,10 +60,17 @@ unalias kraken
 
 ## Configuration file
 
-You can also add this alias to your terminals configuration file. I'm using zsh, so I will add the following line to my `.zshrc` file:
+You can also add this alias to your terminal's configuration file. I'm using [zsh](https://ohmyz.sh/), so I will add the following line to my `.zshrc` file:
 
 ```bash
 alias kraken='open -a "GitKraken" --args -p $(pwd)'
+```
+
+If you are using a bash terminal, you can add it to your `~/.bash_profile` or `~/.bashrc` file. If you are not sure what terminal you are using you can check with the following command:
+
+```bash
+echo "$SHELL"
+/bin/zsh
 ```
 
 # Example
