@@ -33,7 +33,7 @@ Since we both already forgot that, let's create an [alias](https://linuxize.com/
 
 ## Terminal
 
-Create a custom alias named `kraken` by typing the following in your terminal
+Create a custom alias named `kraken` by typing the following in your terminal:
 
 ```bash
 alias kraken='open -a "GitKraken" --args -p $(pwd)'
@@ -41,7 +41,7 @@ alias kraken='open -a "GitKraken" --args -p $(pwd)'
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
 
-To list your aliases, just type the `alias` command
+To list your aliases, just type the `alias` command:
 
 ```bash
 alias
@@ -50,7 +50,7 @@ kraken='open -a "GitKraken" --args -p $(pwd)'
 
 [Source](https://askubuntu.com/a/102094)
 
-You can delete your alias with the `unalias` command
+You can delete your alias with the `unalias` command:
 
 ```bash
 unalias kraken
@@ -60,13 +60,13 @@ unalias kraken
 
 ## Persisting aliases (configuration file)
 
-You may notice the above method only sets the alias while your terminal is open. If you want to be able to persist this alias and use it when you open any terminal, you need to add it to your terminal's configuration file. I'm using [zsh](https://ohmyz.sh/), so I will add the following line to my `~/.zshrc` file:
+You may notice the above method doesn't persist your alias after you close the terminal. To [persist your alias](https://stackoverflow.com/a/29853849), you need to add it to your terminal's configuration file. I'm using [zsh](https://ohmyz.sh/), so I will add the following line to my `~/.zshrc` file:
 
 ```bash
 alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
-For bash terminals, you can add this command to your `~/.bash_profile` (for Mac) or your `~/.bashrc` files. If you are not sure what terminal you are using you can check with the following command:
+For bash terminals, you can add this command to your `~/.bash_profile` (for Mac) or `~/.bashrc` files. If you are not sure what terminal you are using you can check with the following command:
 
 ```bash
 echo "$SHELL"
