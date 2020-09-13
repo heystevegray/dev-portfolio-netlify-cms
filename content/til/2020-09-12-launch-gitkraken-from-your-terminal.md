@@ -33,7 +33,7 @@ Since we both already forgot that, let's create an [alias](https://linuxize.com/
 
 ## rc file
 
-I am using
+I am running a zsh shell on a Mac. But the default one is a bash shell.
 
 ## terminal
 
@@ -81,6 +81,7 @@ This should launch your repository in a new tab in GitKraken! 😎
 * [Linux and Unix alias command tutorial with examples](https://shapeshed.com/unix-alias/#what-is-a-shell-alias)
 * [How do I remove an alias?](https://askubuntu.com/a/325380)
 * [How do I list my aliases?](https://askubuntu.com/a/102094)
+* [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
 
 # TLDR
 
