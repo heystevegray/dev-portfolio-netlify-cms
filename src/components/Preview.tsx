@@ -1,55 +1,70 @@
-import React from "react"
-import { Link } from "gatsby"
-import Img from "gatsby-image"
-import dayjs from "dayjs"
-import TLDR from "./TLDR"
+import React from "react";
+import { Link } from "gatsby";
+import Img from "gatsby-image";
+import dayjs from "dayjs";
+import TLDR from "./TLDR";
+import BlogCard from "../components/Cards/BlogCard";
 
-import "../assets/styles.css"
+import "../assets/styles.css";
+import Tags, { Tag } from "./Tags";
 
-export interface PreviewProps {
-  slug: string
-  image: any
-  publish_date: string
-  description: string
-  title: string
-  showTil: boolean
-  tldr: string
+export interface Frontmatter {
+  image: any;
+  publish_date: string;
+  description: string;
+  title: string;
+  tldr: string;
+  tags: Tag[];
 }
 
-export default function Preview(frontmatter: PreviewProps) {
-  const {
-    slug,
-    image,
-    title,
-    description,
-    publish_date,
-    showTil,
-    tldr,
-  } = frontmatter
+export interface Fields {
+  slug: string;
+}
 
-  return (
-    <Link to={`/til${slug}`} className="box preview" key={slug}>
+export interface PreviewProps {
+  frontmatter: Frontmatter;
+  fields: Fields;
+  tldr: string;
+  isTldr: boolean;
+}
+
+export default function Preview({ frontmatter, fields, isTldr }: PreviewProps) {
+  const { image, title, description, publish_date, tldr } = frontmatter;
+  const { slug } = fields;
+
+  const body = (
+    <div key={slug}>
       <div className="card has-background-black-ter">
-        <div className="card-image">
-          {!showTil && image && <Img fluid={image.childImageSharp.fluid} />}
-        </div>
+        {isTldr ? (
+          <TLDR
+            title={title}
+            tldr={tldr}
+            publish_date={publish_date}
+            description={description}
+          />
+        ) : (
+          <BlogCard frontmatter={frontmatter} fields={fields} image={image} />
+        )}
         <div className="card-content">
-          {showTil ? (
-            <TLDR
-              title={title}
-              tldr={tldr}
-              publish_date={publish_date}
-              description={description}
-            />
-          ) : (
-            <>
-              <p className="title is-centered is-4">{title}</p>
-              <p className="subtitle is-6">{description}</p>
-              <p>{dayjs(publish_date).format("MMM D, YYYY")}</p>
-            </>
-          )}
+          <Tags centered={false} maxTags={4} tags={frontmatter.tags} />
         </div>
       </div>
-    </Link>
-  )
+    </div>
+  );
+
+  return (
+    <>
+      {isTldr ? (
+        <div className="box">{body}</div>
+      ) : (
+        <Link
+          to={`/til${fields.slug}`}
+          className="box til-preview preview"
+          key={fields.slug}
+        >
+          {body}
+        </Link>
+      )}
+    </>
+  );
 }

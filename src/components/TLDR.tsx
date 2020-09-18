@@ -1,26 +1,16 @@
-import React from "react"
-import { PreviewProps } from "./Preview"
-import dayjs from "dayjs"
+import React from "react";
+import { Frontmatter } from "./Preview";
+import dayjs from "dayjs";
+import Markdown from "markdown-to-jsx";
 
-export default function TLDR(props: Partial<PreviewProps>) {
-  const { title, description, publish_date, tldr } = props
-  console.log({ tldr })
+export default function TLDR(props: Partial<Frontmatter>) {
+  const { title, description, publish_date, tldr } = props;
 
   return (
-    <div>
-      <>
-        {title && <p className="title is-centered is-4">{title}</p>}
-        {description && <p className="subtitle is-6">{description}</p>}
-        <section className="section">
-          {tldr && (
-            <div
-              className="content"
-              dangerouslySetInnerHTML={{ __html: tldr }}
-            />
-          )}
-        </section>
-        {publish_date && <p>{dayjs(publish_date).format("MMM D, YYYY")}</p>}
-      </>
-    </div>
-  )
+    <section className="section">
+      {title && <p className="title is-centered is-4">{title}</p>}
+      {publish_date && <p>{dayjs(publish_date).format("MMM D, YYYY")}</p>}
+      {tldr && <Markdown>{tldr}</Markdown>}
+    </section>
+  );
 }

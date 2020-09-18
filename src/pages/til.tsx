@@ -7,6 +7,8 @@ import Tags from "../components/Tags";
 import SEO from "../components/seo";
 
 import "../assets/styles.css";
+import Preview from "../components/Preview";
+import { node } from "prop-types";
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
@@ -15,11 +17,13 @@ export const TilPostTemplateQuery = graphql`
     ) {
       edges {
         node {
+          rawMarkdownBody
           fields {
             slug
           }
           frontmatter {
             title
+            description
             image {
               childImageSharp {
                 fluid(quality: 100) {
@@ -39,7 +43,7 @@ export const TilPostTemplateQuery = graphql`
 `;
 
 export default function til({ data }) {
-  const [showTil, setShowTil] = useState(false)
+  const [isTldr, setIsTldr] = useState(true);
   return (
     <Layout>
       <SEO title="Today I Learned" />
@@ -47,10 +51,10 @@ export default function til({ data }) {
         <section className="section has-text-centered">
           <div className="container">
             <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
-            <section className="section has-background-primary">
+            <section className="section">
               <button
                 className="button is-large is-dark"
-                onClick={() => setShowTil(!showTil)}
+                onClick={() => setIsTldr(!isTldr)}
               >
                 TLDR
               </button>
@@ -61,38 +65,22 @@ export default function til({ data }) {
           <div className="container">
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {
-                const image = node.frontmatter.image;
+                const { frontmatter, fields, rawMarkdownBody } = node;
+                console.log({ frontmatter });
+                const regex = /# TLDR[^|]*$/;
+                const tldr = regex.exec(rawMarkdownBody) || "";
+                console.log({ tldr });
+
+                const final = tldr.toString().replace("# TLDR", "");
+                console.log({ final });
 
                 return (
-                  <Link
-                    to={`/til${node.fields.slug}`}
-                    className="box til-preview"
-                    key={node.fields.slug}
-                  >
-                    <div className="card has-background-black-ter">
-                      <div className="card-image">
-                        {image && <Img fluid={image.childImageSharp.fluid} />}
-                      </div>
-                      <div className="card-content">
-                        <p>
-                          {dayjs(node.frontmatter.publish_date).format(
-                            "MMM D, YYYY"
-                          )}
-                        </p>
-                        <p className="title is-4">{node.frontmatter.title}</p>
-                        {node.frontmatter.description && (
-                          <p className="subtitle is-6">
-                            {node.frontmatter.description}
-                          </p>
-                        )}
-                        <Tags
-                          centered={false}
-                          maxTags={4}
-                          tags={node.frontmatter.tags}
-                        />
-                      </div>
-                    </div>
-                  </Link>
+                  <Preview
+                    tldr={final}
+                    frontmatter={frontmatter}
+                    fields={fields}
+                    isTldr={isTldr}
+                  />
                 );
               })}
           </div>
