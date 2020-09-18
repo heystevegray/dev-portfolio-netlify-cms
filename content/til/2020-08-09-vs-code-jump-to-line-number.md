@@ -12,6 +12,13 @@ tags:
   - development
   - vscode
 ---
+
+## Overview
+
+```toc
+exclude: Overview
+```
+
 ## Summary
 
 If you have an open file in [VS Code](https://code.visualstudio.com/), use `control + G` to jump to a specific line number. Type the number of the line you want to jump to and press enter. Learn more about [all keybindings in VS Code](https://code.visualstudio.com/docs/getstarted/keybindings).

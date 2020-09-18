@@ -1,0 +1,5 @@
+@import "../mixins.scss";
+
+.tag-container {
+  @include center;
+}

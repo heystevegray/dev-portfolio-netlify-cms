@@ -1,12 +1,12 @@
-import React, { ReactElement, useState } from "react"
-import { Link } from "gatsby"
+import React, { ReactElement, useState } from "react";
+import { Link } from "gatsby";
 
 interface Props {
-  siteTitle: string
+  siteTitle: string;
 }
 
 const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
 
   return (
     <header>
@@ -31,7 +31,7 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
             aria-label="menu"
             aria-expanded="false"
             onClick={() => {
-              setActive(!active)
+              setActive(!active);
             }}
           >
             <span aria-hidden="true"></span>
@@ -59,7 +59,7 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
         )}
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

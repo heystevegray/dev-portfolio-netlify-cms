@@ -1,13 +1,13 @@
-import React, { ReactElement } from "react"
-import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
-import dayjs from "dayjs"
-import Layout from "../layout"
-import Tags from "../Tags"
-import SEO from "../seo"
-import { mdiCalendar, mdiCalendarSync } from "@mdi/js"
-import "../../assets/sass/components/tilpost.scss"
-import Icon from "@mdi/react"
+import React, { ReactElement } from "react";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import dayjs from "dayjs";
+import Layout from "../layout";
+import Tags from "../Tags";
+import SEO from "../seo";
+import { mdiCalendar, mdiCalendarSync } from "@mdi/js";
+import "../../assets/sass/components/tilpost.scss";
+import Icon from "@mdi/react";
 
 export const TilPostTemplateQuery = graphql`
   query TilPostTemplateQuery($slug: String) {
@@ -32,7 +32,7 @@ export const TilPostTemplateQuery = graphql`
       html
     }
   }
-`
+`;
 
 const TilPost = ({ data }): ReactElement => {
   const {
@@ -42,8 +42,8 @@ const TilPost = ({ data }): ReactElement => {
     image,
     updated,
     tags,
-  } = data.markdownRemark.frontmatter
-  const { html } = data.markdownRemark
+  } = data.markdownRemark.frontmatter;
+  const { html } = data.markdownRemark;
 
   return (
     <Layout>
@@ -74,7 +74,7 @@ const TilPost = ({ data }): ReactElement => {
                             <div className="column is-narrow">
                               <p>
                                 {dayjs(publish_date).format(
-                                  "MMMM D, YYYY @ h:mm A"
+                                  "MMM D, YYYY @ h:mm A"
                                 )}
                               </p>
                             </div>
@@ -93,7 +93,7 @@ const TilPost = ({ data }): ReactElement => {
                             </div>
                             <div className="column is-narrow">
                               <p>
-                                {dayjs(updated).format("MMMM D, YYYY @ h:mm A")}
+                                {dayjs(updated).format("MMM D, YYYY @ h:mm A")}
                               </p>
                             </div>
                           </div>
@@ -106,6 +106,9 @@ const TilPost = ({ data }): ReactElement => {
             </div>
           </section>
           <section className="section">
+            <Tags tags={tags} />
+            <br />
+            <br />
             {html && (
               <div
                 className="content"
@@ -113,10 +116,9 @@ const TilPost = ({ data }): ReactElement => {
               />
             )}
           </section>
-          <Tags tags={tags} />
         </div>
       </section>
     </Layout>
-  )
-}
-export default TilPost
+  );
+};
+export default TilPost;

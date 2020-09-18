@@ -20,10 +20,11 @@ tags:
   - hooks
   - bulma
 ---
-## Table of Contents
+
+## Overview
 
 ```toc
-exclude: Table of Contents
+exclude: Overview
 ```
 
 ## Summary
@@ -133,7 +134,11 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
 
         {/* The navbar-menu */}
         {active && (
-          <div className={`navbar-menu has-background-black-bis ${active && "is-active"}`}>
+          <div
+            className={`navbar-menu has-background-black-bis ${
+              active && "is-active"
+            }`}
+          >
             <div className="navbar-start">
               <Link to="/til" className="navbar-item">
                 Today I Learned

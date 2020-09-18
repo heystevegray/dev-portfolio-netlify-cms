@@ -1,11 +1,12 @@
-import React, { useState } from "react"
-import Layout from "../components/layout"
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import "../assets/styles.css"
-import Tags from "../components/Tags"
-import SEO from "../components/seo"
-import Preview from "../components/Preview"
+import React, { useState } from "react";
+import Layout from "../components/layout";
+import { graphql, Link } from "gatsby";
+import Img from "gatsby-image";
+import dayjs from "dayjs";
+import Tags from "../components/Tags";
+import SEO from "../components/seo";
+
+import "../assets/styles.css";
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
@@ -35,7 +36,7 @@ export const TilPostTemplateQuery = graphql`
       }
     }
   }
-`
+`;
 
 export default function til({ data }) {
   const [showTil, setShowTil] = useState(false)
@@ -60,21 +61,43 @@ export default function til({ data }) {
           <div className="container">
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {
+                const image = node.frontmatter.image;
+
                 return (
-                  <Preview
-                    title={node.frontmatter.title}
-                    description={node.frontmatter.description}
-                    publish_date={node.frontmatter.publish_date}
-                    image={node.frontmatter.image}
-                    slug={node.fields.slug}
-                    showTil={showTil}
-                    tldr={node.frontmatter.tldr}
-                  />
-                )
+                  <Link
+                    to={`/til${node.fields.slug}`}
+                    className="box til-preview"
+                    key={node.fields.slug}
+                  >
+                    <div className="card has-background-black-ter">
+                      <div className="card-image">
+                        {image && <Img fluid={image.childImageSharp.fluid} />}
+                      </div>
+                      <div className="card-content">
+                        <p>
+                          {dayjs(node.frontmatter.publish_date).format(
+                            "MMM D, YYYY"
+                          )}
+                        </p>
+                        <p className="title is-4">{node.frontmatter.title}</p>
+                        {node.frontmatter.description && (
+                          <p className="subtitle is-6">
+                            {node.frontmatter.description}
+                          </p>
+                        )}
+                        <Tags
+                          centered={false}
+                          maxTags={4}
+                          tags={node.frontmatter.tags}
+                        />
+                      </div>
+                    </div>
+                  </Link>
+                );
               })}
           </div>
         </section>
       </div>
     </Layout>
-  )
+  );
 }

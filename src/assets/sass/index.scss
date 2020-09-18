@@ -1,5 +1,7 @@
 @import "mixins.scss";
 @import "components/tilpost.scss";
+@import "components/til.scss";
+@import "components/tags.scss";
 @import "components/post.scss";
 
 button {
@@ -15,4 +17,19 @@ button {
 .post {
   max-width: 800px;
   overflow: hidden;
+}
+
+.footer {
+  @include center;
+  flex-direction: column;
+  padding: 5rem !important;
+}
+
+.subtitle {
+  margin-top: 0 !important;
+  color: #b8bebf !important;
+}
+
+p {
+  margin-bottom: 0.5rem !important;
 }

@@ -1,0 +1,27 @@
+@import "../mixins.scss";
+
+@include removeMobileSectionPadding;
+
+.card {
+  border: none;
+
+  &-image {
+    max-height: 200px;
+    overflow: hidden;
+  }
+}
+
+.box {
+  border: none;
+  overflow: hidden;
+}
+
+.til {
+  &-preview {
+    padding: 0;
+
+    &:hover {
+      @include hover;
+    }
+  }
+}

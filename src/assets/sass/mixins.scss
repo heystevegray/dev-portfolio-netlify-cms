@@ -1,9 +1,19 @@
 $mobile-padding: 10px;
 
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin hover {
   color: #f2f2f2;
   transition: all 0.25s ease-out;
   transform: translateY(-3px);
+
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 @mixin roundedImage {
