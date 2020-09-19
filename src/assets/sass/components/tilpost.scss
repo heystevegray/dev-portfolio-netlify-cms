@@ -1,3 +1,15 @@
 @import "../mixins.scss";
+@import "../_variables.scss";
 
 @include roundedImage;
+
+.hero-body {
+  width: 100%;
+  min-height: 250px;
+}
+
+.til-post-body {
+  @include center;
+  margin-top: 35px;
+  padding: 0;
+}

@@ -15,7 +15,6 @@ export default function TLDR({ frontmatter }: Props) {
       <div className="card-content card-body">
         <p>{dayjs(publish_date).format("MMM D, YYYY")}</p>
         <p className="title is-4">{title}</p>
-        {description && <p className="subtitle is-6">{description}</p>}
         {tldr && <Markdown>{tldr}</Markdown>}
       </div>
     </div>
