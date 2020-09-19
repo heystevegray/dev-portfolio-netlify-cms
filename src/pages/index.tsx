@@ -5,44 +5,33 @@ import SEO from "../components/seo";
 import "../assets/styles.css";
 import "../assets/sass/index.scss";
 import Img from "gatsby-image";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: "#1abc9c",
-    },
-  },
-});
 
 const IndexPage = ({ data }): ReactElement => {
   const image = data?.file?.childImageSharp?.fixed;
 
   return (
-    <ThemeProvider theme={theme}>
-      <Layout>
-        <SEO title="Developer Portfolio" />
-        <section className="hero is-fullheight-with-navbar has-text-centered has-background-black-bis">
-          <div className="hero-body">
+    <Layout>
+      <SEO title="Developer Portfolio" />
+      <section className="hero is-fullheight-with-navbar has-text-centered has-background-black-bis">
+        <div className="hero-body">
+          <div className="container">
+            {image && <Img className="logo" fixed={image} />}
+            <h1 className="title is-1">Steve Gray</h1>
             <div className="container">
-              {image && <Img className="logo" fixed={image} />}
-              <h1 className="title is-1">Steve Gray</h1>
-              <div className="container">
-                <h3 className="title is-3">Software Engineer</h3>
-                <h5 className="subtitle">{`React | Typescript`}</h5>
-                <div className="columns is-centered">
-                  <Link className="column" to="/til">
-                    <button className="button has-text-dark is-large is-link is-rounded">
-                      Today I Learned
-                    </button>
-                  </Link>
-                </div>
+              <h3 className="title is-3">Software Engineer</h3>
+              <h5 className="subtitle">{`React | Typescript`}</h5>
+              <div className="columns is-centered">
+                <Link className="column" to="/til">
+                  <button className="button has-text-dark is-large is-link is-rounded">
+                    Today I Learned
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
-        </section>
-      </Layout>
-    </ThemeProvider>
+        </div>
+      </section>
+    </Layout>
   );
 };
 

@@ -11,7 +11,7 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
   return (
     <header>
       <nav
-        className="has-background-black-bis"
+        className="navbar is-fixed-top has-background-black-bis"
         role="navigation"
         aria-label="main navigation"
       >

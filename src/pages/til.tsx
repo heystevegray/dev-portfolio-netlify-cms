@@ -4,10 +4,26 @@ import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import Preview from "../components/Preview";
 import { FormControlLabel, Switch } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
 
 import "../assets/styles.css";
+import "../assets/sass/components/til.scss";
 
 const localStorageKey = "heystevegray-tldr";
+
+const CustomSwitch = withStyles({
+  switchBase: {
+    color: "#1abc9c",
+    "&$checked": {
+      color: "#1abc9c",
+    },
+    "&$checked + $track": {
+      backgroundColor: "#1abc9c",
+    },
+  },
+  checked: {},
+  track: {},
+})(Switch);
 
 export default function til({ data }) {
   const initialState =
@@ -23,27 +39,29 @@ export default function til({ data }) {
   return (
     <Layout>
       <SEO title="Today I Learned" />
-      <section className="has-text-centered">
-        <div className="container til-header">
-          <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
+      <section className="section  has-text-centered card-body">
+        <div className="container">
           <section className="section card-body">
-            <FormControlLabel
-              value="top"
-              control={
-                <Switch
-                  checked={isTldr}
-                  onChange={handleToggle}
-                  name="checkedB"
-                  color="primary"
-                />
-              }
-              label="TLDR"
-              labelPlacement="top"
-            />
+            <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
           </section>
         </div>
       </section>
-      <div className="container post">
+      <div className="tldr-switch">
+        <FormControlLabel
+          value="top"
+          control={
+            <CustomSwitch
+              checked={isTldr}
+              onChange={handleToggle}
+              name="checkedB"
+              color="primary"
+            />
+          }
+          label="TLDR"
+          labelPlacement="end"
+        />
+      </div>
+      <div className="container til-card-container post">
         <section className="section body">
           <div className="container">
             {data &&
