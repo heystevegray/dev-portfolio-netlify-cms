@@ -1,8 +1,11 @@
 @import "mixins.scss";
+@import "_variables.scss";
 @import "components/tilpost.scss";
 @import "components/til.scss";
 @import "components/tags.scss";
 @import "components/post.scss";
+@import "components/tldr.scss";
+@import "components/card.scss";
 
 button {
   &:hover {
@@ -15,7 +18,7 @@ button {
 }
 
 .post {
-  max-width: 800px;
+  max-width: $card-width;
   overflow: hidden;
 }
 

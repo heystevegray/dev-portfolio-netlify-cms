@@ -1,0 +1,8 @@
+@import "../_variables.scss";
+
+.card {
+  border: none;
+  //   width: $card-width;
+  max-width: $card-width;
+  min-height: $card-height;
+}

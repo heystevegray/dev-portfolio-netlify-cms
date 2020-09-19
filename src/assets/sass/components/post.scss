@@ -2,16 +2,6 @@
 
 @include removeMobileSectionPadding;
 
-.card {
-  border: none;
-  width: 100%;
-
-  &-image {
-    max-height: 200px;
-    overflow: hidden;
-  }
-}
-
 .box {
   border: none;
   overflow: hidden;

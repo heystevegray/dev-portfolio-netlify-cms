@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@mdi/js": "^5.5.55",
     "@mdi/react": "^1.4.0",
     "dayjs": "^1.8.35",
@@ -31,7 +32,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"

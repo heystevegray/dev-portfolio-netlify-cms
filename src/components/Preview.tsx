@@ -29,31 +29,23 @@ export interface PreviewProps {
 }
 
 export default function Preview({ frontmatter, fields, isTldr }: PreviewProps) {
-  const { image, title, description, publish_date, tldr } = frontmatter;
-  const { slug } = fields;
+  const { image } = frontmatter;
 
   const body = (
-    <div key={slug}>
-      <div className="card has-background-black-ter">
-        {isTldr ? (
-          <TLDR
-            title={title}
-            tldr={tldr}
-            publish_date={publish_date}
-            description={description}
-          />
-        ) : (
-          <BlogCard frontmatter={frontmatter} fields={fields} image={image} />
-        )}
-        <div className="card-content">
-          <Tags centered={false} maxTags={4} tags={frontmatter.tags} />
-        </div>
+    <div className="has-background-black-ter">
+      {isTldr ? (
+        <TLDR frontmatter={frontmatter} />
+      ) : (
+        <BlogCard frontmatter={frontmatter} fields={fields} image={image} />
+      )}
+      <div className="card-content">
+        <Tags centered={false} maxTags={4} tags={frontmatter.tags} />
       </div>
     </div>
   );
 
   return (
-    <>
+    <div>
       {isTldr ? (
         <div className="box">{body}</div>
       ) : (
@@ -65,6 +57,6 @@ export default function Preview({ frontmatter, fields, isTldr }: PreviewProps) {
           {body}
         </Link>
       )}
-    </>
+    </div>
   );
 }
