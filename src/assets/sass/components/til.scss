@@ -4,6 +4,7 @@
 @include removeMobileSectionPadding;
 
 .card {
+  width: 100%;
   border: none;
 
   &-image {
@@ -14,6 +15,21 @@
 
   &-body {
     padding-bottom: 0;
+    width: 100%;
+
+    section {
+      padding-top: 0.5rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &-content {
+    width: 100%;
+  }
+
+  &-container {
+    width: 100%;
   }
 }
 
@@ -24,6 +40,10 @@
   margin-bottom: 1.5rem;
 }
 
+.body {
+  padding-top: 0.5rem;
+}
+
 .til {
   &-preview {
     padding: 0;
@@ -32,13 +52,18 @@
       @include hover;
     }
   }
+
+  &-header {
+    @include center;
+    height: 100px;
+  }
 }
 
 .tldr-switch {
   @include center;
   align-items: flex-end;
   padding-bottom: 2rem;
-  height: 100px;
+  height: 75px;
   z-index: 1;
   background: linear-gradient(
     to bottom,
@@ -47,6 +72,6 @@
     rgba(#121212, 0.9)
   );
   position: sticky;
-  top: 20px;
+  top: 45px;
   width: 100%;
 }

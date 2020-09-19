@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import Img from "gatsby-image";
 import dayjs from "dayjs";
-import Tags from "../Tags";
 import { Fields, Frontmatter } from "../Preview";
 
 interface Props {
