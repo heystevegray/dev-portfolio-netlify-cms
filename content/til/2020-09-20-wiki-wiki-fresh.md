@@ -41,10 +41,6 @@ That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page
 
 <img src="https://media.giphy.com/media/3kD2Eciolhy4VOzjRV/giphy.gif" alt="jack black reading a mystical book">
 
-# Description
-
-Easily host documentation for your GitHub repository.
-
 # Usage
 
 1. To get started, [add a new wilki page](https://docs.github.com/en/github/building-a-strong-community/adding-or-editing-wiki-pages) to the wiki section of your GitHub repository.
