@@ -27,8 +27,8 @@ const CustomSwitch = withStyles({
 })(Switch);
 
 export default function til({ data }) {
-  const initialState =
-    JSON.parse(windowGlobal?.localStorage?.getItem(localStorageKey)) || false;
+  const storage = windowGlobal?.localStorage?.getItem(localStorageKey);
+  const initialState = JSON.parse(storage ?? "false");
   const [isTldr, setIsTldr] = useState(initialState);
 
   const handleToggle = (): void => {
