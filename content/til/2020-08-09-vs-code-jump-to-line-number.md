@@ -29,4 +29,4 @@ Useful when jumping to errors or when tracking down old `console.log()` statemen
 
 ## Resources
 
-[Useful VS Code keyboard shortcuts | Zell Liew](https://zellwk.com/blog/useful-vscode-keyboard-shortcuts/#:~:text=Go%20to%20line,then%20type%20your%20line%20number.com)
+- [Useful VS Code keyboard shortcuts | Zell Liew](https://zellwk.com/blog/useful-vscode-keyboard-shortcuts/#:~:text=Go%20to%20line,then%20type%20your%20line%20number.com)
