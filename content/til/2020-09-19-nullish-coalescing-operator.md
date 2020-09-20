@@ -1,6 +1,6 @@
 ---
 title: "Nullish coalescing operator (??) "
-publish_date: 2020-09-20T07:34:55.348Z
+publish_date: 2020-09-20T07:52:30.280Z
 updated: ""
 description: Check for null values faster than you can say "??".
 image: assets/mick-haupt-ve9dq7zm22y-unsplash.jpg
@@ -41,7 +41,7 @@ tags:
 ---
 # Overview
 
-```
+```toc
 exclude: Overview
 ```
 
