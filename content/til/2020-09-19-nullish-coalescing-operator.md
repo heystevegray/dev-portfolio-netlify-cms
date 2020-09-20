@@ -11,7 +11,7 @@ tldr: >-
   left side is returned.
 
 
-  ```jsx
+  ```js
 
   const name1 = null ?? "Bob";
 
@@ -28,7 +28,7 @@ tldr: >-
   The output is the following:
 
 
-  ```jsx
+  ```js
 
   { name1: "Bob", name2: "Burger", name3: "Jeff" }
 
@@ -65,7 +65,7 @@ const [darkTheme, setDarkTheme] = useState(initialState);
 
 If the left side of the `??` operator is `null` or `undefined`, the right side is returned. Otherwise the left side is returned.
 
-```js
+```
 const name1 = null ?? "Bob";
 const name2 = undefined ?? "Burger";
 const name3 = "Jeff" ?? "Britta";
