@@ -52,7 +52,7 @@ const TilPost = ({ data }): ReactElement => {
         <section className="section">
           <div className="container post">
             <section className="hero til-post-body has-navbar has-text-centered is-small has-background-black-ter">
-              <div className="hero-body  ">
+              <div className="hero-body">
                 <div className="column">
                   <div className="columns">
                     <div className="column">
@@ -63,48 +63,6 @@ const TilPost = ({ data }): ReactElement => {
                       {description && (
                         <h2 className="subtitle">{description}</h2>
                       )}
-                      <div className="column">
-                        <div className="columns is-centered">
-                          <div className="column is-narrow">
-                            {publish_date && (
-                              <div className="columns">
-                                <div className="column is-narrow">
-                                  <Icon
-                                    path={mdiCalendar}
-                                    title="Published"
-                                    size={1}
-                                  />
-                                </div>
-                                <div className="column is-narrow">
-                                  <p>
-                                    {dayjs(publish_date).format(
-                                      "MMM D, YYYY @ h:mm A"
-                                    )}
-                                  </p>
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                          {updated && (
-                            <div className="columns">
-                              <div className="column is-narrow">
-                                <Icon
-                                  path={mdiCalendarSync}
-                                  title="Published"
-                                  size={1}
-                                />
-                              </div>
-                              <div className="column is-narrow">
-                                <p>
-                                  {dayjs(updated).format(
-                                    "MMM D, YYYY @ h:mm A"
-                                  )}
-                                </p>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -114,6 +72,38 @@ const TilPost = ({ data }): ReactElement => {
               <Tags tags={tags} />
               <br />
               <br />
+              <div className="columns is-centered">
+                <div className="column is-narrow">
+                  {publish_date && (
+                    <div className="columns is-centered is-mobile">
+                      <div className="column is-narrow">
+                        <Icon path={mdiCalendar} title="Published" size={1} />
+                      </div>
+                      <div className="column is-narrow">
+                        <p>
+                          {dayjs(publish_date).format("MMM D, YYYY @ h:mm A")}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className="column is-narrow">
+                  {updated && (
+                    <div className="columns is-centered is-mobile">
+                      <div className="column is-narrow">
+                        <Icon
+                          path={mdiCalendarSync}
+                          title="Published"
+                          size={1}
+                        />
+                      </div>
+                      <div className="column is-narrow">
+                        <p>{dayjs(updated).format("MMM D, YYYY @ h:mm A")}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
               {html && (
                 <div
                   className="content"
