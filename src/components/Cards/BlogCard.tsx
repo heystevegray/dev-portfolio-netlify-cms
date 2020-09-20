@@ -19,9 +19,9 @@ export default function BlogCard({ frontmatter, image }: Props) {
         <div className="card-content">
           <p>{dayjs(frontmatter.publish_date).format("MMM D, YYYY")}</p>
           <p className="title is-4">{frontmatter.title}</p>
-          {frontmatter.description && (
-            <p className="subtitle is-6">{frontmatter.description}</p>
-          )}
+          <p className="subtitle is-6">
+            {frontmatter.description || "Click for more details."}
+          </p>
         </div>
       </div>
     </div>
