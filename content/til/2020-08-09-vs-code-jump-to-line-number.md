@@ -1,5 +1,5 @@
 ---
-title: VS Code - Jump to line number
+title: VS Code - Jump to line number (control + G)
 publish_date: 2020-08-09T04:25:29.753Z
 updated: 2020-08-22T22:11:18.769Z
 image: assets/nichlas-andersen-ei9kfavcm-e-unsplash-2-.jpg

@@ -1,11 +1,11 @@
 ---
 title: "Nullish coalescing operator (??) "
-publish_date: 2020-09-20T07:34:55.348Z
+publish_date: 2020-09-20T07:52:30.280Z
 updated: ""
 description: Check for null values faster than you can say "??".
 image: assets/mick-haupt-ve9dq7zm22y-unsplash.jpg
 tldr: >-
-  If the left side of the [Nullish coalescing operator
+  If the left side of the [nullish coalescing operator
   (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
   operator is `null` or `undefined`, the right side is returned. Otherwise the
   left side is returned.
@@ -25,7 +25,7 @@ tldr: >-
   ```
 
 
-  Th output is the following:
+  The output is the following:
 
 
   ```jsx
@@ -41,7 +41,7 @@ tags:
 ---
 # Overview
 
-```
+```toc
 exclude: Overview
 ```
 
