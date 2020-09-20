@@ -1,6 +1,6 @@
 ---
 title: "Nullish coalescing operator (??) "
-publish_date: 2020-09-20T07:28:51.781Z
+publish_date: 2020-09-20T07:33:48.692Z
 updated: ""
 description: Check for null values faster than you can say "??".
 image: assets/mick-haupt-ve9dq7zm22y-unsplash.jpg
@@ -81,4 +81,4 @@ Th output is the following:
 
 # Resources
 
-- [Nullish coalescing operator (`??`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
