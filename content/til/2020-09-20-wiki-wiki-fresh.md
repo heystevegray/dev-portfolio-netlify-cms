@@ -23,7 +23,7 @@ exclude: Overview
 
 # Summary
 
-<img src="assets/screen-shot-2020-09-20-at-7.27.28-pm.png" alt="ooga-chaka wiki" width="500px" />
+<img src="assets/screen-shot-2020-09-20-at-7.27.28-pm.png" alt="ooga-chaka wiki" width="500px"></img>
 
 I. JUST. WANTED. TO. BE. ABLE. TO. ORGANIZE. MY. DOCS. The goal would be to make a documentation site like the [react docs](https://reactjs.org/docs/getting-started.html). But I needed an easy way to manage my documentation, which was just a collection of markdown files. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
 
@@ -39,7 +39,7 @@ Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunning
 
 That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is just a bunch of markdown files.
 
-<img src="https://media.giphy.com/media/3kD2Eciolhy4VOzjRV/giphy.gif" alt="jack black reading a mystical book">
+<img src="https://media.giphy.com/media/3kD2Eciolhy4VOzjRV/giphy.gif" alt="jack black reading a mystical book"><img>
 
 # Usage
 
@@ -49,6 +49,7 @@ That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page
    ```bash
    $ git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.wiki.git
    ```
+
 3. You can spice things up and [edit the sidebar](https://docs.github.com/en/github/building-a-strong-community/creating-a-footer-or-sidebar-for-your-wiki#creating-a-sidebar) and [customize your footer](https://docs.github.com/en/github/building-a-strong-community/creating-a-footer-or-sidebar-for-your-wiki#creating-a-footer).
 4. You can even collaborate on the wiki using different branches:
 
@@ -58,13 +59,13 @@ That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page
 
 Below are some really good video tutorials:
 
-* [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
-* [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
+- [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
+- [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
 
 # Resources
 
-* [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
-* [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
-* [About GitHub Wiki's](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
-* [Documenting your project with wikis](https://docs.github.com/en/github/building-a-strong-community/documenting-your-project-with-wikis)
-* [And here is a Wiki on GitHub](https://en.wikipedia.org/wiki/GitHub) 🤪
+- [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
+- [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
+- [About GitHub Wiki's](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
+- [Documenting your project with wikis](https://docs.github.com/en/github/building-a-strong-community/documenting-your-project-with-wikis)
+- [And here is a Wiki on GitHub](https://en.wikipedia.org/wiki/GitHub) 🤪
