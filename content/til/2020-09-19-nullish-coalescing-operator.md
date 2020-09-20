@@ -55,7 +55,7 @@ A [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish) value in 
 
 A good example of when to use this operator is when you are working with [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). If you try to get an item that doesn't exist, the `Storage` interface will return `null`. | [Source](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
 
-```jsx
+```js
 const storage = localStorage.getItem("dark-theme-key");
 const initialState = JSON.parse(storage ?? "true");
 const [darkTheme, setDarkTheme] = useState(initialState);
@@ -65,7 +65,7 @@ const [darkTheme, setDarkTheme] = useState(initialState);
 
 If the left side of the `??` operator is `null` or `undefined`, the right side is returned. Otherwise the left side is returned.
 
-```jsx
+```js
 const name1 = null ?? "Bob";
 const name2 = undefined ?? "Burger";
 const name3 = "Jeff" ?? "Britta";
@@ -75,7 +75,7 @@ console.log({ name1, name2, name3 });
 
 Th output is the following:
 
-```jsx
+```js
 { name1: "Bob", name2: "Burger", name3: "Jeff" }
 ```
 
