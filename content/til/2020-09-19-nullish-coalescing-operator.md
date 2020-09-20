@@ -4,7 +4,35 @@ publish_date: 2020-09-19T23:19:22.844Z
 updated: ""
 description: Check for null values faster than you can say "??".
 image: assets/mick-haupt-ve9dq7zm22y-unsplash.jpg
-tldr: "# hi"
+tldr: >-
+  If the left side of the [Nullish coalescing operator
+  (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+  operator is `null` or `undefined`, the right side is returned. Otherwise the
+  left side is returned.
+
+
+  ```jsx
+
+  const name1 = null ?? "Bob";
+
+  const name2 = undefined ?? "Burger";
+
+  const name3 = "Jeff" ?? "Britta";
+
+
+  console.log({ name1, name2, name3 });
+
+  ```
+
+
+  Th output is the following:
+
+
+  ```jsx
+
+  { name1: "Bob", name2: "Burger", name3: "Jeff" }
+
+  ```
 tags:
   - development
   - javascript
@@ -29,7 +57,7 @@ A good example of when to use this operator is when you are working with [localS
 
 ```jsx
 const storage = localStorage.getItem("dark-theme-key");
-const initialState = JSON.parse(storage ?? "false");
+const initialState = JSON.parse(storage ?? "true");
 
 const [darkTheme, setDarkTheme] = useState(initialState);
 ```
