@@ -10,6 +10,7 @@ import "../assets/styles.css";
 import "../assets/sass/components/til.scss";
 
 const localStorageKey = "heystevegray-tldr";
+const windowGlobal = typeof window !== "undefined" && window;
 
 const CustomSwitch = withStyles({
   switchBase: {
@@ -27,7 +28,7 @@ const CustomSwitch = withStyles({
 
 export default function til({ data }) {
   const initialState =
-    JSON.parse(window?.localStorage?.getItem(localStorageKey)) || false;
+    JSON.parse(windowGlobal?.localStorage?.getItem(localStorageKey)) || false;
   const [isTldr, setIsTldr] = useState(initialState);
 
   const handleToggle = (): void => {
@@ -35,7 +36,7 @@ export default function til({ data }) {
     setIsTldr(value);
 
     try {
-      window?.localStorage?.setItem(localStorageKey, `${value}`);
+      windowGlobal?.localStorage?.setItem(localStorageKey, `${value}`);
     } catch (error) {
       console.log(error);
     }
