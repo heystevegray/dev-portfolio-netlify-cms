@@ -50,7 +50,7 @@ Since we both already forgot that, let's create an [alias](https://linuxize.com/
 Create a custom alias named `kraken` by typing the following in your terminal:
 
 ```bash
-alias kraken='open -a "GitKraken" --args -p $(pwd)'
+$ alias kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
 [Source](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
@@ -58,7 +58,12 @@ alias kraken='open -a "GitKraken" --args -p $(pwd)'
 To list your aliases, just type the `alias` command:
 
 ```bash
-alias
+$ alias
+```
+
+The output is the following:
+
+```bash
 kraken='open -a "GitKraken" --args -p $(pwd)'
 ```
 
