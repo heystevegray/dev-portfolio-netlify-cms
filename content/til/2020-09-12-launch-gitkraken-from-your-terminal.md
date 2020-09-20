@@ -83,7 +83,12 @@ alias kraken='open -a "GitKraken" --args -p $(pwd)'
 For bash terminals, you can add this command to your `~/.bash_profile` (for Mac) or `~/.bashrc` files. If you are not sure what terminal you are using you can check with the following command:
 
 ```bash
-echo "$SHELL"
+$ echo "$SHELL"
+```
+
+The output is the following:
+
+```bash
 /bin/zsh
 ```
 
