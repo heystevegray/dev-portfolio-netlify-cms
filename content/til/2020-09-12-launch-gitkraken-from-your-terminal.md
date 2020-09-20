@@ -11,7 +11,7 @@ tldr: >-
 
   ```bash
 
-  alias kraken='open -a "GitKraken" --args -p $(pwd)'
+  $ alias kraken='open -a "GitKraken" --args -p $(pwd)'
 
   ```
 
@@ -72,7 +72,7 @@ kraken='open -a "GitKraken" --args -p $(pwd)'
 You can delete your alias with the `unalias` command:
 
 ```bash
-unalias kraken
+$ unalias kraken
 ```
 
 [Source](https://askubuntu.com/a/325380)
@@ -102,8 +102,8 @@ The output is the following:
 Once you have created the alias, navigate to your repository and run the `kraken` command.
 
 ```bash
-cd Development/my-project
-kraken
+$ cd Development/my-project
+$ kraken
 ```
 
 This should launch your repository in a new tab in GitKraken! 😎
