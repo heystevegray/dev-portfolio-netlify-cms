@@ -47,9 +47,9 @@ exclude: Overview
 
 # Summary
 
-A [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish) value in Javascript is a value that is either `null` or `undefiend`. The nullish coalescing operator (??) is a [Binary logical operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#Binary_logical_operators).
+A [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish) value in Javascript is a value that is either `null` or `undefiend`. The nullish coalescing operator (`??`) is a [Binary logical operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#Binary_logical_operators).
 
-> The nullish coalescing operator (??) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand. | [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+> The nullish coalescing operator (`??`) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand. | [Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 
 # Usage
 
@@ -81,4 +81,4 @@ Th output is the following:
 
 # Resources
 
-- [Nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Nullish coalescing operator (`??`)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
