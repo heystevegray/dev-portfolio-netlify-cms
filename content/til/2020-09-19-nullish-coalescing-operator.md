@@ -53,7 +53,7 @@ A [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish) value in 
 
 # Usage
 
-A good example of when to use this operator is when you are working with [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). When you try to get and item by it's name, the `Storage` interface will return that key's `value`, or `null` if the key does not exist. | [Source](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
+A good example of when to use this operator is when you are working with [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). If you try to get an item that doesn't exist, the `Storage` interface will return `null`. | [Source](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
 
 ```jsx
 const storage = localStorage.getItem("dark-theme-key");
