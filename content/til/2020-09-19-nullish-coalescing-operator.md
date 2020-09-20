@@ -58,7 +58,6 @@ A good example of when to use this operator is when you are working with [localS
 ```jsx
 const storage = localStorage.getItem("dark-theme-key");
 const initialState = JSON.parse(storage ?? "true");
-
 const [darkTheme, setDarkTheme] = useState(initialState);
 ```
 
