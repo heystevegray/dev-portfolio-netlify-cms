@@ -4,11 +4,22 @@ publish_date: 2020-09-04T06:53:24.054Z
 updated: 2020-09-13T20:54:12.145Z
 description: Revert changes that you made to your files.
 image: assets/hidde-van-esch-gazronaxvsu-unsplash.jpg
+tldr: |
+  You can reset changes to a file with the `git checkout` command.
+
+  1\. Make a change to a file like `src/pages/index.tsx` and save.
+
+  2\. Run `git checkout` on the same file to revert the changes.
+
+  ```shell
+  $ git checkout src/pages/index.tsx
+  ```
 tags:
   - development
   - git
   - gitkraken
 ---
+
 ## Overview
 
 ```toc
@@ -25,8 +36,12 @@ I frequently discard experimental changes to files that pertain to my feature. S
 2. See your changes with `git status`
 
    ```bash
-   git status
+   $ git status
+   ```
 
+   The output is the following:
+
+   ```bash
    On branch master
    Your branch is up to date with 'origin/master'.
 
@@ -37,16 +52,22 @@ I frequently discard experimental changes to files that pertain to my feature. S
 
    no changes added to commit (use "git add" and/or "git commit -a")
    ```
+
 3. Run `git checkout` on the same file.
 
    ```shell
-   git checkout src/pages/index.tsx
+   $ git checkout src/pages/index.tsx
    ```
+
 4. You will see there are no changes when you run `git status` again.
 
    ```shell
-   git status
+   $ git status
+   ```
 
+   The output is the following:
+
+   ```shell
    On branch master
    Your branch is up to date with 'origin/master'.
 
@@ -56,16 +77,3 @@ I frequently discard experimental changes to files that pertain to my feature. S
 # Resources
 
 [git-checkout](https://git-scm.com/docs/git-checkout)
-
-# TLDR
-
-You can reset changes to a file with the `git checkout` command.
-
-## Example
-
-1. Make a change to a file like `src/pages/index.tsx` and save.
-2. Run `git checkout` on the same file to revert the changes.
-
-   ```shell
-   git checkout src/pages/index.tsx
-   ```

@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function Tags({
-  tags,
+  tags = [],
   className = "",
   centered = true,
   maxTags,

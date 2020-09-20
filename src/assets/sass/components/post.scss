@@ -1,0 +1,16 @@
+@import "../mixins.scss";
+
+@include removeMobileSectionPadding;
+
+.box {
+  border: none;
+  overflow: hidden;
+}
+
+.preview {
+  padding: 0;
+
+  &:hover {
+    @include hover;
+  }
+}

@@ -18,4 +18,5 @@ collections:
       - { name: description, label: Description, required: false }
       - { name: image, label: Image, widget: image, required: false }
       - { name: body, label: Body, widget: markdown }
+      - { name: tldr, label: TLDR, widget: markdown }
       - { name: tags, label: Tags, widget: list }

@@ -1,11 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/layout";
-import { graphql, Link } from "gatsby";
-import Img from "gatsby-image";
-import dayjs from "dayjs";
-import "../assets/styles.css";
-import Tags from "../components/Tags";
+import { graphql } from "gatsby";
 import SEO from "../components/seo";
+import Preview from "../components/Preview";
+import { FormControlLabel, Switch } from "@material-ui/core";
+import { withStyles } from "@material-ui/core/styles";
+
+import "../assets/styles.css";
+import "../assets/sass/components/til.scss";
+
+const localStorageKey = "heystevegray-tldr";
+const windowGlobal = typeof window !== "undefined" && window;
+
+const CustomSwitch = withStyles({
+  switchBase: {
+    color: "#1abc9c",
+    "&$checked": {
+      color: "#1abc9c",
+    },
+    "&$checked + $track": {
+      backgroundColor: "#1abc9c",
+    },
+  },
+  checked: {},
+  track: {},
+})(Switch);
+
+export default function til({ data }) {
+  const storage = windowGlobal?.localStorage?.getItem(localStorageKey);
+  const initialState = JSON.parse(storage ?? "false");
+  const [isTldr, setIsTldr] = useState(initialState);
+
+  const handleToggle = (): void => {
+    const value = !isTldr;
+    setIsTldr(value);
+
+    try {
+      windowGlobal?.localStorage?.setItem(localStorageKey, `${value}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  return (
+    <Layout>
+      <SEO title="Today I Learned" />
+      <section className="section has-text-centered card-body">
+        <div className="container">
+          <section className="section card-body">
+            <h1 className="til-header has-text-weight-bold is-size-1">
+              Today I Learned
+            </h1>
+          </section>
+        </div>
+      </section>
+      <div className="tldr-switch">
+        <FormControlLabel
+          value="top"
+          control={
+            <CustomSwitch
+              checked={isTldr}
+              onChange={handleToggle}
+              name="checkedB"
+              color="primary"
+            />
+          }
+          label="TLDR"
+          labelPlacement="end"
+        />
+      </div>
+      <div className="container til-card-container post">
+        <section className="section body">
+          <div className="container">
+            {data &&
+              data?.allMarkdownRemark.edges?.map(({ node }) => {
+                const { frontmatter, fields, rawMarkdownBody } = node;
+                const regex = /# TLDR[^|]*$/;
+                const tldr = regex.exec(rawMarkdownBody) || "";
+                const final = tldr.toString().replace("# TLDR", "");
+
+                return (
+                  <Preview
+                    key={fields.slug}
+                    tldr={final}
+                    frontmatter={frontmatter}
+                    fields={fields}
+                    isTldr={isTldr}
+                  />
+                );
+              })}
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
+}
 
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
@@ -14,6 +103,7 @@ export const TilPostTemplateQuery = graphql`
     ) {
       edges {
         node {
+          rawMarkdownBody
           fields {
             slug
           }
@@ -28,6 +118,7 @@ export const TilPostTemplateQuery = graphql`
                 }
               }
             }
+            tldr
             publish_date
             tags
           }
@@ -36,58 +127,3 @@ export const TilPostTemplateQuery = graphql`
     }
   }
 `;
-
-export default function til({ data }) {
-  return (
-    <Layout>
-      <SEO title="Today I Learned" />
-      <div className="container post">
-        <section className="section has-text-centered">
-          <div className="container">
-            <h1 className="has-text-weight-bold is-size-1">Today I Learned</h1>
-          </div>
-        </section>
-        <section className="section body">
-          <div className="container">
-            {data &&
-              data?.allMarkdownRemark.edges?.map(({ node }) => {
-                const image = node.frontmatter.image;
-
-                return (
-                  <Link
-                    to={`/til${node.fields.slug}`}
-                    className="box til-preview"
-                    key={node.fields.slug}
-                  >
-                    <div className="card has-background-black-ter">
-                      <div className="card-image">
-                        {image && <Img fluid={image.childImageSharp.fluid} />}
-                      </div>
-                      <div className="card-content">
-                        <p>
-                          {dayjs(node.frontmatter.publish_date).format(
-                            "MMM D, YYYY"
-                          )}
-                        </p>
-                        <p className="title is-4">{node.frontmatter.title}</p>
-                        {node.frontmatter.description && (
-                          <p className="subtitle is-6">
-                            {node.frontmatter.description}
-                          </p>
-                        )}
-                        <Tags
-                          centered={false}
-                          maxTags={4}
-                          tags={node.frontmatter.tags}
-                        />
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
-}
