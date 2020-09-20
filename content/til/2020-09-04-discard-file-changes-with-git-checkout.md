@@ -5,21 +5,18 @@ updated: 2020-09-18T04:45:42.347Z
 description: Revert changes that you made to your files.
 image: assets/hidde-van-esch-gazronaxvsu-unsplash.jpg
 tldr: |-
-  You can reset changes to a file with the `git checkout` command.
+  You can reset changes to a file with the `git checkout` command. Make a change to a file like `src/pages/index.tsx` and save. Run `git checkout` on the same file to revert the changes.
 
-  ## Example
+  ```shell
+  $ git checkout src/pages/index.tsx
+  ```
 
-  1. Make a change to a file like `src/pages/index.tsx` and save.
-  2. Run `git checkout` on the same file to revert the changes.
-
-     ```shell
-     $ git checkout src/pages/index.tsx
-     ```
 tags:
   - development
   - git
   - gitkraken
 ---
+
 ## Overview
 
 ```toc
