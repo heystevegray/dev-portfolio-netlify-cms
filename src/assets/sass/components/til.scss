@@ -3,9 +3,34 @@
 
 @include removeMobileSectionPadding;
 
+.faded {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+
+  &-image {
+    height: 250px;
+
+    img {
+      border-radius: 0;
+      max-height: 250px;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    top: 135px;
+    height: 125px;
+    width: 100%;
+    border: none;
+
+    padding-top: 1rem;
+  }
+}
+
 .card {
   width: 100%;
-  border: none;
+  border-radius: 0px;
 
   &-image {
     max-height: 150px;
@@ -16,16 +41,18 @@
   &-body {
     padding-bottom: 0;
     width: 100%;
-
-    section {
-      padding-top: 0.5rem;
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 
   &-content {
     width: 100%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(#242424, 0.5) 10%,
+      rgba(#242424, 0.9) 30%,
+      rgba(#242424, 1) 65%,
+      #242424
+    );
   }
 
   &-container {
@@ -38,6 +65,7 @@
   padding: 0;
   overflow: hidden;
   margin-bottom: 1.5rem;
+  background: #242424;
 }
 
 .body {

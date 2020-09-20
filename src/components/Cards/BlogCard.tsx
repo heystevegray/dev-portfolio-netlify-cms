@@ -11,16 +11,18 @@ interface Props {
 
 export default function BlogCard({ frontmatter, image }: Props) {
   return (
-    <div className="card has-background-black-ter">
-      <div className="card-image">
+    <div className="card">
+      <div className="faded-image">
         {image && <Img fluid={image.childImageSharp.fluid} />}
       </div>
-      <div className="card-content card-body">
-        <p>{dayjs(frontmatter.publish_date).format("MMM D, YYYY")}</p>
-        <p className="title is-4">{frontmatter.title}</p>
-        {frontmatter.description && (
-          <p className="subtitle is-6">{frontmatter.description}</p>
-        )}
+      <div className="faded-content card-body">
+        <div className="card-content">
+          <p>{dayjs(frontmatter.publish_date).format("MMM D, YYYY")}</p>
+          <p className="title is-4">{frontmatter.title}</p>
+          {frontmatter.description && (
+            <p className="subtitle is-6">{frontmatter.description}</p>
+          )}
+        </div>
       </div>
     </div>
   );

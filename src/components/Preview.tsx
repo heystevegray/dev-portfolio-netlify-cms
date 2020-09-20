@@ -32,7 +32,7 @@ export default function Preview({ frontmatter, fields, isTldr }: PreviewProps) {
   const { image } = frontmatter;
 
   const body = (
-    <div className="has-background-black-ter">
+    <div>
       {isTldr ? (
         <TLDR frontmatter={frontmatter} />
       ) : (
