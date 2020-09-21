@@ -27,11 +27,9 @@ exclude: Overview
 
 ![ooga-chaka wiki](assets/screen-shot-2020-09-20-at-7.27.28-pm.png "ooga-chaka wiki")
 
-I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of [it's markdown documentation](https://github.com/heystevegray/ooga-chaka/wiki).
+I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of [it's markdown documentation](https://github.com/heystevegray/ooga-chaka/wiki). You can [learn more about React Hooks here](https://reactjs.org/docs/hooks-intro.html).
 
-I have seen really slick websites for documentation, like the [React Docs](https://reactjs.org/docs/getting-started.html), and I wanted something that was easy to maintain and navigate. This was possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
-
-If you are not familiar with React Hooks, you can [learn more about them here](https://reactjs.org/docs/hooks-intro.html).
+I have seen really slick websites for documentation, like the [React Docs](https://reactjs.org/docs/getting-started.html), and I wanted something similar that was easy to maintain and navigate. This was possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
 
 ## History
 
