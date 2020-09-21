@@ -73,3 +73,4 @@ Below are some really good video tutorials:
 * [Documenting your project with wikis](https://docs.github.com/en/github/building-a-strong-community/documenting-your-project-with-wikis)
 * [And here is a Wiki on GitHub](https://en.wikipedia.org/wiki/GitHub) 🤪
 * [What is Markdown?](https://www.markdownguide.org/getting-started/)
+* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
