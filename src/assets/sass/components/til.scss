@@ -20,10 +20,8 @@
   &-content {
     position: absolute;
     bottom: 0;
-    height: 125px;
     width: 100%;
     border: none;
-
     padding-top: 1rem;
   }
 }
@@ -41,6 +39,10 @@
   &-body {
     padding-bottom: 0;
     width: 100%;
+
+    section {
+      padding: 0;
+    }
   }
 
   &-content {
