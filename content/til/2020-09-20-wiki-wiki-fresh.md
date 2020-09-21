@@ -27,7 +27,7 @@ exclude: Overview
 
 ![ooga-chaka wiki](assets/screen-shot-2020-09-20-at-7.27.28-pm.png "ooga-chaka wiki")
 
-I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of the markdown documentation that I was creating for it. The goal would be to make a documentation site like the [react docs](https://reactjs.org/docs/getting-started.html). But I needed an easy way to manage my documentation, including editing and hosting. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
+I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of the [markdown](https://www.markdownguide.org/getting-started/) documentation that I was creating for it. I have seen really slick websites for documentation, like the [React Docs](https://reactjs.org/docs/getting-started.html), and I wanted something that was easy to maintain and navigate. I knew I would be including editing and hosting. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
 
 If you are not familiar with React Hooks, you can [learn more about them here](https://reactjs.org/docs/hooks-intro.html).
 
@@ -72,3 +72,4 @@ Below are some really good video tutorials:
 * [About GitHub Wiki's](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
 * [Documenting your project with wikis](https://docs.github.com/en/github/building-a-strong-community/documenting-your-project-with-wikis)
 * [And here is a Wiki on GitHub](https://en.wikipedia.org/wiki/GitHub) 🤪
+* [What is Markdown?](https://www.markdownguide.org/getting-started/)
