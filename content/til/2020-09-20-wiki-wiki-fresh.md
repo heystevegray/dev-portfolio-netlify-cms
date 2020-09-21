@@ -41,7 +41,7 @@ Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunning
 
 > The name "Wikipedia" is a blending of the words wiki (a technology for creating collaborative websites, from the Hawaiian word wiki, meaning "quick") and encyclopedia. Wikipedia's articles provide links designed to guide the user to related pages with additional information. | [Source](https://en.wikipedia.org/wiki/Wikipedia:About#:~:text=The%20name%20%22Wikipedia%22%20is%20a,related%20pages%20with%20additional%20information.)
 
-That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is just a bunch of markdown files.
+\* That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is just a bunch of markdown files *
 
 <img src="https://media.giphy.com/media/3kD2Eciolhy4VOzjRV/giphy.gif" alt="jack black reading a mystical book"><img>
 
