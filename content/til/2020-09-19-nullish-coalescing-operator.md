@@ -56,10 +56,14 @@ A [nullish](https://developer.mozilla.org/en-US/docs/Glossary/Nullish) value in 
 A good example of when to use this operator is when you are working with [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage). If you try to get an item that doesn't exist, the `Storage` interface will return `null`. | [Source](https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem)
 
 ```jsx
-const storage = localStorage.getItem("dark-theme-key");
-const initialState = JSON.parse(storage ?? "true");
-const [darkTheme, setDarkTheme] = useState(initialState);
+useEffect(() => {
+  const storage = localStorage.getItem("dark-theme-key");
+  const initialState = JSON.parse(storage ?? "true");
+  const [darkTheme, setDarkTheme] = useState(initialState);
+}, []);
 ```
+
+You can [learn more about useEffect here](https://reactjs.org/docs/hooks-effect.html).
 
 # Example
 
