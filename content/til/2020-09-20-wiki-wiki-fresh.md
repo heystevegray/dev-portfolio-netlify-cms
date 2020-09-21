@@ -33,7 +33,7 @@ I have seen really slick websites for documentation, like the [React Docs](https
 
 ## History
 
-Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunningham), check out this awesome [interview.](https://en.wikipedia.org/wiki/File:Ward_Cunningham,_Inventor_of_the_Wiki.webm)
+Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunningham), check out this awesome [interview](https://en.wikipedia.org/wiki/File:Ward_Cunningham,_Inventor_of_the_Wiki.webm).
 
 > "Wiki" is a Hawaiian word that means "quick" | [Source](https://en.wikipedia.org/wiki/File:Ward_Cunningham,_Inventor_of_the_Wiki.webm)
 
@@ -71,7 +71,6 @@ Here are some really good video tutorials:
 * [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
 * [About GitHub Wiki's](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
 * [Documenting your project with wikis](https://docs.github.com/en/github/building-a-strong-community/documenting-your-project-with-wikis)
-* [And here is a Wiki on GitHub](https://en.wikipedia.org/wiki/GitHub) 🤪
 * [What is Markdown?](https://www.markdownguide.org/getting-started/)
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [ooga-chaka wiki](https://github.com/heystevegray/ooga-chaka/wiki)
