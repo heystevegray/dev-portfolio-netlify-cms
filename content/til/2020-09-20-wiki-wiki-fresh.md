@@ -1,6 +1,6 @@
 ---
-title: Wiki Wiki freshhttp://localhost:8000/admin/#/collections/til
-publish_date: 2020-09-20T23:42:23.322Z
+title: Wiki Wiki fresh
+publish_date: 2020-09-21T01:32:49.290Z
 updated: ""
 description: Easily host documentation for your GitHub repository.
 image: assets/hnl_wiki_wiki_bus_-1-.jpg
@@ -14,6 +14,8 @@ tags:
   - wiki
   - documentation
   - history
+  - react
+  - hooks
 ---
 # Overview
 
@@ -25,7 +27,9 @@ exclude: Overview
 
 ![ooga-chaka wiki](assets/screen-shot-2020-09-20-at-7.27.28-pm.png "ooga-chaka wiki")
 
-I. JUST. WANTED. TO. BE. ABLE. TO. ORGANIZE. MY. DOCS. The goal would be to make a documentation site like the [react docs](https://reactjs.org/docs/getting-started.html). But I needed an easy way to manage my documentation, which was just a collection of markdown files. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
+I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of the markdown documentation that I was creating for it. The goal would be to make a documentation site like the [react docs](https://reactjs.org/docs/getting-started.html). But I needed an easy way to manage my documentation, including editing and hosting. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
+
+If you are not familiar with React Hooks, you can [learn more about them here](https://reactjs.org/docs/hooks-intro.html).
 
 ## History
 
