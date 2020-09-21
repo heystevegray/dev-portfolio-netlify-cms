@@ -17,6 +17,7 @@ tags:
   - react
   - hooks
 ---
+
 # Overview
 
 ```toc
@@ -41,7 +42,7 @@ Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunning
 
 > The name "Wikipedia" is a blending of the words wiki (a technology for creating collaborative websites, from the Hawaiian word wiki, meaning "quick") and encyclopedia. Wikipedia's articles provide links designed to guide the user to related pages with additional information. | [Source](https://en.wikipedia.org/wiki/Wikipedia:About#:~:text=The%20name%20%22Wikipedia%22%20is%20a,related%20pages%20with%20additional%20information.)
 
-\* That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is just a bunch of markdown files *
+\* That moment when you realize [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) is just a bunch of markdown files \*
 
 <img src="https://media.giphy.com/media/3kD2Eciolhy4VOzjRV/giphy.gif" alt="jack black reading a mystical book"><img>
 
@@ -53,6 +54,7 @@ Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunning
    ```bash
    $ git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.wiki.git
    ```
+
 3. You can spice things up and [edit the sidebar](https://docs.github.com/en/github/building-a-strong-community/creating-a-footer-or-sidebar-for-your-wiki#creating-a-sidebar) and [customize your footer](https://docs.github.com/en/github/building-a-strong-community/creating-a-footer-or-sidebar-for-your-wiki#creating-a-footer).
 4. You can even collaborate on the wiki using different branches:
 
@@ -62,15 +64,15 @@ Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunning
 
 Here are some really good video tutorials:
 
-* [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
-* [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
+- [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
+- [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
 
 # Resources
 
-* [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
-* [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
-* [About GitHub Wiki's](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
-* [Documenting your project with wikis](https://docs.github.com/en/github/building-a-strong-community/documenting-your-project-with-wikis)
-* [What is Markdown?](https://www.markdownguide.org/getting-started/)
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-* [ooga-chaka wiki](https://github.com/heystevegray/ooga-chaka/wiki)
+- [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
+- [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
+- [About GitHub Wiki's](https://docs.github.com/en/github/building-a-strong-community/about-wikis)
+- [Documenting your project with wikis](https://docs.github.com/en/github/building-a-strong-community/documenting-your-project-with-wikis)
+- [What is Markdown?](https://www.markdownguide.org/getting-started/)
+- [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+- [ooga-chaka wiki](https://github.com/heystevegray/ooga-chaka/wiki)
