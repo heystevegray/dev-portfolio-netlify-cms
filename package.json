@@ -21,6 +21,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.31",
     "gatsby-remark-autolink-headers": "^2.3.11",
+    "gatsby-remark-images": "^3.3.30",
     "gatsby-remark-table-of-contents": "0.0.9",
     "gatsby-remark-vscode": "^3.0.1",
     "gatsby-source-filesystem": "^2.3.27",
