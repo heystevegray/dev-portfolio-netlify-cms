@@ -27,7 +27,9 @@ exclude: Overview
 
 ![ooga-chaka wiki](assets/screen-shot-2020-09-20-at-7.27.28-pm.png "ooga-chaka wiki")
 
-I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of the [markdown](https://www.markdownguide.org/getting-started/) documentation that I was creating for it. I have seen really slick websites for documentation, like the [React Docs](https://reactjs.org/docs/getting-started.html), and I wanted something that was easy to maintain and navigate. I knew I would be including editing and hosting. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
+I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of [it's markdown documentation](https://github.com/heystevegray/ooga-chaka/wiki).
+
+I have seen really slick websites for documentation, like the [React Docs](https://reactjs.org/docs/getting-started.html), and I wanted something that was easy to maintain and navigate. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
 
 If you are not familiar with React Hooks, you can [learn more about them here](https://reactjs.org/docs/hooks-intro.html).
 
@@ -60,7 +62,7 @@ Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunning
 
 # Example
 
-Below are some really good video tutorials:
+Here are some really good video tutorials:
 
 * [GitHub Wiki - thenewboston](https://www.youtube.com/watch?v=4B0XNThjO0E&ab_channel=thenewboston)
 * [Learning GitHub - Making Wikis](https://www.youtube.com/watch?v=bnMl0d-RcPQ&ab_channel=SteveGriffith)
@@ -74,3 +76,4 @@ Below are some really good video tutorials:
 * [And here is a Wiki on GitHub](https://en.wikipedia.org/wiki/GitHub) 🤪
 * [What is Markdown?](https://www.markdownguide.org/getting-started/)
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
+* [ooga-chaka wiki](https://github.com/heystevegray/ooga-chaka/wiki)
