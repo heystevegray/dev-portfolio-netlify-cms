@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import SEO from "../components/seo";
@@ -27,9 +27,7 @@ const CustomSwitch = withStyles({
 })(Switch);
 
 export default function til({ data }) {
-  const storage = windowGlobal?.localStorage?.getItem(localStorageKey);
-  const initialState = JSON.parse(storage ?? "false");
-  const [isTldr, setIsTldr] = useState(initialState);
+  const [isTldr, setIsTldr] = useState(false);
 
   const handleToggle = (): void => {
     const value = !isTldr;
@@ -41,6 +39,12 @@ export default function til({ data }) {
       console.log(error);
     }
   };
+
+  useEffect(() => {
+    const storage = windowGlobal?.localStorage?.getItem(localStorageKey);
+    const initialState = JSON.parse(storage ?? "false");
+    setIsTldr(initialState);
+  }, []);
 
   return (
     <Layout>
