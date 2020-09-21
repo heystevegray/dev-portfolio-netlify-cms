@@ -23,8 +23,6 @@ exclude: Overview
 
 # Summary
 
-<img src="assets/screen-shot-2020-09-20-at-7.27.28-pm.png" alt="ooga-chaka wiki" width="500px"></img>
-
 ![ooga-chaka wiki](assets/screen-shot-2020-09-20-at-7.27.28-pm.png "ooga-chaka wiki")
 
 I. JUST. WANTED. TO. BE. ABLE. TO. ORGANIZE. MY. DOCS. The goal would be to make a documentation site like the [react docs](https://reactjs.org/docs/getting-started.html). But I needed an easy way to manage my documentation, which was just a collection of markdown files. This was made possible with [GitHub wiki pages](https://docs.github.com/en/github/building-a-strong-community/about-wikis).
