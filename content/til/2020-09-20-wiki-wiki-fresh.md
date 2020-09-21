@@ -26,7 +26,7 @@ exclude: Overview
 
 # Summary
 
-![ooga-chaka wiki](assets/screen-shot-2020-09-20-at-7.27.28-pm.png "ooga-chaka wiki")
+![ooga-chaka wiki](/assets/screen-shot-2020-09-20-at-7.27.28-pm.png "ooga-chaka wiki")
 
 I am working on [a custom React Hooks library](https://www.npmjs.com/package/ooga-chaka), and I wanted to be able to organize all of [it's markdown documentation](https://github.com/heystevegray/ooga-chaka/wiki). You can [learn more about React Hooks here](https://reactjs.org/docs/hooks-intro.html).
 
