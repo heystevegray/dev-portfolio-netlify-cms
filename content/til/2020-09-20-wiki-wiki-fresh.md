@@ -1,5 +1,5 @@
 ---
-title: Wiki Wiki fresh
+title: Wiki Wiki freshhttp://localhost:8000/admin/#/collections/til
 publish_date: 2020-09-20T23:42:23.322Z
 updated: ""
 description: Easily host documentation for your GitHub repository.
