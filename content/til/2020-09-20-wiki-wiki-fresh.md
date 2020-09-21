@@ -47,7 +47,7 @@ Wiki was created by [Ward Cunningham](https://en.wikipedia.org/wiki/Ward_Cunning
 
 # Usage
 
-1. To get started, [add a new wilki page](https://docs.github.com/en/github/building-a-strong-community/adding-or-editing-wiki-pages) to the wiki section of your GitHub repository.
+1. [Add a new wilki page](https://docs.github.com/en/github/building-a-strong-community/adding-or-editing-wiki-pages) to the wiki section of your GitHub repository.
 2. Just like your git repository, you can also `clone` and [edit your wiki pages locally](https://docs.github.com/en/github/building-a-strong-community/adding-or-editing-wiki-pages#adding-or-editing-wiki-pages-locally) like this:
 
    ```bash
