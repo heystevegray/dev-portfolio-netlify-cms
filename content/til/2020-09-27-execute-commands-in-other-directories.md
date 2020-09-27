@@ -51,37 +51,37 @@ $ (cd ../other-project && npm i)
 
 For this example we will create and write to a file in a different directory than our current one. We will wrap parenthesis `()` around the command so that we don't actuallly have to change directories, becuase.. no one wan'ts to keep typing `cd ../` all the time.
 
-1. Le'ts [print the current working directory](https://linuxize.com/post/current-working-directory/#pwd-command). Enter the following command in your terminal:
+1.  Le'ts [print the current working directory](https://linuxize.com/post/current-working-directory/#pwd-command). Enter the following command in your terminal:
 
-   ```bash
-   $ pwd
-   ```
+    ```bash
+    $ pwd
+    ```
 
-   The output is the following:
+    The output is the following:
 
-   ```bash
-   /Development/project-a
-   ```
+    ```bash
+    /Development/project-a
+    ```
 
-2. Next we will change directories to `project-b` and create a file called `hello.txt`. Enter the following command (don't forget the parenthesis `()` around the command 😁):
+2.  Next we will change directories to `project-b` and create a file called `hello.txt`. Enter the following command (don't forget the parenthesis `()` around the command 😁):
 
-   ```bash
-   $ (cd ../project-b && touch hello.txt && echo "Hello World" > hello.txt)
-   ```
+    ```bash
+    $ (cd ../project-b && touch hello.txt && echo "Hello World" > hello.txt)
+    ```
 
-3. You can display the contents of the hello.txt file with the [cat](https://linuxize.com/post/linux-cat-command/) command:
+3.  You can display the contents of the hello.txt file with the [cat](https://linuxize.com/post/linux-cat-command/) command:
 
-   ```bash
-   $ cat ../project-b/hello.txt
-   ```
+    ```bash
+    $ cat ../project-b/hello.txt
+    ```
 
-   The output is the following:
+    The output is the following:
 
-   ```bash
-   Hello World
-   ```
+    ```bash
+    Hello World
+    ```
 
-![https://media.giphy.com/media/YcMs3OGd89Pxu/giphy.gif](https://media.giphy.com/media/YcMs3OGd89Pxu/giphy.gif)
+    ![https://media.giphy.com/media/YcMs3OGd89Pxu/giphy.gif](https://media.giphy.com/media/YcMs3OGd89Pxu/giphy.gif)
 
 # Resources
 
@@ -90,7 +90,7 @@ For this example we will create and write to a file in a different directory tha
 - [Subshells](https://tldp.org/LDP/abs/html/subshells.html#:~:text=A%20subshell%20is%20a%20separate,process%20a%20list%20of%20commands.)
 - [Grouping Commands](https://www.gnu.org/software/bash/manual/bash.html#Grouping-Commands)
 
-### Commands
+## Commands
 
 - [cd](https://linuxize.com/post/linux-cd-command/)
 - [pwd](https://linuxize.com/post/current-working-directory/#pwd-command)
@@ -98,6 +98,6 @@ For this example we will create and write to a file in a different directory tha
 - [touch](https://linuxize.com/post/linux-touch-command/)
 - [echo](https://linuxize.com/post/echo-command-in-linux-with-examples/)
 
-### Photo Credit
+## Photo Credit
 
 - Photo by [Razvan Narcis Ticu](https://unsplash.com/@ticurazvannarcis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)
