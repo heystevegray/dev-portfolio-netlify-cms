@@ -2,7 +2,7 @@
 title: Execute commands in other directories
 publish_date: 2020-09-27T05:13:44.860Z
 updated: ""
-description: Spawn sub-shell's so you never leave your current working directory.
+description: "Spawn sub-shell's "
 image: assets/razvan-narcis-ticu-mqz-tzeg8l8-unsplash.jpg
 tldr: >-
   Wrap commands in parenthesis `()` to run them in a
