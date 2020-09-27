@@ -63,7 +63,7 @@ For this example we will create and write to a file in a different directory tha
     /Development/project-a
     ```
 
-2.  Next we will change directories to `project-b` and create a file called `hello.txt`. Enter the following command (don't forget the parenthesis `()` around the command 😁):
+2.  Next we will change directories to `project-b` and create a file called `hello.txt`. After we create the file we will write "Hello World" to it. Enter the following command (don't forget the parenthesis `()` around the command 😁):
 
     ```bash
     $ (cd ../project-b && touch hello.txt && echo "Hello World" > hello.txt)
