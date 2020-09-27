@@ -67,7 +67,7 @@ For this example we will create and write to a file in a different directory tha
    $ (cd ../project-b && touch hello.txt && echo "Hello World" > hello.txt)
    ```
 
-3. You can display the contents of the `hello.txt`- file with the [cat](https://linuxize.com/post/linux-cat-command/) command:
+3. You can display the contents of the `hello.txt` file with the [cat](https://linuxize.com/post/linux-cat-command/) command:
 
    ```bash
    $ cat ../project-b/hello.txt
