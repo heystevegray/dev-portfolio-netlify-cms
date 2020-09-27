@@ -60,11 +60,13 @@ For this example we will create and write to a file in a different directory tha
    ```bash
    /Development/project-a
    ```
+
 2. Next we will change directories to `project-b` and create a file called `hello.txt`. After we create the file we will write "Hello World" to it. Enter the following command (don't forget the parenthesis `()` around the command 😁):
 
    ```bash
    $ (cd ../project-b && touch hello.txt && echo "Hello World" > hello.txt)
    ```
+
 3. You can display the contents of the `hello.txt`- file with the [cat](https://linuxize.com/post/linux-cat-command/) command:
 
    ```bash
@@ -81,17 +83,18 @@ For this example we will create and write to a file in a different directory tha
 
 # Resources
 
-* Subshells
+- [Subshells](https://tldp.org/LDP/abs/html/subshells.html#:~:text=A%20subshell%20is%20a%20separate,process%20a%20list%20of%20commands.)
 
-  * [How do I run a program with a different working directory from current, from Linux shell?](https://stackoverflow.com/questions/786376/how-do-i-run-a-program-with-a-different-working-directory-from-current-from-lin/786419#786419)
-  * [Current working directory](https://shapeshed.com/unix-pwd/)
-  * [Subshells](https://tldp.org/LDP/abs/html/subshells.html#:~:text=A%20subshell%20is%20a%20separate,process%20a%20list%20of%20commands.)
-  * [Grouping Commands](https://www.gnu.org/software/bash/manual/bash.html#Grouping-Commands)
-* Commands
+  - [How do I run a program with a different working directory from current, from Linux shell?](https://stackoverflow.com/questions/786376/how-do-i-run-a-program-with-a-different-working-directory-from-current-from-lin/786419#786419)
+  - [Current working directory](https://shapeshed.com/unix-pwd/)
+  - [Grouping Commands](https://www.gnu.org/software/bash/manual/bash.html#Grouping-Commands)
 
-  * [cd](https://linuxize.com/post/linux-cd-command/)
-  * [pwd](https://linuxize.com/post/current-working-directory/#pwd-command)
-  * [mkdir](https://linuxize.com/post/how-to-create-directories-in-linux-with-the-mkdir-command/)
-  * [touch](https://linuxize.com/post/linux-touch-command/)
-  * [echo](https://linuxize.com/post/echo-command-in-linux-with-examples/)
-* Photo by [Razvan Narcis Ticu](https://unsplash.com/@ticurazvannarcis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)
+- Commands
+
+  - [cd](https://linuxize.com/post/linux-cd-command/)
+  - [pwd](https://linuxize.com/post/current-working-directory/#pwd-command)
+  - [mkdir](https://linuxize.com/post/how-to-create-directories-in-linux-with-the-mkdir-command/)
+  - [touch](https://linuxize.com/post/linux-touch-command/)
+  - [echo](https://linuxize.com/post/echo-command-in-linux-with-examples/)
+
+- Photo by [Razvan Narcis Ticu](https://unsplash.com/@ticurazvannarcis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)
