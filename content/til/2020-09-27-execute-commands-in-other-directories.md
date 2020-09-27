@@ -39,11 +39,12 @@ I was trying to avoid having to `cd` to one directory, run a command, and switch
 
 You can run commands in other directories without leaving your current working directory, by wrapping the commands in parenthesis `()`.
 
-> The parentheses cause a sub-shell to be spawned | [Source](https://stackoverflow.com/a/786419/14342613)
-
 ```shell
 $ (cd ../other-project && npm i)
 ```
+
+> The parentheses cause a sub-shell to be spawned | [Source](https://stackoverflow.com/a/786419/14342613)
+
 
 ![https://media.giphy.com/media/NnSfgd2KxuP3q/giphy.gif](https://media.giphy.com/media/NnSfgd2KxuP3q/giphy.gif)
 
