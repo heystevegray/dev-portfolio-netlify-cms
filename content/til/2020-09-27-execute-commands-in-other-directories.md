@@ -31,18 +31,17 @@ exclude: Overview
 
 # Summary
 
-I was trying to avoid having to `cd` to one directory, run a command, and switch back to my [current working directory](https://shapeshed.com/unix-pwd/).
+I was trying to avoid having to `cd` to one directory, run a command, and switch back to my [current working directory](https://shapeshed.com/unix-pwd/). To run commands in sub-shells, wrap the commands in parenthesis `()`. Executing commands in a sub process circumvents the famous `cd ../thing` and `cd ../` all the time.
+
+> The parentheses cause a sub-shell to be spawned | [Source](https://stackoverflow.com/a/786419/14342613)
 
 # Usage
-
-You can run commands in other directories without leaving your current working directory, by wrapping the commands in parenthesis `()`.
 
 ```shell
 $ (cd ../other-project && npm i)
 ```
 
-> The parentheses cause a sub-shell to be spawned | [Source](https://stackoverflow.com/a/786419/14342613)
-
+![Thumbs up Abed](https://media.giphy.com/media/NnSfgd2KxuP3q/giphy.gif "Thumbs up Abed")
 
 # Example
 
