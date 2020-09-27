@@ -16,6 +16,13 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
         <div className="columns is-mobile is-centered">
           <a
             className="socials__link"
+            href="https://www.npmjs.com/~heystevegray"
+            target="_blank"
+          >
+            <Icon className="column is-primary" path={mdiNpm} size={iconSize} />
+          </a>
+          <a
+            className="socials__link"
             href="https://github.com/heystevegray"
             target="_blank"
           >
@@ -25,14 +32,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
               size={iconSize}
             />
           </a>
-          <a
-            className="socials__link"
-            href="https://www.npmjs.com/~heystevegray"
-            target="_blank"
-          >
-            <Icon className="column is-primary" path={mdiNpm} size={iconSize} />
-          </a>
-          <a
+          {/* <a
             className="socials__link"
             href="https://twitter.com/heystevegray"
             target="_blank"
@@ -53,7 +53,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
               path={mdiLinkedin}
               size={iconSize}
             />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

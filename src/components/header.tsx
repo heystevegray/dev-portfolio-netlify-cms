@@ -1,5 +1,6 @@
 import React, { ReactElement, useState } from "react";
 import { Link } from "gatsby";
+import Socials from "./Socials/Socials";
 
 interface Props {
   siteTitle: string;
@@ -41,6 +42,13 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
         </div>
 
         {/* The navbar-menu */}
+        {!active && (
+          <div className="navbar-menu">
+            <div className="navbar-end navbar-item">
+              <Socials iconSize={2.5} />
+            </div>
+          </div>
+        )}
         {active && (
           <div
             className={`navbar-menu has-background-grey-darker ${
