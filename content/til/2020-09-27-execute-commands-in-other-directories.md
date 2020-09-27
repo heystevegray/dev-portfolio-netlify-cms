@@ -63,9 +63,9 @@ For this example we will create and write to a file in a different directory tha
 2. Next we will change directories to `project-b` and create a file called `hello.txt`. After we create the file we will write "Hello World" to it. Enter the following command (don't forget the parenthesis `()` around the command 😁):
 
    ```bash
-   $ (cd ../project-b && touch `hello.txt` && echo "Hello World" > hello.txt)
+   $ (cd ../project-b && touch hello.txt && echo "Hello World" > hello.txt)
    ```
-3. You can display the contents of the hello.txt file with the [cat](https://linuxize.com/post/linux-cat-command/) command:
+3. You can display the contents of the `hello.txt`- file with the [cat](https://linuxize.com/post/linux-cat-command/) command:
 
    ```bash
    $ cat ../project-b/hello.txt
