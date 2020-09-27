@@ -43,7 +43,6 @@ $ (cd ../other-project && npm i)
 
 > The parentheses cause a sub-shell to be spawned | [Source](https://stackoverflow.com/a/786419/14342613)
 
-![Thumbs up Abed](https://media.giphy.com/media/NnSfgd2KxuP3q/giphy.gif "Thumbs up Abed")
 
 # Example
 
