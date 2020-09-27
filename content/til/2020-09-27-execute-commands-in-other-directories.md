@@ -49,7 +49,7 @@ $ (cd ../other-project && npm i)
 
 For this example we will create and write to a file in a different directory than our current one. We will wrap parenthesis `()` around the command so that we don't actuallly have to change directories, becuase.. no one wan'ts to keep typing `cd ../` all the time.
 
-1. Le'ts [print the current working directory](https://linuxize.com/post/current-working-directory/#pwd-command). Enter the following command in your terminal:
+1. Let's [print the current working directory](https://linuxize.com/post/current-working-directory/#pwd-command). Enter the following command in your terminal:
 
    ```bash
    $ pwd
