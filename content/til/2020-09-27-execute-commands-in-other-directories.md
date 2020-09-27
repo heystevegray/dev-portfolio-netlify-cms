@@ -1,6 +1,6 @@
 ---
 title: Execute commands in other directories
-publish_date: 2020-09-27T04:56:25.959Z
+publish_date: 2020-09-27T05:02:13.779Z
 updated: ""
 description: Spawn sub-shell's so you never leave your current working directory.
 image: assets/razvan-narcis-ticu-mqz-tzeg8l8-unsplash.jpg
