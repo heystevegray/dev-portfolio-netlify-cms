@@ -5,6 +5,7 @@ updated: ""
 description: How to save your ass when you accidentally deleted your feature
   before it was merged to develop. Not that I would know, just heard about
   it....
+tldr: asdf
 tags:
   - development
   - git
@@ -15,4 +16,10 @@ tags:
 > git reflog
 ```
 
+
+
 Look up how to display shell code and output from other docs.
+
+
+
+https://media.giphy.com/media/WiyczarN2XMm4/giphy.gif
