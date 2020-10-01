@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import SEO from "../components/seo";
 import Preview from "../components/Preview";
 import { FormControlLabel, Switch } from "@material-ui/core";
-import { withStyles } from "@material-ui/core/styles";
+import { createStyles, Theme, withStyles } from "@material-ui/core/styles";
 
 import "../assets/styles.css";
 import "../assets/sass/components/til.scss";
@@ -12,19 +12,23 @@ import "../assets/sass/components/til.scss";
 const localStorageKey = "heystevegray-tldr";
 const windowGlobal = typeof window !== "undefined" && window;
 
-const CustomSwitch = withStyles({
-  switchBase: {
-    color: "#1abc9c",
-    "&$checked": {
+const CustomSwitch = withStyles((theme: Theme) =>
+  createStyles({
+    switchBase: {
       color: "#1abc9c",
+      "&$checked": {
+        color: "#1abc9c",
+      },
+      "&$checked + $track": {
+        backgroundColor: "#1abc9c",
+      },
     },
-    "&$checked + $track": {
-      backgroundColor: "#1abc9c",
+    checked: {},
+    track: {
+      backgroundColor: theme.palette.grey[500],
     },
-  },
-  checked: {},
-  track: {},
-})(Switch);
+  })
+)(Switch);
 
 export default function til({ data }) {
   const [isTldr, setIsTldr] = useState(false);
