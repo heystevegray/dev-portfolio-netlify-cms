@@ -1,6 +1,6 @@
 ---
 title: Commands in a Sub-shell, Turtle Power
-publish_date: 2020-10-02T03:10:55.702Z
+publish_date: 2020-10-02T03:13:15.408Z
 updated: ""
 description: Spawn sub-shell's so you never leave your current working directory.
 image: assets/razvan-narcis-ticu-mqz-tzeg8l8-unsplash.jpg
