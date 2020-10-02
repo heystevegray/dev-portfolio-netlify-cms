@@ -1,8 +1,8 @@
 ---
 title: Commands in a Sub-shell, Turtle Power
-publish_date: 2020-10-02T03:13:15.408Z
+publish_date: 2020-10-02T03:42:12.278Z
 updated: ""
-description: Spawn sub-shell's so you never leave your current working directory.
+description: Spawn sub-shells so you never leave your current working directory.
 image: assets/razvan-narcis-ticu-mqz-tzeg8l8-unsplash.jpg
 tldr: >-
   Wrap commands in parenthesis `()` to run them in a
@@ -34,7 +34,7 @@ exclude: Overview
 
 I was trying to avoid having to change directories to run a command, then switch back to my [current working directory](https://shapeshed.com/unix-pwd/). You can run commands in sub-shells by wrap the commands in parenthesis `()`.
 
-> The parentheses cause a sub-shell to be spawned | [Source](https://stackoverflow.com/a/786419/14342613)
+> The parentheses cause a sub-shell to be spawned. After the program exits, the sub-shell terminates, returning you to your prompt of the parent shell, in the directory you started from. | [Source](https://stackoverflow.com/a/786419/14342613)
 
 # Usage
 
@@ -97,6 +97,8 @@ We can execute these commands without actually leaving our current directory by 
 
 # Resources
 
+**Sub-shells**
+
 - [Subshells](https://tldp.org/LDP/abs/html/subshells.html#:~:text=A%20subshell%20is%20a%20separate,process%20a%20list%20of%20commands.)
 
 - [Grouping Commands](https://www.gnu.org/software/bash/manual/bash.html#Grouping-Commands)
@@ -104,7 +106,7 @@ We can execute these commands without actually leaving our current directory by 
 
 - [How do I run a program with a different working directory from current, from Linux shell?](https://stackoverflow.com/questions/786376/how-do-i-run-a-program-with-a-different-working-directory-from-current-from-lin/786419#786419)
 
-## Commands
+**Commands**
 
 - [cd](https://linuxize.com/post/linux-cd-command/)
 - [pwd](https://linuxize.com/post/current-working-directory/#pwd-command)
@@ -112,6 +114,6 @@ We can execute these commands without actually leaving our current directory by 
 - [touch](https://linuxize.com/post/linux-touch-command/)
 - [echo](https://linuxize.com/post/echo-command-in-linux-with-examples/)
 
-## Photo
+**Photo**
 
 - Photo by [Razvan Narcis Ticu](https://unsplash.com/@ticurazvannarcis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/)
