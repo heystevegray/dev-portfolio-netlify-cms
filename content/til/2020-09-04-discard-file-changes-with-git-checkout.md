@@ -4,13 +4,17 @@ publish_date: 2020-09-04T06:53:24.054Z
 updated: 2020-09-18T04:45:42.347Z
 description: Revert changes that you made to your files.
 image: assets/hidde-van-esch-gazronaxvsu-unsplash.jpg
-tldr: |-
-  You can reset changes to a file with the `git checkout` command. Make a change to a file like `src/pages/index.tsx` and save. Run `git checkout` on the same file to revert the changes.
+tldr: >-
+  You can reset changes to a file with the `git checkout` command. Make a change
+  to a file like `src/pages/index.tsx` and save. Run `git checkout` on the same
+  file to revert the changes.
+
 
   ```shell
-  $ git checkout src/pages/index.tsx
-  ```
 
+  $ git checkout src/pages/index.tsx
+
+  ```
 tags:
   - development
   - git
@@ -73,4 +77,4 @@ I frequently discard experimental changes to files that pertain to my feature. S
 
 # Resources
 
-[git-checkout](https://git-scm.com/docs/git-checkout)
+- [git-checkout](https://git-scm.com/docs/git-checkout)
