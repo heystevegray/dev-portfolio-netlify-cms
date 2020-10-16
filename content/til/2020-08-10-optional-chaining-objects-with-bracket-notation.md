@@ -48,4 +48,4 @@ const nestedProp = obj?.["first"]?.["second"];
 
 ## Resources
 
-[The optional chaining operator (**`?.`**)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [The optional chaining operator (**`?.`**)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
