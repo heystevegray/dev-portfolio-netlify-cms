@@ -8,9 +8,8 @@ tldr: >-
   Wrap commands in parenthesis `()` to run them in a
   [sub-shell](https://www.gnu.org/software/bash/manual/bash.html#Grouping-Commands)
   without leaving your current working directory. 
-
-
-  > After the program exits, the sub-shell terminates, returning you to your prompt of the parent shell, in the directory you started from. | [Source](https://stackoverflow.com/questions/786376/how-do-i-run-a-program-with-a-different-working-directory-from-current-from-lin/786419#786419)
+  <br /><br />
+  After the program exits, the sub-shell terminates, returning you to your prompt of the parent shell, in the directory you started from. | [Source](https://stackoverflow.com/questions/786376/how-do-i-run-a-program-with-a-different-working-directory-from-current-from-lin/786419#786419)
 
 
   ```shell
@@ -24,6 +23,7 @@ tags:
   - workflow
   - turtle-power
 ---
+
 # Overview
 
 ```toc

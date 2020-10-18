@@ -6,6 +6,16 @@ $mobile-padding: 10px;
   justify-content: center;
 }
 
+@mixin default-gradient {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(24, 24, 24, 0.2) 30%,
+    rgba(24, 24, 24, 0.2) 50%,
+    #181818
+  );
+}
+
 @mixin hover {
   color: #f2f2f2;
   transition: all 0.25s ease-out;

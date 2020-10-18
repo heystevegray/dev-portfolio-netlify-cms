@@ -437,8 +437,8 @@ code {
   font-weight: 400;
 }
 body {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 1.1em;
+  line-height: 1.8;
   color: #fff;
 }
 a {
@@ -455,7 +455,7 @@ a:hover {
   color: #1dd2af;
 }
 code {
-  color: #e74c3c;
+  color: #c8b2fd;
   padding: 0.25em 0.5em;
 }
 code,

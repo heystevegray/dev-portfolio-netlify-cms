@@ -18,8 +18,8 @@ const IndexPage = ({ data }): ReactElement => {
             {image && <Img className="logo" fixed={image} />}
             <h1 className="title is-1">Steve Gray</h1>
             <div className="container">
-              <h3 className="title is-3">Software Engineer</h3>
-              <h5 className="subtitle">{`React | Typescript`}</h5>
+              <h2 className="title is-2">Software Engineer</h2>
+              <h3 className="subtitle">{`React | Typescript`}</h3>
               <div className="columns is-centered">
                 <Link className="column" to="/til">
                   <button className="button has-text-dark is-large is-link is-rounded">

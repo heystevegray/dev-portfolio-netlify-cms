@@ -28,9 +28,11 @@ export default function Tags({
         <div className={`${centerTags}`}>
           <ul className="tags">
             {items.map((label, index) => (
-              <span className={`tag ${background}`} key={index}>
-                {label}
-              </span>
+              <li>
+                <span className={`tag ${background}`} key={index}>
+                  {label}
+                </span>
+              </li>
             ))}
           </ul>
         </div>

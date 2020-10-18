@@ -16,6 +16,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
         <div className="columns is-mobile is-centered">
           <a
             className="socials__link"
+            aria-label="steve gray on npm"
             href="https://www.npmjs.com/~heystevegray"
             target="_blank"
           >
@@ -23,6 +24,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
           </a>
           <a
             className="socials__link"
+            aria-label="steve gray on github"
             href="https://github.com/heystevegray"
             target="_blank"
           >

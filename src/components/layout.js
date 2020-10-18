@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
+      <main
       // style={{
       //   margin: `0 auto`,
       //   maxWidth: 960,
@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         <section className="hero has-background-black-bis is-fullheight">
           {children}
         </section>
-      </div>
+      </main>
       <Footer />
     </>
   );
