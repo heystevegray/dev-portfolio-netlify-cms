@@ -50,7 +50,7 @@ export default function Preview({ frontmatter, fields, isTldr }: PreviewProps) {
         <div className="box">{body}</div>
       ) : (
         <Link
-          to={`/til${fields.slug}`}
+          to={`${fields.slug}`}
           className="box til-preview preview"
           key={fields.slug}
         >
