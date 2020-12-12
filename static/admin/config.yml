@@ -22,7 +22,7 @@ collections:
       - { name: tags, label: Tags, widget: list }
   - name: projects
     label: projects
-    description: Today I Learned
+    description: Projects I created
     folder: content/projects
     create: true
     slug: "{{slug}}"

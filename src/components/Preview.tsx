@@ -8,7 +8,7 @@ import BlogCard from "../components/Cards/BlogCard";
 import "../assets/styles.css";
 import Tags, { Tag } from "./Tags";
 
-export interface Frontmatter {
+export interface Preview {
   image: any;
   publish_date: string;
   description: string;
@@ -22,7 +22,7 @@ export interface Fields {
 }
 
 export interface PreviewProps {
-  frontmatter: Frontmatter;
+  frontmatter: Preview;
   fields: Fields;
   tldr: string;
   isTldr: boolean;

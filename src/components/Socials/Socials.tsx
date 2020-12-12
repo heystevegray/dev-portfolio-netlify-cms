@@ -44,7 +44,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
               path={mdiTwitter}
               size={iconSize}
             />
-          </a>
+          </a> */}
           <a
             className="socials__link"
             href="https://www.linkedin.com/in/stephengray191/"
@@ -55,7 +55,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
               path={mdiLinkedin}
               size={iconSize}
             />
-          </a> */}
+          </a>
         </div>
       </div>
     </div>

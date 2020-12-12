@@ -1,10 +1,21 @@
 import React, { ReactElement } from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "../assets/styles.css";
 import "../assets/sass/index.scss";
 import ProjectCard from "../components/Cards/ProjectCard";
+import { Tag } from "../components/Tags";
+
+export interface Project {
+  image: any;
+  updated: string;
+  description: string;
+  title: string;
+  demo: string;
+  github: string;
+  tags: Tag[];
+}
 
 const ProjectsPage = ({ data }): ReactElement => {
   console.log({ data });
@@ -12,36 +23,27 @@ const ProjectsPage = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title="Projects" />
-      <section className="hero is-fullheight has-text-centered has-background-black-bis">
-        <div className="hero-body">
-          <div className="container til-card-container post">
-            <section className="section body">
-              <div className="container">
-                {data &&
-                  data?.allMarkdownRemark.edges?.map(
-                    ({ node }, index: number) => {
-                      const { frontmatter } = node;
-                      console.log({ frontmatter });
+      <div className="place-self-center">
+        {data &&
+          data?.allMarkdownRemark.edges?.map(({ node }, index: number) => {
+            const { frontmatter } = node;
+            console.log({ frontmatter });
 
-                      return (
-                        <ProjectCard key={index} frontmatter={frontmatter} />
-                      );
-                    }
-                  )}
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
+            return <ProjectCard key={index} project={frontmatter} />;
+          })}
+      </div>
     </Layout>
   );
 };
 
 export default ProjectsPage;
 
-export const ProjectstTemplateQuery = graphql`
+export const ProjectTemplateQuery = graphql`
   query allProjects {
-    allMarkdownRemark(filter: { fields: { slug: { regex: "/projects/" } } }) {
+    allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/projects/" } } }
+      sort: { fields: frontmatter___updated, order: DESC }
+    ) {
       edges {
         node {
           fields {
@@ -55,11 +57,8 @@ export const ProjectstTemplateQuery = graphql`
             github
             demo
             image {
-              childImageSharp {
-                fixed(width: 125, height: 125) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
+              publicURL
+              extension
             }
           }
         }

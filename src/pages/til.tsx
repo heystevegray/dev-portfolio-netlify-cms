@@ -107,6 +107,7 @@ export default function til({ data }) {
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
     allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/til/" } } }
       sort: { fields: frontmatter___publish_date, order: DESC }
     ) {
       edges {

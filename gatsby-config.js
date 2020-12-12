@@ -5,10 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Steve Gray`,
-    description: `My developer portfolio website using gatsby and netlify cms.`,
+    description: `Software Engineer`,
     author: `Stephen Gray`,
   },
   plugins: [
+    "gatsby-plugin-postcss",
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
