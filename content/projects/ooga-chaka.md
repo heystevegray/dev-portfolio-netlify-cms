@@ -1,6 +1,6 @@
 ---
 title: ooga-chaka
-updated: 2020-09-21T05:57:54.027Z
+updated: 2020-09-21T06:00:54.027Z
 description: A collection of my custom React Hooks.
 image: assets/react.svg
 demo: https://www.npmjs.com/package/ooga-chaka
