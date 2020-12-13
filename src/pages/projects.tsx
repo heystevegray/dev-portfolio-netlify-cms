@@ -21,7 +21,7 @@ const ProjectsPage = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title="Steve Gray" description="Projects" />
-      <div className="mt-40 lg:mt-60 place-self-center">
+      <div className="mt-40 mb-40 lg:mt-60 lg:mb-60 place-self-center">
         {data &&
           data?.allMarkdownRemark.edges?.map(({ node }, index: number) => {
             const { frontmatter } = node;

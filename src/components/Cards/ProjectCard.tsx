@@ -1,5 +1,4 @@
 import React from "react";
-import Img from "gatsby-image";
 import dayjs from "dayjs";
 import Tags from "../Tags";
 import { mdiGithub, mdiLinkVariant } from "@mdi/js";
@@ -11,13 +10,13 @@ interface Props {
 }
 
 export default function ProjectCard({ project }: Props) {
-  const image = project?.image.publicURL;
+  const image = project?.image?.publicURL;
 
   return (
     <div className="mb-8">
       <figure className="m-0 md:flex rounded-xl p-4 md:p-0">
         <div className="flex flex-col">
-          <div className="app-icon rounded p-6 w-32 h-32 align-middle rounded-full mx-auto ">
+          <div className="app-icon rounded p-8 w-40 h-40 align-middle rounded-full mx-auto ">
             {image && (
               <img
                 aria-label={`${project.title}`}

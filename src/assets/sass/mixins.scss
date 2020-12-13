@@ -16,6 +16,10 @@ $mobile-padding: 10px;
   );
 }
 
+@mixin app-icon-gradient {
+  background: linear-gradient(to bottom, #181818, #252728 50%, #303030 80%);
+}
+
 @mixin hover {
   color: #f2f2f2;
   transition: all 0.25s ease-out;
