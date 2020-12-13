@@ -22,7 +22,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 async function getPageData(graphql) {
   return await graphql(`
     {
-      tilPosts: allMarkdownRemark {
+      tilPosts: allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/til/" } } }
+      ) {
         edges {
           node {
             id
