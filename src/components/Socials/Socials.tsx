@@ -36,6 +36,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
           </a>
           {/* <a
             className="socials__link"
+			aria-label="steve gray on twitter"
             href="https://twitter.com/heystevegray"
             target="_blank"
           >
@@ -47,6 +48,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
           </a> */}
           <a
             className="socials__link"
+            aria-label="steve gray on linked in"
             href="https://www.linkedin.com/in/stephengray191/"
             target="_blank"
           >

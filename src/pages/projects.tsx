@@ -18,16 +18,13 @@ export interface Project {
 }
 
 const ProjectsPage = ({ data }): ReactElement => {
-  console.log({ data });
-
   return (
     <Layout>
       <SEO title="Projects" />
-      <div className="place-self-center">
+      <div className="mt-40 lg:mt-60 place-self-center">
         {data &&
           data?.allMarkdownRemark.edges?.map(({ node }, index: number) => {
             const { frontmatter } = node;
-            console.log({ frontmatter });
 
             return <ProjectCard key={index} project={frontmatter} />;
           })}

@@ -12,26 +12,22 @@ interface Props {
 
 export default function ProjectCard({ project }: Props) {
   const image = project?.image.publicURL;
-  //   const fluid = image?.childImageSharp.fluid;
-  console.log({ image });
 
   return (
-    <>
-      <figure className="mt-28 md:flex bg-red rounded-xl p-8 md:p-0">
-        <div className="w-32 h-32 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto my-auto">
-          {/* {fluid && <Img fluid={fluid} />} */}
-          {image && <img src={image} />}
-        </div>
-        <div className="pt-6 md:p-8 text-center md:text-left space-y-4 max-w-md">
-          <p className="text-white">{project.title}</p>
-          <div className="text-gray-500 align-middle">
-            {dayjs(project.updated).format("MMM D, YYYY")}
+    <div className="mb-8">
+      <figure className="m-0 md:flex rounded-xl p-4 md:p-0">
+        <div className="flex flex-col">
+          <div className="app-icon rounded p-6 w-32 h-32 align-middle rounded-full mx-auto ">
+            {image && (
+              <img
+                aria-label={`${project.title}`}
+                className="place-self-center"
+                src={image}
+              />
+            )}
           </div>
-          <blockquote>
-            <p className="text-lg font-semibold w-200">{project.description}</p>
-          </blockquote>
-          <figcaption className="font-medium">
-            <div className="inline-block">
+          <figcaption className="font-medium flex flex-row justify-center mt-8">
+            <div className="">
               {project.demo && (
                 <a
                   className="socials__link"
@@ -47,7 +43,7 @@ export default function ProjectCard({ project }: Props) {
                 </a>
               )}
             </div>
-            <div className="inline-block">
+            <div className="">
               {project.github && (
                 <a
                   className="socials__link"
@@ -64,9 +60,22 @@ export default function ProjectCard({ project }: Props) {
               )}
             </div>
           </figcaption>
-          <Tags tags={project.tags} />
+        </div>
+        <div className="pt-6 md:p-8 text-center md:text-left space-y-4 max-w-md">
+          <p className="text-gray-100 text-4xl">{project.title}</p>
+          <p className="text-gray-400 place-self-center">
+            {dayjs(project.updated).format("MMM D, YYYY")}
+          </p>
+          <blockquote>
+            <p className="text-lg font-semibold md:w-200">
+              {project.description}
+            </p>
+          </blockquote>
+          <div className="flex justify-center md:justify-start">
+            <Tags tags={project.tags} />
+          </div>
         </div>
       </figure>
-    </>
+    </div>
   );
 }
