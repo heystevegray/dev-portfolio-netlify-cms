@@ -39,9 +39,7 @@ export default function til({ data }) {
 
     try {
       windowGlobal?.localStorage?.setItem(localStorageKey, `${value}`);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
