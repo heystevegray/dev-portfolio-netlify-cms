@@ -17,7 +17,7 @@ $mobile-padding: 10px;
 }
 
 @mixin app-icon-gradient {
-  background: linear-gradient(to bottom, #181818, #252728 50%, #303030 80%);
+  background: linear-gradient(to bottom, transparent, #181818 50%, #242424);
 }
 
 @mixin hover {

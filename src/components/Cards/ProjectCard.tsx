@@ -14,13 +14,13 @@ export default function ProjectCard({ project }: Props) {
 
   return (
     <div className="mb-8">
-      <figure className="m-0 md:flex rounded-xl p-4 md:p-0">
+      <figure className="m-0 md:flex rounded-xl p-5">
         <div className="flex flex-col">
           <div className="app-icon rounded p-8 w-40 h-40 align-middle rounded-full mx-auto ">
             {image && (
               <img
                 aria-label={`${project.title}`}
-                className="place-self-center"
+                className="place-self-center w-24 h-24"
                 src={image}
               />
             )}
