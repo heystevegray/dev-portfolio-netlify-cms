@@ -19,6 +19,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
             aria-label="steve gray on npm"
             href="https://www.npmjs.com/~heystevegray"
             target="_blank"
+            rel="noopener"
           >
             <Icon className="column is-primary" path={mdiNpm} size={iconSize} />
           </a>
@@ -27,6 +28,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
             aria-label="steve gray on github"
             href="https://github.com/heystevegray"
             target="_blank"
+            rel="noopener"
           >
             <Icon
               className="column is-primary"
@@ -39,6 +41,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
 			aria-label="steve gray on twitter"
             href="https://twitter.com/heystevegray"
             target="_blank"
+			rel="noopener"
           >
             <Icon
               className="column is-primary"
@@ -51,6 +54,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
             aria-label="steve gray on linked in"
             href="https://www.linkedin.com/in/stephengray191/"
             target="_blank"
+            rel="noopener"
           >
             <Icon
               className="column is-primary"

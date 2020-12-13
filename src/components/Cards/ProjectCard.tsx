@@ -34,6 +34,7 @@ export default function ProjectCard({ project }: Props) {
                   aria-label={`${project.title} demo`}
                   href={`${project.demo}`}
                   target="_blank"
+                  rel="noopener"
                 >
                   <Icon
                     className="column is-primary"
@@ -50,6 +51,7 @@ export default function ProjectCard({ project }: Props) {
                   aria-label={`${project.title} on github`}
                   href={`${project.github}`}
                   target="_blank"
+                  rel="noopener"
                 >
                   <Icon
                     className="column is-primary"
