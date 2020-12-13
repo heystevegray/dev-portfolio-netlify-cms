@@ -21,6 +21,9 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
           <Link to="/" className="navbar-item">
             {siteTitle}
           </Link>
+          <Link to="/projects" className="is-hidden-touch navbar-item">
+            Projects
+          </Link>
           <Link to="/til" className="is-hidden-touch navbar-item">
             Today I Learned
           </Link>
@@ -58,6 +61,9 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
             <div className="navbar-start">
               <Link to="/" className="navbar-item">
                 Home
+              </Link>
+              <Link to="/projects" className="navbar-item">
+                Projects
               </Link>
               <Link to="/til" className="navbar-item">
                 Today I Learned
