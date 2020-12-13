@@ -10,7 +10,7 @@ const IndexPage = ({ data }): ReactElement => {
 
   return (
     <Layout>
-      <SEO title="Stephen Gray" description="Software Engineer" />
+      <SEO title="Steve Gray" description="Software Engineer" />
       <section className="hero is-fullheight has-text-centered has-background-black-bis">
         <div className="hero-body">
           <div className="container">

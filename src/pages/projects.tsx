@@ -20,7 +20,7 @@ export interface Project {
 const ProjectsPage = ({ data }): ReactElement => {
   return (
     <Layout>
-      <SEO title="Stephen Gray" description="Projects" />
+      <SEO title="Steve Gray" description="Projects" />
       <div className="mt-40 lg:mt-60 place-self-center">
         {data &&
           data?.allMarkdownRemark.edges?.map(({ node }, index: number) => {

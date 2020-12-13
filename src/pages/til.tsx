@@ -50,7 +50,7 @@ export default function til({ data }) {
 
   return (
     <Layout>
-      <SEO title="Stephen Gray" description="Today I Learned" />
+      <SEO title="Steve Gray" description="Today I Learned" />
       <section className="section has-text-centered card-body">
         <div className="container">
           <section className="section card-body">
