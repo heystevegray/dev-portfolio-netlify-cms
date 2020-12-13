@@ -1,6 +1,6 @@
 ---
 title: nudge
-updated: 2020-11-29T11:10:24.249Z
+updated: 2020-03-01T00:00:40.887Z
 description: Having trouble making a decision? Get a nudge in the right direction.
 image: assets/nudge.svg
 demo: https://nudgeme.netlify.com/
