@@ -32,7 +32,7 @@ exclude: Overview
 
 # Summary
 
-I was trying to avoid having to change directories to run a command, then switch back to my [current working directory](https://shapeshed.com/unix-pwd/). You can run commands in sub-shells by wrap the commands in parenthesis `()`.
+I was trying to avoid having to change directories to run a command, then switch back to my [current working directory](https://shapeshed.com/unix-pwd/). You can run commands in sub-shells by wrapping the commands in parenthesis `()`.
 
 > The parentheses cause a sub-shell to be spawned. After the program exits, the sub-shell terminates, returning you to your prompt of the parent shell, in the directory you started from. | [Source](https://stackoverflow.com/a/786419/14342613)
 
