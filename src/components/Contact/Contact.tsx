@@ -13,6 +13,7 @@ const Contact = () => {
         data-netlify="true"
         netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="Contact" />
         <div className="flex flex-wrap flex-col w-full sm:p-4 p-1">
           <div className="hidden">
             <label className="hidden mb-1" htmlFor="bot-field">
