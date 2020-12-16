@@ -7,12 +7,7 @@ const Contact = () => {
       id="contact"
       className="contact max-w-2xl my-10 has-background-black-ter md:p-8 md:py-12 p-4 flex flex-col flex-wrap w-full mx-auto"
     >
-      <form
-        name="Contact"
-        method="POST"
-        data-netlify="true"
-        data-netlify-recaptcha="true"
-      >
+      <form name="contact" method="POST" data-netlify="true">
         <div className="flex flex-wrap flex-col w-full sm:p-4 p-1">
           <label className="mb-1" htmlFor="name">
             Name *
@@ -50,7 +45,6 @@ const Contact = () => {
             aria-label="message"
             required
           />
-          <div data-netlify-recaptcha="true"></div>
           <Button
             style={{ background: "var(--accent-color)" }}
             className="text-black"
