@@ -11,14 +11,20 @@ const about = () => {
       <SEO title="Steve Gray" description="About me" />
       <div className="text-white md:text-xl place-self-center max-w-2xl mb-40">
         <Title title="About me" />
-        <div className="hero-body md:mt-20 items-center flex flex-col place-self-center md:flex-row">
+        <div className="hero-body md:mt-20 items-center flex flex-col place-self-center">
           <div className="ml-4">
             <Headshot />
           </div>
-          <div className="px-5 md:ml-4 pt-8 md:pt-0">
-            <p>
-              Hey I'm Steve Gray. I'm a Software Engineer currently interested
-              in {<Link text="React" href="https://reactjs.org/" />},{" "}
+          <div className="px-5 md:ml-4 md:mt-0">
+            <p className="block m:ml-0 m-4 mb-0 text-center text-3xl">
+              Steve Gray
+            </p>
+            <p className="block m:ml-0 m-4 text-center text-2xl text-gray-500">
+              Software Engineer
+            </p>
+            <p className="mt-4 text-md">
+              Hey I'm Steve Gray. I build web applications with{" "}
+              {<Link text="React" href="https://reactjs.org/" />},{" "}
               {
                 <Link
                   text="TypeScript"
@@ -26,12 +32,12 @@ const about = () => {
                 />
               }
               , and {<Link text="GraphQL" href="https://graphql.org/" />}. I
-              really enjoy learning about web development, and sharing my
-              knowledge with others.
+              enjoy learning about web development, and sharing my knowledge
+              with others.
             </p>
-            <p className="pt-5">
+            <p className="mt-4 text-md">
               Outside of coding, I'm an EDM producer, drummer, pianist, and
-              professional Netflix-er. I've also been teaching myself about
+              professional Netflix-er. I have also been teaching myself about
               photography and video editing.
             </p>
           </div>
