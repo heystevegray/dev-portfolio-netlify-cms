@@ -9,25 +9,11 @@ const Contact = () => {
     >
       <form
         name="Contact"
-        action="POST"
+        method="POST"
         data-netlify="true"
-        netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
       >
-        <input type="hidden" name="form-name" value="Contact" />
         <div className="flex flex-wrap flex-col w-full sm:p-4 p-1">
-          <div className="hidden">
-            <label className="hidden mb-1" htmlFor="bot-field">
-              Bot filter
-            </label>
-            <input
-              className="hidden p-3 mb-4 text-md input"
-              type="text"
-              placeholder="Don’t fill this out if you’re human"
-              id="bot-field"
-              name="bot-field"
-              aria-label="bot-field"
-            />
-          </div>
           <label className="mb-1" htmlFor="name">
             Name *
           </label>
@@ -64,6 +50,7 @@ const Contact = () => {
             aria-label="message"
             required
           />
+          <div data-netlify-recaptcha="true"></div>
           <Button
             style={{ background: "var(--accent-color)" }}
             className="text-black"
