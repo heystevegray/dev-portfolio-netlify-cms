@@ -7,7 +7,8 @@ const Contact = () => {
       id="contact"
       className="contact max-w-2xl my-10 has-background-black-ter md:p-8 md:py-12 p-4 flex flex-col flex-wrap w-full mx-auto"
     >
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="post" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
         <div className="flex flex-wrap flex-col w-full sm:p-4 p-1">
           <label className="mb-1" htmlFor="name">
             Name *
