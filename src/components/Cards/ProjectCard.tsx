@@ -13,10 +13,10 @@ export default function ProjectCard({ project }: Props) {
   const image = project?.image?.publicURL;
 
   return (
-    <div className="mb-8">
+    <div className="mb-14">
       <figure className="m-0 md:flex rounded-xl p-5">
         <div className="flex flex-col">
-          <div className="app-icon rounded p-8 w-40 h-40 align-middle rounded-full mx-auto ">
+          <div className="app-icon p-8 w-40 h-40 align-middle rounded-full mx-auto ">
             {image && (
               <img
                 aria-label={`${project.title}`}

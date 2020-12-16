@@ -35,7 +35,12 @@ const TilPost = ({ data }): ReactElement => {
                   <div className="columns">
                     <div className="column">
                       <div className="column">
-                        {image && <Img fixed={image.childImageSharp.fixed} />}
+                        {image && (
+                          <Img
+                            className="rounded-full"
+                            fixed={image.childImageSharp.fixed}
+                          />
+                        )}
                       </div>
                       <h1 className="title">{title}</h1>
                       {description && (

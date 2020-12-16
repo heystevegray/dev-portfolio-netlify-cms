@@ -14,3 +14,27 @@
 .app-icon {
   @include app-icon-gradient;
 }
+
+.contact {
+  @include default-gradient;
+
+  .input {
+    background-color: #121212;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 2.5rem;
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #979797 !important;
+      opacity: 1; /* Firefox */
+    }
+  }
+
+  textarea {
+    &.input {
+      min-height: 200px !important;
+    }
+  }
+}

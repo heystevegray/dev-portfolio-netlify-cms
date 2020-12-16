@@ -6,6 +6,7 @@ import "../assets/styles.css";
 import "../assets/sass/index.scss";
 import ProjectCard from "../components/Cards/ProjectCard";
 import { Tag } from "../components/Tags";
+import Title from "../components/Title/Title";
 
 export interface Project {
   image: any;
@@ -21,7 +22,8 @@ const ProjectsPage = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title="Steve Gray" description="Projects" />
-      <div className="mt-40 mb-40 lg:mt-50 lg:mb-50 place-self-center">
+      <Title title="Projects" />
+      <div className="sm:mt-14 mt-8 mb-40 lg:mb-50 place-self-center">
         {data &&
           data?.allMarkdownRemark.edges?.map(({ node }, index: number) => {
             const { frontmatter } = node;

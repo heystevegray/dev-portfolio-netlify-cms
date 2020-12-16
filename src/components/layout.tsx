@@ -12,7 +12,12 @@ import Header from "./header";
 import Footer from "./footer";
 import "./layout.css";
 
-const Layout = ({ children }) => {
+interface Props {
+  children: any;
+  isHome?: boolean;
+}
+
+const Layout = ({ children, isHome = false }: Props) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header isHome={isHome} siteTitle={data.site.siteMetadata.title} />
       <main>
         <section className="hero has-background-black-bis is-fullheight">
           {children}

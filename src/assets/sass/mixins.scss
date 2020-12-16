@@ -30,12 +30,6 @@ $mobile-padding: 10px;
   }
 }
 
-@mixin roundedImage {
-  img {
-    border-radius: 50%;
-  }
-}
-
 @mixin removeMobileSectionPadding {
   @media screen and (max-width: 768px) {
     .section.body {

@@ -19,10 +19,6 @@ button {
   }
 }
 
-.logo {
-  @include roundedImage;
-}
-
 .post {
   width: 100%;
   max-width: $card-width;
@@ -41,4 +37,8 @@ button {
 
 p {
   margin-bottom: $p-margin !important;
+}
+
+.button {
+  background-color: var(--accent-color);
 }
