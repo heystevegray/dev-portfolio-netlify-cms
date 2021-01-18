@@ -8,6 +8,6 @@ github: ""
 tags:
   - React
   - JavaScript
-  - HTML
-  - CSS
+  - Material-UI
+  - PWA
 ---
