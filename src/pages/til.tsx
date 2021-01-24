@@ -50,9 +50,8 @@ export default function til({ data }) {
   }, []);
 
   return (
-    <Layout>
+    <Layout title="Today I Learned">
       <SEO title="Steve Gray" description="Today I Learned" />
-      <Title title="Today I Learned" />
       <div className="tldr-switch">
         <FormControlLabel
           value="top"
@@ -70,7 +69,7 @@ export default function til({ data }) {
         />
       </div>
       <div className="container til-card-container post">
-        <section className="section body">
+        <section className="section body mb-20">
           <div className="container">
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {

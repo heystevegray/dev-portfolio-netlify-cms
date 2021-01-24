@@ -6,8 +6,8 @@ interface Props {
 
 const Title = ({ title }: Props): ReactElement => {
   return (
-    <div className="mt-40 mb-10">
-      <h2 className="text-4xl text-center">{title}</h2>
+    <div className="place-self-center">
+      <h1 className="text-4xl text-center">{title}</h1>
     </div>
   );
 };

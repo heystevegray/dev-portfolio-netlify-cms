@@ -23,7 +23,7 @@ const TilPost = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title={`${title}`} />
-      <div className="mt-10">
+      <div className="md:-mt-20 -mt-12">
         <section className="section">
           <div className="container post">
             <Link to="/til" className="">

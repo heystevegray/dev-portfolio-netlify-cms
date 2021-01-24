@@ -31,7 +31,7 @@ const Header = ({
                 Projects
               </Link>
               <Link to="/til" className="is-hidden-touch navbar-item">
-                Today I Learned
+                TIL
               </Link>
               <Link to="/about" className="is-hidden-touch navbar-item">
                 About
@@ -80,7 +80,7 @@ const Header = ({
                 Projects
               </Link>
               <Link to="/til" className="navbar-item">
-                Today I Learned
+                TIL
               </Link>
               <Link to="/about" className="navbar-item">
                 About

@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: Props) {
   const image = project?.image?.publicURL;
 
   return (
-    <div className="mb-14">
+    <div className="mb-14 w-full max-w-2xl">
       <figure className="m-0 md:flex rounded-xl p-5">
         <div className="flex flex-col">
           <div className="app-icon p-8 w-40 h-40 align-middle rounded-full mx-auto ">
@@ -62,7 +62,7 @@ export default function ProjectCard({ project }: Props) {
             </div>
           </figcaption>
         </div>
-        <div className="pt-6 md:p-8 text-center md:text-left space-y-4 max-w-md">
+        <div className="pt-6 w-full md:p-8 text-center md:text-left space-y-4">
           <p className="text-gray-100 text-4xl">{project.title}</p>
           <p className="text-gray-400 place-self-center">
             {dayjs(project.updated).format("MMM D, YYYY")}

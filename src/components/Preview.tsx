@@ -39,7 +39,7 @@ export default function Preview({ frontmatter, fields, isTldr }: PreviewProps) {
         <BlogCard frontmatter={frontmatter} fields={fields} image={image} />
       )}
       <div className="card-content">
-        <Tags centered={false} maxTags={4} tags={frontmatter.tags} />
+        <Tags maxTags={4} tags={frontmatter.tags} />
       </div>
     </div>
   );

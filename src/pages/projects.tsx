@@ -6,7 +6,6 @@ import "../assets/styles.css";
 import "../assets/sass/index.scss";
 import ProjectCard from "../components/Cards/ProjectCard";
 import { Tag } from "../components/Tags";
-import Title from "../components/Title/Title";
 
 export interface Project {
   image: any;
@@ -20,14 +19,12 @@ export interface Project {
 
 const ProjectsPage = ({ data }): ReactElement => {
   return (
-    <Layout>
+    <Layout title="Projects">
       <SEO title="Steve Gray" description="Projects" />
-      <Title title="Projects" />
-      <div className="sm:mt-14 mt-8 mb-40 lg:mb-50 place-self-center">
+      <div className="w-full place-items-center flex flex-col px-2 mb-20">
         {data &&
           data?.allMarkdownRemark.edges?.map(({ node }, index: number) => {
             const { frontmatter } = node;
-
             return <ProjectCard key={index} project={frontmatter} />;
           })}
       </div>
