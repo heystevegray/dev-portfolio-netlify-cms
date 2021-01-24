@@ -49,7 +49,7 @@ const Layout = ({
       <Header isHome={isHome} siteTitle={data.site.siteMetadata.title} />
       <main
         className="sm:pt-44 pt-20 md:px-10"
-        style={{ minHeight: windowHeight }}
+        style={{ height: windowHeight }}
       >
         {title && (
           <div className={`mt-10 sm:mb-20 mb-16 ${isHome && "invisible"}`}>
