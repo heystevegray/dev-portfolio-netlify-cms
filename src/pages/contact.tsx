@@ -5,7 +5,7 @@ import SEO from "../components/seo";
 
 const contact = () => {
   return (
-    <Layout title="Contact me" fullHeight>
+    <Layout title="Contact me">
       <SEO title="Steve Gray" description="Contact me" />
       <div className="mb-40">
         <Contact />

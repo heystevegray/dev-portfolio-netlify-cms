@@ -20,7 +20,6 @@ interface Props {
   isHome?: boolean;
   showHeadshot?: boolean;
   title?: string;
-  fullHeight?: boolean;
   center?: boolean;
 }
 
@@ -29,11 +28,7 @@ const Layout = ({
   isHome = false,
   title,
   showHeadshot = false,
-  fullHeight = false,
 }: Props) => {
-  const { height } = useWindowSize();
-  const windowHeight = fullHeight ? height : "100%";
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -47,10 +42,7 @@ const Layout = ({
   return (
     <div>
       <Header isHome={isHome} siteTitle={data.site.siteMetadata.title} />
-      <main
-        className="sm:pt-44 pt-20 md:px-10"
-        style={{ height: windowHeight }}
-      >
+      <main className="sm:pt-44 pt-20 md:px-10" style={{ minHeight: "100vh" }}>
         {title && (
           <div className={`mt-10 sm:mb-20 mb-16 ${isHome && "invisible"}`}>
             <Title title={title} />

@@ -5,7 +5,7 @@ import SEO from "../components/seo";
 
 const App = (): ReactElement => {
   return (
-    <Layout isHome={true} title="Home" showHeadshot fullHeight>
+    <Layout isHome={true} title="Home" showHeadshot>
       <SEO title="Steve Gray" description="Software Engineer" />
       <div className="justify-center text-2xl grid xs:gap-6 gap-4 grid-flow-col auto-cols-max mt-6">
         <Link to="/projects">Projects</Link>

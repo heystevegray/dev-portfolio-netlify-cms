@@ -6,7 +6,7 @@ import Link from "../components/Link/Link";
 
 const about = () => {
   return (
-    <Layout title="About" showHeadshot fullHeight>
+    <Layout title="About" showHeadshot>
       <SEO title="Steve Gray" description="About me" />
       <div className="text-white flex justify-center mb-20">
         <div className="px-5 max-w-md">
