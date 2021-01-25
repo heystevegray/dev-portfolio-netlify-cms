@@ -8,8 +8,8 @@ const about = () => {
   return (
     <Layout title="About" showHeadshot>
       <SEO title="Steve Gray" description="About me" />
-      <div className="text-white flex justify-center mb-20">
-        <div className="px-5 max-w-md">
+      <div className="text-white flex justify-center">
+        <div className="px-5 max-w-md mb-40">
           <p className="mt-6 text-lg">
             Hey I'm Steve Gray. I build web applications with{" "}
             {<Link text="React" href="https://reactjs.org/" />},{" "}
