@@ -1,7 +1,7 @@
 import React from "react";
 import dayjs from "dayjs";
 import Tags from "../Tags";
-import { mdiGithub, mdiLinkVariant } from "@mdi/js";
+import { mdiGithub, mdiLink } from "@mdi/js";
 import Icon from "@mdi/react";
 import { Project } from "../../pages/projects";
 
@@ -36,8 +36,8 @@ export default function ProjectCard({ project }: Props) {
                   rel="noopener"
                 >
                   <Icon
-                    className="column is-primary"
-                    path={mdiLinkVariant}
+                    className="column is-primary transform -rotate-45"
+                    path={mdiLink}
                     size={2.5}
                   />
                 </a>
