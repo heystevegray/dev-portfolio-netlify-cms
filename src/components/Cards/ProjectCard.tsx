@@ -62,18 +62,21 @@ export default function ProjectCard({ project }: Props) {
             </div>
           </figcaption>
         </div>
-        <div className="pt-6 w-full md:p-8 text-center md:text-left space-y-4">
+        <div className="pt-6 w-full md:p-8 text-center md:text-left">
           <p className="text-gray-100 text-4xl">{project.title}</p>
           <p className="text-gray-400 place-self-center">
             {dayjs(project.updated).format("MMM D, YYYY")}
           </p>
-          <blockquote>
-            <p className="text-lg font-semibold md:w-200">
+          <div className="md:justify-start place-items-center justify-center flex">
+            <p className="text-lg font-semibold sm:p-0 px-10">
               {project.description}
             </p>
-          </blockquote>
+          </div>
           <div className="flex justify-center md:justify-start">
-            <Tags tags={project.tags} />
+            <Tags
+              className="max-w-xs sm:max-w-md mx-auto md:justify-start place-items-center justify-center flex flex-wrap"
+              tags={project.tags}
+            />
           </div>
         </div>
       </figure>

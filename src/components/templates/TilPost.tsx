@@ -23,7 +23,7 @@ const TilPost = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title={`${title}`} />
-      <div className="md:-mt-20">
+      <div className="md:-mt-24 -mt-5">
         <section className="section">
           <div className="container post">
             <Link to="/til" className="">
@@ -53,7 +53,7 @@ const TilPost = ({ data }): ReactElement => {
             </section>
             <section className="section">
               <div className="flex justify-center mb-10">
-                <Tags tags={tags} />
+                <Tags className="justify-center" tags={tags} />
               </div>
               <div className="columns is-centered">
                 <div className="column is-narrow">

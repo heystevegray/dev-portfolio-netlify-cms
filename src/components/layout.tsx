@@ -42,7 +42,7 @@ const Layout = ({
   return (
     <div>
       <Header isHome={isHome} siteTitle={data.site.siteMetadata.title} />
-      <main className="sm:pt-36 pt-10 md:px-10 min-h-screen">
+      <main className="sm:pt-36 pt-12 md:px-10 min-h-screen">
         {title && (
           <div className={`mt-10 sm:mb-20 mb-10 ${isHome && "invisible"}`}>
             <Title title={title} />

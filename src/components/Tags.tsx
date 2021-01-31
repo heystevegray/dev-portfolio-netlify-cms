@@ -7,15 +7,20 @@ export interface Tag {
 interface Props {
   tags: Tag[];
   maxTags?: number;
+  className?: string;
 }
 
-export default function Tags({ tags = [], maxTags }: Props): ReactElement {
+export default function Tags({
+  className = "",
+  tags = [],
+  maxTags,
+}: Props): ReactElement {
   const items: Tag[] = maxTags ? tags.slice(0, maxTags) : tags;
 
   return (
-    <div className="">
+    <div className="w-full">
       {tags && tags.length ? (
-        <ul className="flex flex-wrap">
+        <ul className={`flex flex-wrap ${className}`}>
           {items.map((label, index) => (
             <li
               key={index}

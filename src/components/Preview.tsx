@@ -39,7 +39,11 @@ export default function Preview({ frontmatter, fields, isTldr }: PreviewProps) {
         <BlogCard frontmatter={frontmatter} fields={fields} image={image} />
       )}
       <div className="card-content">
-        <Tags maxTags={4} tags={frontmatter.tags} />
+        <Tags
+          className="sm:justify-start flex flex-wrap justify-center place-items-start"
+          maxTags={4}
+          tags={frontmatter.tags}
+        />
       </div>
     </div>
   );
