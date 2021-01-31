@@ -12,7 +12,6 @@ import Header from "./header";
 import Title from "./Title/Title";
 import Headshot from "./Headshot/Headshot";
 import Footer from "./footer";
-import { useWindowSize } from "react-use";
 import "./layout.css";
 
 interface Props {
