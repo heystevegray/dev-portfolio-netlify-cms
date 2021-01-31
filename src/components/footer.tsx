@@ -4,10 +4,10 @@ import Socials from "./Socials/Socials";
 export default function Footer() {
   return (
     <footer>
-      <div className="p-10 place-self-center has-background-black-ter">
+      <div className="p-10 mt-10 place-self-center has-background-black-ter">
         <Socials />
         <p className="has-text-centered">
-          Steve Gray © {new Date().getFullYear()}
+          All rights reserved {new Date().getFullYear()}
         </p>
       </div>
     </footer>

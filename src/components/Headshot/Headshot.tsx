@@ -21,11 +21,9 @@ const Headshot = () => {
           const image = data?.file?.childImageSharp?.fixed;
           return (
             <div className="text-center">
-              <Img className="rounded-full p-4" fixed={image} />
-              <h2 className="block text-4xl mt-4">Steve Gray</h2>
-              <h3 className="block text-3xl text-gray-400">
-                Software Engineer
-              </h3>
+              <Img className="rounded-full" fixed={image} />
+              <p className="m-0 block text-4xl mt-2">Steve Gray</p>
+              <p className="block text-3xl text-gray-400">Software Engineer</p>
             </div>
           );
         }}
