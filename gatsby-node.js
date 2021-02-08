@@ -22,7 +22,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 async function getPageData(graphql) {
   return await graphql(`
     {
-      tilPosts: allMarkdownRemark {
+      tilPosts: allMarkdownRemark(
+        filter: { fields: { slug: { regex: "/til/" } } }
+      ) {
         edges {
           node {
             id
@@ -47,9 +49,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const { data } = await getPageData(graphql);
   data.tilPosts.edges.forEach(({ node }) => {
     const { slug } = node.fields;
-    console.log(`Found post /til${slug}`);
+    console.log(`Found post ${slug}`);
     actions.createPage({
-      path: `/til${slug}`,
+      path: `${slug}`,
       component: path.resolve("./src/components/templates/TilPost.tsx"),
       context: { slug: slug },
     });

@@ -228,16 +228,16 @@
   -webkit-appearance: none;
   align-items: center;
   border: 1px solid transparent;
-  border-radius: 0.4em;
+  /* border-radius: 0.4em; */
   box-shadow: none;
-  display: inline-flex;
-  font-size: 15px;
-  height: 2.5em;
-  justify-content: flex-start;
+  /* display: inline-flex; */
+  /* font-size: 15px; */
+  /* height: 2.5em; */
+  /* justify-content: flex-start; */
   line-height: 1.5;
-  padding: calc(0.5em - 1px) calc(0.75em - 1px);
-  position: relative;
-  vertical-align: top;
+  /* padding: calc(0.5em - 1px) calc(0.75em - 1px); */
+  /* position: relative; */
+  /* vertical-align: top; */
 }
 .button:active,
 .button:focus,

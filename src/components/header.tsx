@@ -4,9 +4,13 @@ import Socials from "./Socials/Socials";
 
 interface Props {
   siteTitle: string;
+  isHome: boolean;
 }
 
-const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
+const Header = ({
+  siteTitle = "Home",
+  isHome = false,
+}: Props): ReactElement => {
   const [active, setActive] = useState(false);
 
   return (
@@ -21,16 +25,29 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
           <Link to="/" className="navbar-item">
             {siteTitle}
           </Link>
-          <Link to="/til" className="is-hidden-touch navbar-item">
-            Today I Learned
-          </Link>
+          {!isHome && (
+            <>
+              <Link to="/projects" className="is-hidden-touch navbar-item">
+                Projects
+              </Link>
+              <Link to="/til" className="is-hidden-touch navbar-item">
+                TIL
+              </Link>
+              <Link to="/about" className="is-hidden-touch navbar-item">
+                About
+              </Link>
+              <Link to="/contact" className="is-hidden-touch navbar-item">
+                Contact
+              </Link>
+            </>
+          )}
 
           {/* The navbar-burger */}
           <a
             role="button"
             className={`navbar-burger burger ${active && "is-active"}`}
             aria-label="menu"
-            aria-expanded="false"
+            aria-expanded={active}
             onClick={() => {
               setActive(!active);
             }}
@@ -59,8 +76,17 @@ const Header = ({ siteTitle = "Home" }: Props): ReactElement => {
               <Link to="/" className="navbar-item">
                 Home
               </Link>
+              <Link to="/projects" className="navbar-item">
+                Projects
+              </Link>
               <Link to="/til" className="navbar-item">
-                Today I Learned
+                TIL
+              </Link>
+              <Link to="/about" className="navbar-item">
+                About
+              </Link>
+              <Link to="/contact" className="navbar-item">
+                Contact
               </Link>
             </div>
           </div>

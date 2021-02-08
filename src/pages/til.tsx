@@ -8,6 +8,7 @@ import { createStyles, Theme, withStyles } from "@material-ui/core/styles";
 
 import "../assets/styles.css";
 import "../assets/sass/components/til.scss";
+import Title from "../components/Title/Title";
 
 const localStorageKey = "heystevegray-tldr";
 const windowGlobal = typeof window !== "undefined" && window;
@@ -15,12 +16,12 @@ const windowGlobal = typeof window !== "undefined" && window;
 const CustomSwitch = withStyles((theme: Theme) =>
   createStyles({
     switchBase: {
-      color: "#1abc9c",
+      color: "var(--accent-color)",
       "&$checked": {
-        color: "#1abc9c",
+        color: "var(--accent-color)",
       },
       "&$checked + $track": {
-        backgroundColor: "#1abc9c",
+        backgroundColor: "var(--accent-color)",
       },
     },
     checked: {},
@@ -39,9 +40,7 @@ export default function til({ data }) {
 
     try {
       windowGlobal?.localStorage?.setItem(localStorageKey, `${value}`);
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -51,23 +50,15 @@ export default function til({ data }) {
   }, []);
 
   return (
-    <Layout>
-      <SEO title="Today I Learned" />
-      <section className="section has-text-centered card-body">
-        <div className="container">
-          <section className="section card-body">
-            <h1 className="til-header has-text-weight-bold is-size-1">
-              Today I Learned
-            </h1>
-          </section>
-        </div>
-      </section>
+    <Layout title="Today I Learned">
+      <SEO title="Steve Gray" description="Today I Learned" />
       <div className="tldr-switch">
         <FormControlLabel
           value="top"
           control={
             <CustomSwitch
               checked={isTldr}
+              size="medium"
               onChange={handleToggle}
               name="checkedB"
               color="primary"
@@ -78,7 +69,7 @@ export default function til({ data }) {
         />
       </div>
       <div className="container til-card-container post">
-        <section className="section body">
+        <section className="section body mb-20">
           <div className="container">
             {data &&
               data?.allMarkdownRemark.edges?.map(({ node }) => {
@@ -107,6 +98,7 @@ export default function til({ data }) {
 export const TilPostTemplateQuery = graphql`
   query allTilPostsQuery {
     allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/til/" } } }
       sort: { fields: frontmatter___publish_date, order: DESC }
     ) {
       edges {

@@ -5,10 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Steve Gray`,
-    description: `My developer portfolio website using gatsby and netlify cms.`,
+    description: `Software Engineer`,
     author: `Stephen Gray`,
   },
   plugins: [
+    "gatsby-plugin-postcss",
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-helmet`,
@@ -16,7 +17,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `markdown-pages`,
-        path: `${__dirname}/content/til`,
+        path: `${__dirname}/content`,
       },
     },
     {
@@ -32,13 +33,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Steve Gray | Software Engineer`,
+        short_name: `Steve Gray`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#121212`,
+        theme_color: `#1abc9c`,
         display: `standalone`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     {

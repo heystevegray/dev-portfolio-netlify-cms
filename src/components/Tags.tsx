@@ -6,36 +6,30 @@ export interface Tag {
 
 interface Props {
   tags: Tag[];
-  className?: string;
-  centered?: boolean;
   maxTags?: number;
-  background?: string;
+  className?: string;
 }
 
 export default function Tags({
-  tags = [],
   className = "",
-  centered = true,
+  tags = [],
   maxTags,
-  background = "is-secondary",
 }: Props): ReactElement {
   const items: Tag[] = maxTags ? tags.slice(0, maxTags) : tags;
-  const centerTags = centered ? "tag-container" : "";
 
   return (
-    <div className={`${className}`}>
+    <div className="w-full">
       {tags && tags.length ? (
-        <div className={`${centerTags}`}>
-          <ul className="tags">
-            {items.map((label, index) => (
-              <li>
-                <span className={`tag ${background}`} key={index}>
-                  {label}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className={`flex flex-wrap ${className}`}>
+          {items.map((label, index) => (
+            <li
+              key={index}
+              className="rounded mr-2 my-1 text-xs p-2 text-center has-background-black-ter items-center"
+            >
+              {label}
+            </li>
+          ))}
+        </ul>
       ) : null}
     </div>
   );

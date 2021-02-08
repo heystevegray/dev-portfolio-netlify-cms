@@ -16,6 +16,10 @@ $mobile-padding: 10px;
   );
 }
 
+@mixin app-icon-gradient {
+  background: linear-gradient(to bottom, transparent, #181818 50%, #242424);
+}
+
 @mixin hover {
   color: #f2f2f2;
   transition: all 0.25s ease-out;
@@ -23,12 +27,6 @@ $mobile-padding: 10px;
 
   &:active {
     transform: translateY(2px);
-  }
-}
-
-@mixin roundedImage {
-  img {
-    border-radius: 50%;
   }
 }
 

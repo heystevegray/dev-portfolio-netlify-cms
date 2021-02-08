@@ -9,31 +9,6 @@ import { mdiCalendar, mdiCalendarSync } from "@mdi/js";
 import "../../assets/sass/components/tilpost.scss";
 import Icon from "@mdi/react";
 
-export const TilPostTemplateQuery = graphql`
-  query TilPostTemplateQuery($slug: String) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        description
-        image {
-          childImageSharp {
-            fixed(width: 125, height: 125) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-        publish_date
-        updated
-        tags
-      }
-      html
-    }
-  }
-`;
-
 const TilPost = ({ data }): ReactElement => {
   const {
     title,
@@ -48,16 +23,24 @@ const TilPost = ({ data }): ReactElement => {
   return (
     <Layout>
       <SEO title={`${title}`} />
-      <div className="">
+      <div className="md:-mt-24 -mt-5">
         <section className="section">
           <div className="container post">
+            <Link to="/til" className="">
+              {"← Today I Learned"}
+            </Link>
             <section className="hero til-post-body has-navbar has-text-centered is-small has-background-black-ter">
               <div className="hero-body">
                 <div className="column">
                   <div className="columns">
                     <div className="column">
                       <div className="column">
-                        {image && <Img fixed={image.childImageSharp.fixed} />}
+                        {image && (
+                          <Img
+                            className="rounded-full"
+                            fixed={image.childImageSharp.fixed}
+                          />
+                        )}
                       </div>
                       <h1 className="title">{title}</h1>
                       {description && (
@@ -69,9 +52,9 @@ const TilPost = ({ data }): ReactElement => {
               </div>
             </section>
             <section className="section">
-              <Tags tags={tags} />
-              <br />
-              <br />
+              <div className="flex justify-center mb-10">
+                <Tags className="justify-center" tags={tags} />
+              </div>
               <div className="columns is-centered">
                 <div className="column is-narrow">
                   {publish_date && (
@@ -110,6 +93,9 @@ const TilPost = ({ data }): ReactElement => {
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               )}
+              <div className="mt-20">
+                <Link to="/til">{"← Today I Learned"}</Link>
+              </div>
             </section>
           </div>
         </section>
@@ -118,3 +104,28 @@ const TilPost = ({ data }): ReactElement => {
   );
 };
 export default TilPost;
+
+export const TilPostTemplateQuery = graphql`
+  query TilPostTemplateQuery($slug: String) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
+      frontmatter {
+        title
+        description
+        image {
+          childImageSharp {
+            fixed(width: 125, height: 125) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        publish_date
+        updated
+        tags
+      }
+      html
+    }
+  }
+`;

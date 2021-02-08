@@ -27,6 +27,7 @@ tags:
   - zsh
   - bash
 ---
+
 # Overview
 
 ```toc
@@ -110,15 +111,15 @@ This should launch your repository in a new tab in GitKraken! 😎
 
 # Resources
 
-* [git](https://git-scm.com/)
-* [GitKraken](https://gitkraken.com/)
-* [Open GitKraken using the current repo directory in the cli](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
-* [How to Create Bash Aliases](https://linuxize.com/post/how-to-create-bash-aliases/)
-* [Linux and Unix alias command tutorial with examples](https://shapeshed.com/unix-alias/#what-is-a-shell-alias)
-* [How do I remove an alias?](https://askubuntu.com/a/325380)
-* [How do I list my aliases?](https://askubuntu.com/a/102094)
-* [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
-* [Shell Expansion](http://linuxcommand.org/lc3_lts0080.php)
-* [Oh My Zsh](https://ohmyz.sh)
-* [Why doesn't .bashrc run automatically?](https://apple.stackexchange.com/a/13019)
-* [How to persist an alias?](https://stackoverflow.com/questions/29790259/mac-how-to-save-alias-in-computer/29853849#29853849)
+- [git](https://git-scm.com/)
+- [GitKraken](https://gitkraken.com/)
+- [Open GitKraken using the current repo directory in the cli](https://gist.github.com/dersam/0ec781e8fe552521945671870344147b#gistcomment-2131114)
+- [How to Create Bash Aliases](https://linuxize.com/post/how-to-create-bash-aliases/)
+- [Linux and Unix alias command tutorial with examples](https://shapeshed.com/unix-alias/#what-is-a-shell-alias)
+- [How do I remove an alias?](https://askubuntu.com/a/325380)
+- [How do I list my aliases?](https://askubuntu.com/a/102094)
+- [How to set an alias in a macOS or Linux shell](https://flaviocopes.com/how-to-set-alias-shell)
+- [Shell Expansion](http://linuxcommand.org/lc3_lts0080.php)
+- [Oh My Zsh](https://ohmyz.sh)
+- [Why doesn't .bashrc run automatically?](https://apple.stackexchange.com/a/13019)
+- [How to persist an alias?](https://stackoverflow.com/questions/29790259/mac-how-to-save-alias-in-computer/29853849#29853849)

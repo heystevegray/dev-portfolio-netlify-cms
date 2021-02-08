@@ -4,7 +4,6 @@
 .hero-body {
   width: 100%;
   min-height: 250px;
-  @include roundedImage;
   @include default-gradient;
 }
 
