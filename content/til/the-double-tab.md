@@ -1,7 +1,7 @@
 ---
 title: Holy tabs batman
-publish_date: 2021-05-27T04:13:04.207Z
-updated: 2021-05-27T04:13:03.307Z
+publish_date: 2021-05-27T04:21:14.058Z
+updated: 2021-05-27T04:21:15.721Z
 description: Programmatically open new tabs in your terminal, and open your
   browser to `http://localhost:3000`
 image: assets/daniel-sessler-i_-owwnuw6w-unsplash.jpg
