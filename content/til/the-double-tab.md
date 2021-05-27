@@ -6,8 +6,8 @@ description: Programmatically open new tabs in your terminal, and open your
   browser to `http://localhost:3000`
 image: assets/daniel-sessler-i_-owwnuw6w-unsplash.jpg
 tldr: >-
-  Automatically open new tabs in your terminal, and open your browser to
-  http://localhost:3000. First install the following developer dependencies:
+  Programmatically open new tabs in your terminal, and open your browser to
+  `http://localhost:3000`. First install the following developer dependencies:
 
 
   ```bash
@@ -59,7 +59,7 @@ exclude: Overview
 ```
 
 ## Summary
-Automatically open new tabs in your terminal, and open your browser to `http://localhost:3000`.
+Programmatically open new tabs in your terminal, and open your browser to `http://localhost:3000`.
 
 ## Description
 
