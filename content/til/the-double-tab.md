@@ -51,7 +51,12 @@ tldr: >-
 
   More info on [ttab](https://www.npmjs.com/package/ttab), [concurrently](https://www.npmjs.com/package/concurrently), and [open](https://apple.stackexchange.com/a/212585).
 tags:
-  - nextjs docker ttab concurrently npm scripts
+  - nextjs
+  - docker
+  - ttab
+  - concurrently
+  - npm
+  - scripts
 ---
 # Overview
 
@@ -64,7 +69,7 @@ Programmatically open new tabs in your terminal, and open your browser to `http:
 
 ## Description
 
-In this example we have a new [next js](https://nextjs.org/) application. We will add an npm script called `lazy` to do the following:
+In this example we have a new [next js](https://nextjs.org/) application. We will add an `npm` script called `lazy` to do the following:
 
 * Open a new tab in your terminal for your development server (`npm run tab:dev`)
 * Open a new tab in your terminal for your docker container (`npm run tab:docker`)
@@ -91,7 +96,7 @@ npm install -D concurrently ttab
 }
 ```
 
-Now that we have our npm scripts setup, we can run the following:
+Now that we have our `npm` scripts setup, we can run the following:
 
 ```bash
 npm run lazy
