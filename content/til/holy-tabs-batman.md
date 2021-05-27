@@ -3,7 +3,7 @@ title: Holy tabs Batman
 publish_date: 2021-05-27T04:27:22.288Z
 updated: 2021-05-27T04:27:23.060Z
 description: Programmatically open new tabs in your terminal, and open your
-  browser to `http://localhost:3000` with one `npm` script.
+  browser to http://localhost:3000 with one npm script.
 image: assets/daniel-sessler-i_-owwnuw6w-unsplash.jpg
 tldr: >-
   Programmatically open new tabs in your terminal, and open your browser to
@@ -63,11 +63,7 @@ tags:
 ```toc
 exclude: Overview
 ```
-
 ## Summary
-Programmatically open new tabs in your terminal, and open your browser to `http://localhost:3000` with one `npm` script.
-
-## Description
 
 In this example we have a new [next js](https://nextjs.org/) application. We will add an `npm` script called `lazy` to do the following:
 
