@@ -5,9 +5,8 @@ updated: 2021-05-27T04:13:03.307Z
 description: Open new terminal tabs when you start your npm scripts
 image: assets/daniel-sessler-i_-owwnuw6w-unsplash.jpg
 tldr: >-
-  Open new terminal tabs for your development server and docker container, and
-  open `http://localhost:3000` with one `npm` script. First install the
-  following developer dependencies:
+  Automatically open new tabs in your terminal, and open your browser to
+  http://localhost:3000. First install the following developer dependencies:
 
 
   ```bash
