@@ -1,8 +1,9 @@
 ---
-title: The Double Tab
+title: Holy tabs batman
 publish_date: 2021-05-27T04:13:04.207Z
 updated: 2021-05-27T04:13:03.307Z
-description: Open new terminal tabs when you start your npm scripts
+description: Programmatically open new tabs in your terminal, and open your
+  browser to `http://localhost:3000`
 image: assets/daniel-sessler-i_-owwnuw6w-unsplash.jpg
 tldr: >-
   Automatically open new tabs in your terminal, and open your browser to
