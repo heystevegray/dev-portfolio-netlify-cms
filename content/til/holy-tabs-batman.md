@@ -21,15 +21,22 @@ tldr: >-
   `concurrently` allows us to run commands at the same time, and `ttab` will open the terminal tabs for us. Add the following to your `package.json` scripts section:
 
 
-  ````json
+   ```json
   "scripts": {
-      "dev": "next",
-      "docker": "docker compose up",
-      "tab:dev": "ttab -t \"Next App\" npm run dev",
-      "tab:docker": "ttab -t \"Docker\" npm run docker",
-      "localhost": "open \"http://localhost:3000\"",
-      "lazy": "concurrently \"npm run tab:dev\" \"npm run tab:docker\" \"npm run localhost\"",
+    "dev": "next",
+
+    "docker": "docker compose up",
+
+    "tab:dev": "ttab -t \"Next App\" npm run dev",
+
+    "tab:docker": "ttab -t \"Docker\" npm run docker",
+
+    "localhost": "open 'http://localhost:3000'",
+
+    "lazy": "concurrently \"npm run tab:dev\" \"npm run tab:docker\" \"npm run localhost\"",
   }
+
+
   ```
 
 
