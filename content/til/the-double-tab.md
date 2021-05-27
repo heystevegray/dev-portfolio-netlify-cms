@@ -58,6 +58,9 @@ tags:
 exclude: Overview
 ```
 
+## Summary
+Automatically open tabs in your terminal, and open your browser to `http://localhost:3000`.
+
 ## Description
 
 In this example we have a new [next js](https://nextjs.org/) application. We will add an npm script called `lazy` to do the following:
