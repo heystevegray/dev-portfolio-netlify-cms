@@ -92,7 +92,7 @@ npm install -D concurrently ttab
     "tab:dev": "ttab -t \"Next App\" npm run dev",
     "tab:docker": "ttab -t \"Docker\" npm run docker",
     "localhost": "open \"http://localhost:3000\"",
-    "lazy": "concurrently \"npm run next\" \"npm run watch-queries\"",
+    "lazy": "concurrently \"npm run tab:dev\" \"npm run tab:docker\" \"npm run localhost\"",
 }
 ```
 
