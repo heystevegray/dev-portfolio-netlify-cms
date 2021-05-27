@@ -3,11 +3,12 @@ title: Holy tabs batman
 publish_date: 2021-05-27T04:21:14.058Z
 updated: 2021-05-27T04:21:15.721Z
 description: Programmatically open new tabs in your terminal, and open your
-  browser to `http://localhost:3000`
+  browser to `http://localhost:3000` with one `npm` script.
 image: assets/daniel-sessler-i_-owwnuw6w-unsplash.jpg
 tldr: >-
   Programmatically open new tabs in your terminal, and open your browser to
-  `http://localhost:3000`. First install the following developer dependencies:
+  `http://localhost:3000` with one `npm` script. First install the following
+  developer dependencies:
 
 
   ```bash
@@ -59,7 +60,7 @@ exclude: Overview
 ```
 
 ## Summary
-Programmatically open new tabs in your terminal, and open your browser to `http://localhost:3000`.
+Programmatically open new tabs in your terminal, and open your browser to `http://localhost:3000` with one `npm` script.
 
 ## Description
 
