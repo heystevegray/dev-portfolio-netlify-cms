@@ -104,7 +104,7 @@ npm run lazy
 
 ## Resources
 
-* [Open Multiple Terminal Tabs on npm Start with ttab and npm-run-all](https://egghead.io/lessons/npm-open-multiple-terminal-tabs-on-npm-start-with-ttab-and-npm-run-all)
+* [Inspired by - Open Multiple Terminal Tabs on npm Start with ttab and npm-run-all](https://egghead.io/lessons/npm-open-multiple-terminal-tabs-on-npm-start-with-ttab-and-npm-run-all)
 
 ### Commands
 
