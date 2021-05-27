@@ -24,15 +24,10 @@ tldr: >-
    ```json
   "scripts": {
     "dev": "next",
-
     "docker": "docker compose up",
-
     "tab:dev": "ttab -t \"Next App\" npm run dev",
-
     "tab:docker": "ttab -t \"Docker\" npm run docker",
-
     "localhost": "open 'http://localhost:3000'",
-
     "lazy": "concurrently \"npm run tab:dev\" \"npm run tab:docker\" \"npm run localhost\"",
   }
 
