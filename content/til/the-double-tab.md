@@ -1,5 +1,5 @@
 ---
-title: Holy tabs batman
+title: Holy tabs Batman
 publish_date: 2021-05-27T04:27:22.288Z
 updated: 2021-05-27T04:27:23.060Z
 description: Programmatically open new tabs in your terminal, and open your
