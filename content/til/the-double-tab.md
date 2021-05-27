@@ -59,7 +59,7 @@ exclude: Overview
 ```
 
 ## Summary
-Automatically open tabs in your terminal, and open your browser to `http://localhost:3000`.
+Automatically open new tabs in your terminal, and open your browser to `http://localhost:3000`.
 
 ## Description
 
