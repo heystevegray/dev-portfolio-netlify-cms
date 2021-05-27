@@ -62,9 +62,9 @@ exclude: Overview
 
 In this example we have a new [next js](https://nextjs.org/) application. We will add an npm script called `lazy` to do the following:
 
-- Open a new tab in your terminal for your development server (`npm run tab:dev`)
-- Open a new tab in your terminal for your docker container (`npm run tab:docker`)
-- Open `http://localhost:3000` in your default browser (`npm run localhost`)
+* Open a new tab in your terminal for your development server (`npm run tab:dev`)
+* Open a new tab in your terminal for your docker container (`npm run tab:docker`)
+* Open `http://localhost:3000` in your default browser (`npm run localhost`)
 
 ## Usage
 
@@ -78,12 +78,12 @@ npm install -D concurrently ttab
 
 ```json
 "scripts": {
-        "dev": "next",
-        "docker": "docker compose up",
-        "tab:dev": "ttab -t \"Next App\" npm run dev",
-				"tab:docker": "ttab -t \"Docker\" npm run docker",
-				"localhost": "open \"http://localhost:3000\"",
-				"lazy": "concurrently \"npm run next\" \"npm run watch-queries\"",
+    "dev": "next",
+    "docker": "docker compose up",
+    "tab:dev": "ttab -t \"Next App\" npm run dev",
+    "tab:docker": "ttab -t \"Docker\" npm run docker",
+    "localhost": "open \"http://localhost:3000\"",
+    "lazy": "concurrently \"npm run next\" \"npm run watch-queries\"",
 }
 ```
 
@@ -94,12 +94,15 @@ npm run lazy
 ```
 
 ## Resources
-- [Open Multiple Terminal Tabs on npm Start with ttab and npm-run-all](https://egghead.io/lessons/npm-open-multiple-terminal-tabs-on-npm-start-with-ttab-and-npm-run-all)
+
+* [Open Multiple Terminal Tabs on npm Start with ttab and npm-run-all](https://egghead.io/lessons/npm-open-multiple-terminal-tabs-on-npm-start-with-ttab-and-npm-run-all)
 
 ### Commands
-- [ttab](https://www.npmjs.com/package/ttab)
-- [concurrently](https://www.npmjs.com/package/concurrently)
-- [How to open files via Terminal](https://apple.stackexchange.com/a/212585)
+
+* [ttab](https://www.npmjs.com/package/ttab)
+* [concurrently](https://www.npmjs.com/package/concurrently)
+* [How to open files via Terminal](https://apple.stackexchange.com/a/212585)
 
 ### Photo
-- [Photo by Daniel Seßler on Unsplash](https://unsplash.com/photos/I_-OwWnUw6w)
+
+* [Photo by Daniel Seßler on Unsplash](https://unsplash.com/photos/I_-OwWnUw6w)
