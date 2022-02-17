@@ -4,6 +4,7 @@
   &__link {
     &:hover {
       @include hover;
+      color: var(--light-1);
     }
   }
 }

@@ -1,8 +1,8 @@
 import React from "react";
-import Headshot from "../components/Headshot/Headshot";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Link from "../components/Link/Link";
+import { Button } from "@material-ui/core";
 
 const about = () => {
   return (
@@ -14,7 +14,11 @@ const about = () => {
             Hey I'm Steve Gray. I build web applications with{" "}
             {<Link text="React" href="https://reactjs.org/" />},{" "}
             {<Link text="TypeScript" href="https://www.typescriptlang.org/" />},
-            and {<Link text="GraphQL" href="https://graphql.org/" />}. I enjoy
+            and {<Link text="GraphQL" href="https://graphql.org/" />}. I'm
+            currently a big fan of{" "}
+            {<Link text="Next.js" href="https://nextjs.org/" />},{" "}
+            {<Link text="Prisma" href="https://www.prisma.io/" />}, and{" "}
+            {<Link text="Material-UI" href="https://mui.com/" />}. I enjoy
             learning about web development and sharing my knowledge with others.
           </p>
           <p className="mt-4 text-lg">
@@ -22,6 +26,20 @@ const about = () => {
             professional Netflix-er. I have also been teaching myself about
             photography and video editing.
           </p>
+          <div className="mt-10 flex justify-center">
+            <Button
+              color="primary"
+              variant="contained"
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/14EqZET210VlM7tPoSWG_06si7E4VyOa2/view?usp=sharing",
+                  "_blank"
+                )
+              }
+            >
+              View PDF Resume
+            </Button>
+          </div>
         </div>
       </div>
     </Layout>
