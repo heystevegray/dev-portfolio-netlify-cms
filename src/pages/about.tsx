@@ -32,7 +32,7 @@ const about = () => {
               variant="contained"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/14EqZET210VlM7tPoSWG_06si7E4VyOa2/view?usp=sharing",
+                  "https://drive.google.com/file/d/1_pK5sw8-zO_XigghnNsA8dassN1P_t3m/view?usp=sharing",
                   "_blank"
                 )
               }
