@@ -10,19 +10,13 @@ import "../../assets/sass/components/tilpost.scss";
 import Icon from "@mdi/react";
 
 const TilPost = ({ data }): ReactElement => {
-  const {
-    title,
-    description,
-    publish_date,
-    image,
-    updated,
-    tags,
-  } = data.markdownRemark.frontmatter;
+  const { title, description, publish_date, image, updated, tags } =
+    data.markdownRemark.frontmatter;
   const { html } = data.markdownRemark;
 
   return (
     <Layout>
-      <SEO title={`${title}`} />
+      <SEO title={title} />
       <div className="md:-mt-24 -mt-5">
         <section className="section">
           <div className="container post">

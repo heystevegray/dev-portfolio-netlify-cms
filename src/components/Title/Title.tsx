@@ -7,7 +7,9 @@ interface Props {
 const Title = ({ title }: Props): ReactElement => {
   return (
     <div className="place-self-center">
-      <h1 className="text-4xl text-center">{title}</h1>
+      <section aria-label={title} tabIndex={0}>
+        <h1 className="text-4xl text-center">{title}</h1>
+      </section>
     </div>
   );
 };

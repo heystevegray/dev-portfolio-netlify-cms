@@ -21,6 +21,9 @@ const Header = ({
         aria-label="main navigation"
       >
         <div className="navbar-brand">
+          <a className="skip-navigation" href="#main-content">
+            Skip Navigation
+          </a>
           {/* Main links */}
           <Link to="/" className="navbar-item">
             {siteTitle}

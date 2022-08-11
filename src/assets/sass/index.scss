@@ -42,3 +42,17 @@ p {
 .button {
   background-color: var(--accent-color);
 }
+
+.skip-navigation {
+  position: absolute;
+  background-color: #121212;
+  z-index: 1000;
+  top: 15px;
+  left: 5px;
+  transform: translateY(-200px);
+  transition: transform 250ms ease-in;
+
+  &:focus {
+    transform: translateY(0px);
+  }
+}
