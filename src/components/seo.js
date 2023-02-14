@@ -9,8 +9,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { NAME } from "../lib/config";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title = NAME }) {
   const { site } = useStaticQuery(
     graphql`
       query {

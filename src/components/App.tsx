@@ -2,11 +2,12 @@ import React, { ReactElement } from "react";
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { JOB_TITLE, NAME } from "../lib/config";
 
 const App = (): ReactElement => {
   return (
     <Layout isHome={true} title="Home" showHeadshot>
-      <SEO title="Steve Gray" description="Software Engineer" />
+      <SEO description={JOB_TITLE} />
       <div className="justify-center sm:text-2xl text-xl grid xs:gap-6 gap-4 grid-flow-col auto-cols-max">
         <Link to="/projects">Projects</Link>
         <Link to="/til">TIL</Link>

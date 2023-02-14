@@ -1,12 +1,14 @@
+const { NAME, JOB_TITLE } = require("./src/lib/config");
+
 // Gatsby settings for the environment variables
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 module.exports = {
   siteMetadata: {
-    title: `Steve Gray`,
-    description: `Software Engineer`,
-    author: `Stephen Gray`,
+    title: NAME,
+    description: JOB_TITLE,
+    author: NAME,
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -33,8 +35,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Steve Gray | Software Engineer`,
-        short_name: `Steve Gray`,
+        name: `${NAME} | Software Engineer`,
+        short_name: NAME,
         start_url: `/`,
         background_color: `#121212`,
         theme_color: `#1abc9c`,

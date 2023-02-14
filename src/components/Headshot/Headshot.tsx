@@ -1,6 +1,7 @@
 import React from "react";
 import Img from "gatsby-image";
 import { graphql, StaticQuery } from "gatsby";
+import { JOB_TITLE, NAME } from "../../lib/config";
 
 const Headshot = () => {
   return (
@@ -22,8 +23,8 @@ const Headshot = () => {
           return (
             <div className="text-center">
               <Img className="rounded-full" fixed={image} />
-              <p className="m-0 block text-4xl mt-2">Steve Gray</p>
-              <p className="block text-3xl text-gray-400">Software Engineer</p>
+              <p className="m-0 block text-4xl mt-2">{NAME}</p>
+              <p className="block text-3xl text-gray-400">{JOB_TITLE}</p>
             </div>
           );
         }}

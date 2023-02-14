@@ -3,15 +3,16 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Link from "../components/Link/Link";
 import { Button } from "@material-ui/core";
+import { NAME } from "../lib/config";
 
 const about = () => {
   return (
     <Layout title="About" showHeadshot>
-      <SEO title="Steve Gray" description="About me" />
+      <SEO description="About me" />
       <div className="text-white flex justify-center">
         <div className="px-5 max-w-md mb-40">
           <p className="mt-6 text-lg">
-            Hey I'm Steve Gray. I build web applications with{" "}
+            Hey I'm {NAME}. I build web applications with{" "}
             {<Link text="React" href="https://reactjs.org/" />},{" "}
             {<Link text="TypeScript" href="https://www.typescriptlang.org/" />},
             and {<Link text="GraphQL" href="https://graphql.org/" />}. I'm
