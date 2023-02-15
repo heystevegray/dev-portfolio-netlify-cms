@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `${NAME} | Software Engineer`,
+        name: `${NAME} | ${JOB_TITLE}`,
         short_name: NAME,
         start_url: `/`,
         background_color: `#121212`,
