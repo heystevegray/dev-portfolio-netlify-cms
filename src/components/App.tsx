@@ -8,7 +8,7 @@ const App = (): ReactElement => {
   return (
     <Layout isHome={true} title="Home" showHeadshot>
       <SEO description={JOB_TITLE} />
-      <div className="justify-center sm:text-2xl text-xl grid xs:gap-6 gap-4 grid-flow-col auto-cols-max">
+      <div className="justify-center text-2xl grid xs:gap-6 gap-4 grid-flow-col auto-cols-max">
         <Link to="/projects">Projects</Link>
         <Link to="/til">TIL</Link>
         <Link to="/about">About</Link>

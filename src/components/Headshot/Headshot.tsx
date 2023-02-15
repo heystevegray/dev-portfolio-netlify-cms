@@ -24,7 +24,7 @@ const Headshot = () => {
             <div className="text-center">
               <Img className="rounded-full" fixed={image} />
               <p className="m-0 block text-4xl mt-2">{NAME}</p>
-              <p className="block text-3xl text-gray-400">{JOB_TITLE}</p>
+              <p className="block text-2xl text-gray-400">{JOB_TITLE}</p>
             </div>
           );
         }}
