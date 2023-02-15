@@ -3,6 +3,7 @@ import Icon from "@mdi/react";
 import { mdiGithub, mdiTwitter, mdiLinkedin, mdiNpm } from "@mdi/js";
 
 import "./Socials.scss";
+import { NAME } from "../../lib/config";
 
 interface Props {
   iconSize?: number;
@@ -16,7 +17,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
         <div className="columns is-mobile is-centered">
           <a
             className="socials__link"
-            aria-label="steve gray on npm"
+            aria-label={`${NAME} on npm`}
             href="https://www.npmjs.com/~heystevegray"
             target="_blank"
             rel="noopener"
@@ -25,7 +26,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
           </a>
           <a
             className="socials__link"
-            aria-label="steve gray on github"
+            aria-label={`${NAME} on github`}
             href="https://github.com/heystevegray"
             target="_blank"
             rel="noopener"
@@ -38,10 +39,10 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
           </a>
           {/* <a
             className="socials__link"
-			aria-label="steve gray on twitter"
+            aria-label={`${NAME} on twitter`}
             href="https://twitter.com/heystevegray"
             target="_blank"
-			rel="noopener"
+            rel="noopener"
           >
             <Icon
               className="column is-primary"
@@ -51,7 +52,7 @@ export default function Socials({ className = "", iconSize = 3 }: Props) {
           </a> */}
           <a
             className="socials__link"
-            aria-label="steve gray on linked in"
+            aria-label={`${NAME} on linked in`}
             href="https://www.linkedin.com/in/stephengray191/"
             target="_blank"
             rel="noopener"

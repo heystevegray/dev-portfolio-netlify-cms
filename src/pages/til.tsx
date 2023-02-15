@@ -51,7 +51,7 @@ export default function til({ data }) {
 
   return (
     <Layout title="Today I Learned">
-      <SEO title="Steve Gray" description="Today I Learned" />
+      <SEO description="Today I Learned" />
       <div className="tldr-switch">
         <FormControlLabel
           value="top"
